@@ -36,12 +36,17 @@ textarea{
 
 }
 
+a:hover {
+  color: #3f3f3f;
+ }
+
 .container{
   margin: 0 auto;
   width: 100%;
   max-width: 1140px;
 }
 
+/*-----------Header-----------*/
 header{
   position: fixed;
   width: 1440px;
@@ -55,7 +60,9 @@ header{
   justify-content: space-between;
   align-items: center;
 }
+/*-----------End Header-----------*/
 
+/*-----------Content header-----------*/
 .content{
   display: flex;
   flex-direction: column;
@@ -67,33 +74,6 @@ header{
   margin-top: 8rem;
   text-align: left;
   border-bottom: 1px solid #ff3399;
-}
-
-.content__body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.content__header-home{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 12rem;
-}
-
-.home__title{
-  font-size: 6rem;
-  font-weight: 700;
-  color: #ff3399;
-}
-
-.home__subtitle{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 52px;
-  font-style: italic;
-  font-weight: 400;
-  margin-top: -15px;
 }
 
 .content__header-strip div{
@@ -108,7 +88,17 @@ header{
   line-height: 4.66rem;
   margin-left: 0.26rem;
 }
+/*-----------End content header-----------*/
 
+/*-----------Content body-----------*/
+.content__body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*-----------End content body-----------*/
+
+/*-----------Navigation-----------*/
 .company__content{
   display: inline-block;
 }
@@ -164,7 +154,6 @@ header{
   transition: all .2s ease;
 }
 
-/*--------- Modificators ---------*/
 .nav__link:hover:not(.nav__link--btn)::after, .nav__link.active:not(.nav__link--btn)::after {
   width: 100%;
 }
@@ -184,9 +173,60 @@ header{
   box-shadow: 0 0 4px #585858;
   border-color: rgb(64, 224, 208);
   color: #ffffff;
+}
+/*-----------End Navigation-----------*/
 
+/*-----------Home-----------*/
+.content__header-home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12rem;
 }
 
+.home__title{
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ff3399;
+}
+
+.home__subtitle{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 52px;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: -15px;
+}
+
+.carousel {
+  position: relative;
+  width: 950px;
+  padding-top: 50px;
+}
+
+.d-block.w-100{
+  text-align: justify;
+  /*color: #40E0D0;*/
+  color: #3f3f3f;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.sr-only{
+  display: none;
+}
+
+.carousel-control-prev-icon {
+  /*background-image: url('./images/left-arrow.svg');*/
+  background-image: none;
+}
+.carousel-control-next-icon {
+  /*background-image: url('./images/right-arrow.svg');*/
+  background-image: none;
+}
+/*-----------End Home-----------*/
+
+/*-----------Products-----------*/
 .menu__products{
   display: flex;
   align-items: center;
@@ -198,7 +238,7 @@ header{
   background: none;
   font-weight: 200;
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .nav__link.menu__link:after{
@@ -293,7 +333,9 @@ header{
   border-color: rgb(64, 224, 208);
   color: #ffffff;
 }
+/*-----------End Products-----------*/
 
+/*-----------Team-----------*/
 .team__items{
   display: flex;
   flex-wrap: wrap;
@@ -487,10 +529,13 @@ header{
 .team__info-description{
   overflow-y: auto;
   margin: 10px 27px;
-  height: 122px;
+  height: 130px;
   font-size: 13px;
+  text-align: justify;
 }
+/*-----------End Products-----------*/
 
+/*-----------Contact-----------*/
 .contact__title{
   margin-top: 30px;
   font-size: 35px;
@@ -569,6 +614,10 @@ textarea::placeholder{
 ::placeholder{
   color: #808080;;
 }
+/*-----------End Contact-----------*/
+
+
+
 
 
 
