@@ -17,7 +17,7 @@ const Contact = () => {
                     <span className="contact__subtitle">
                         We'd love to hear your thoughts and be in touch with us
                     </span>
-                    <textarea className="contact__message" type="text" name="" placeholder="Message"/>
+                    <textarea className="contact__message"  name="" placeholder="Message"/>
                     <div className="contact__buttons">
                         <input required className="input__email"  type="email" name="email" placeholder="Email Address"/>
                         <input required className="input__name"  type="text" name="name" placeholder="Full Name"/>

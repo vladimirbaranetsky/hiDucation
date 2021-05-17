@@ -532,7 +532,7 @@ textarea::placeholder{
 .input__email{
   box-shadow: 0 0 4px #585858;
   border-radius: 30px;
-  width: 310px;
+
   margin-right: 15px;
   font-size: 15px;
   color: #808080;
@@ -585,15 +585,12 @@ textarea::placeholder{
 }
 
 input[type=submit] {
-  /*background-color: #0441aa;*/
-  /*color: white;*/
-  /*cursor: pointer;*/
   box-shadow: 0 0 4px #585858;
-  /*border-radius: 30px;*/
   width: 100%;
+
   margin-right: 15px;
   font-size: 15px;
-  color: #808080;;
+  color: #808080;
   padding: 0 15px;
 }
 
@@ -602,11 +599,12 @@ input[type=submit]:hover {
   color: #ffffff;
 }
 
-.login__row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/*.login__row:after {*/
+/*  content: "";*/
+/*  display: table;*/
+/*  clear: both;*/
+/*}*/
+
 .vl {
   position: absolute;
   left: 50%;
@@ -615,8 +613,7 @@ input[type=submit]:hover {
   height: 175px;
 }
 .h2{
-  text-align: center;
-  margin-top: 2px;
+  margin-top: 10px;
   margin-bottom: 2px;
 }
 .inner {
@@ -625,29 +622,26 @@ input[type=submit]:hover {
   transform: translate(-50%, -50%);
   background-color: #f1f1f1;
   border: 1px solid #ccc;
-  border-radius: 50%;
+  border-radius: 40%;
   padding: 8px 10px;
 }
 
-.fb {
-  display: flex;
+.fb{
   width: 700px;
   height: 45px;
-  margin-top: 15px;
+  color: #808080;
 }
 
 .apple {
-  display: flex;
   width: 700px;
   height: 45px;
-  margin-top: 15px;
+  color: #808080;
 }
 
 .google {
-  display: flex;
   width: 700px;
   height: 45px;
-  margin-top: 15px;
+  color: #808080;
 }
 
 input,
@@ -668,12 +662,11 @@ input,
 }
 
 input:hover,
-.btn:hover {
+.btn:hover{
   opacity: 1;
   background-color: rgb(64, 224, 208);
   color: #ffffff;
 }
-
 
 .row:after {
   content: "";
