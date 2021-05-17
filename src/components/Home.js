@@ -9,6 +9,7 @@ const Home = () => {
                     <span className="home__subtitle">Revolutionize Learning</span>
                 </div>
                 <div className="content__body">
+
                 </div>
             </div>
         </div>
