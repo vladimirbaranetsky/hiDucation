@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-/node_modules/.cache/babel-loader/0fc8c361f81ae7e9140744188b7931157717766b.json.gz
-/node_modules/.cache/babel-loader/9dde32d81271758fc3c07f00769be91d9f01cb1c.json.gz
-/node_modules/.cache/babel-loader/21eb6fc27afec815c43c75ce4d51214ffb05bf4a.json.gz
-/node_modules/.cache/babel-loader/34dcca5b3d94c14f5787f9570b49adbb3f227dcd.json.gz
-/node_modules/.cache/babel-loader/f7a1dca40fccfbbd71831770ef094cff4e9ec6c5.json.gz
-=======
 /node_modules/
-<<<<<<< HEAD
 /.vscode/
-=======
-node_modules
->>>>>>> bf2653cc9898f3fc2d913cbc4515f0059ce8ac8a
-/node_modules/
->>>>>>> 68d2fa705673fdca5a4e5671b575786e865b5494
+
