@@ -23,6 +23,10 @@ const Contact = () => {
                         <input required className="input__name"  type="text" name="name" placeholder="Full Name"/>
                         <button className="btn__send" type="submit">Send</button>
                     </div>
+
+
+
+
                 </div>
             </div>
         </div>
