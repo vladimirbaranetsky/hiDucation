@@ -1,3 +1,8 @@
 /node_modules/
 /.vscode/
-
+.idea/.gitignore
+.idea/dmitrii-vladimir_frontend_repo.iml
+.gitignore
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/Project_Default.xml
