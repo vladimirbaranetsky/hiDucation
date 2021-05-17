@@ -22,9 +22,11 @@ const Login = () => {
                                     <span className="psw"><a href="#">Forgot password?</a></span>
                                     <input type="submit" value="Login"/>
                                 </div>
+
                                 <div className="vl">
                                     <span className="inner">or</span>
                                 </div>
+
                                 <div className="login__col">
                                     <a href="#" className="fb btn">Continue with Facebook</a>
                                     <a href="#" className="apple btn">Continue with Apple</a>

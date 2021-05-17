@@ -612,10 +612,12 @@ input[type=submit]:hover {
   border: 2px solid #ddd;
   height: 175px;
 }
+
 .h2{
   margin-top: 10px;
   margin-bottom: 2px;
 }
+
 .inner {
   position: absolute;
   top: 50%;
