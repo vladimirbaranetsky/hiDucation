@@ -11,7 +11,7 @@ const Login = () => {
                     <span className="content__header-title">LOGIN</span>
                 </div>
                 <div className="content__body">
-<<<<<<< HEAD
+
                     <div className="h2"><h2>Welcome back</h2>
                     </div>
                     <div className="login__container">
@@ -36,9 +36,6 @@ const Login = () => {
                             </div>
                         </form>
                     </div>
-=======
-
->>>>>>> bf2653cc9898f3fc2d913cbc4515f0059ce8ac8a
                 </div>
             </div>
         </div>
