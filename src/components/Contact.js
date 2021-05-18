@@ -21,15 +21,12 @@ const Contact = () => {
                     <div className="contact__buttons">
                         <input required className="input__email"  type="email" name="email" placeholder="Email Address"/>
                         <input required className="input__name"  type="text" name="name" placeholder="Full Name"/>
-                        <button className="btn__send" type="submit">Send</button>
+                        <button className="nav__link--btn btn__send" type="submit">Send</button>
                     </div>
-
-
-
-
                 </div>
             </div>
         </div>
+
     </React.Fragment>
 }
 

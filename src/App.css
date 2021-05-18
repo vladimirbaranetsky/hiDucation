@@ -5,7 +5,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  color: #3f3f3f;
+  color:#808080;
   background-image: url("../src/images/background.jpg");
   background-size: cover;
 }
@@ -37,7 +37,7 @@ textarea{
 }
 
 a:hover {
-  color: #3f3f3f;
+  color:#808080;
  }
 
 .container{
@@ -130,7 +130,7 @@ header{
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
-  color: #3f3f3f;
+  color:#808080;
   transition: all .2s linear;
 }
 
@@ -160,8 +160,8 @@ header{
 
 .nav__link--btn {
   min-width: 100px;
-  border: 1px solid #3f3f3f;
-  padding: 10px 20px;
+  border: 1px solid #808080;
+  padding: 8px 15px;
   transition: all .2s linear;
   border-radius: 30px;
   cursor: pointer;
@@ -170,7 +170,7 @@ header{
 
 .nav__link--btn:hover, .nav__link--btn.active {
   background-color: rgb(64, 224, 208);
-  box-shadow: 0 0 4px #585858;
+  box-shadow: 0 0 4px #808080;
   border-color: rgb(64, 224, 208);
   color: #ffffff;
 }
@@ -207,7 +207,7 @@ header{
 .d-block.w-100{
   text-align: justify;
   /*color: #40E0D0;*/
-  color: #3f3f3f;
+  color: #808080;
   font-size: 18px;
   line-height: 30px;
 }
@@ -243,7 +243,7 @@ header{
 
 .nav__link.menu__link:after{
   height: 1px;
-  background-color: #3f3f3f;
+  background-color: #808080;
 }
 .product__items{
   display: flex;
@@ -267,13 +267,13 @@ header{
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  box-shadow: 0 0 4px #585858;
+  box-shadow: 0 0 4px #808080;
   border-radius: 10px;
   transition: box-shadow .2s linear;
 }
 
 .product__item-wrapper:hover {
-  box-shadow: 0 0 25px #3f3f3f;
+  box-shadow: 0 0 25px #808080;
 }
 
 .product__photo{
@@ -295,7 +295,7 @@ header{
 }
 
 .product__info div{
-  border-bottom: 1px solid #3f3f3f;
+  border-bottom: 1px solid #808080;
   padding-bottom: 3px;
 }
 .product__info-title{
@@ -317,21 +317,11 @@ header{
   margin-top: 15px;
 }
 
-.nav__link--btn.btn__purchases{
-  font-size: 1rem;
-  font-weight: bold;
-  color: #585858;
+.btn__purchases{
   background-color: #ffffff;
-  border-radius: 30px;
-  border: 1px solid #585858;
-  transition: all .2s linear;
-}
-
-.nav__link--btn.btn__purchases:hover{
-  background-color: rgb(64, 224, 208);
-  box-shadow: 0 0 4px #585858;
-  border-color: rgb(64, 224, 208);
-  color: #ffffff;
+  border: 1px solid #808080;
+  color: #808080;
+  font-weight: 600;
 }
 /*-----------End Products-----------*/
 
@@ -351,7 +341,7 @@ header{
   overflow: hidden;
   position: relative;
   height: 450px;
-  box-shadow: 0 0 4px #585858;
+  box-shadow: 0 0 4px #808080;
   border-radius: 10px;
   background-color: #ffffff;
 }
@@ -511,7 +501,7 @@ header{
   align-items: center;
   width: 200px;
   padding-top: 240px;
-  border-bottom: 1px solid #3f3f3f;
+  border-bottom: 1px solid #808080;
 }
 
 .team__info-title{
@@ -523,7 +513,7 @@ header{
   text-transform: uppercase;
   padding-bottom: 5px;
   font-weight: 200;
-  color: #585858;
+  color: #808080;
 }
 
 .team__info-description{
@@ -533,7 +523,7 @@ header{
   font-size: 13px;
   text-align: justify;
 }
-/*-----------End Products-----------*/
+/*-----------End Team-----------*/
 
 /*-----------Contact-----------*/
 .contact__title{
@@ -550,7 +540,7 @@ header{
 .contact__message{
   width: 700px;
   height: 130px;
-  box-shadow: 0 0 4px #585858;
+  box-shadow: 0 0 4px #808080;
   border-radius: 30px;
   margin-top: 30px;
   padding: 15px;
@@ -561,23 +551,27 @@ header{
 
 textarea {
   font-family: 'Poppins', sans-serif;
+  border: 1px solid #ffffff;
 }
 
-textarea::placeholder{
+::placeholder{
+  color: #808080;
   font-size: 1rem;
+  opacity: 0.5;
 }
 
 .contact__buttons{
   display: flex;
   width: 700px;
-  height: 45px;
+  height: 40px;
   margin-top: 15px;
 }
 
 .input__email{
-  box-shadow: 0 0 4px #585858;
+  box-shadow: 0 0 4px #808080;
+  border: 1px solid #ffffff;
   border-radius: 30px;
-
+  width: 330px;
   margin-right: 15px;
   font-size: 15px;
   color: #808080;
@@ -585,7 +579,8 @@ textarea::placeholder{
 }
 
 .input__name{
-  box-shadow: 0 0 4px #585858;
+  box-shadow: 0 0 4px #808080;
+  border: 1px solid #ffffff;
   border-radius: 30px;
   width: 240px;
   margin-right: 15px;
@@ -594,135 +589,223 @@ textarea::placeholder{
   padding: 0 15px;
 }
 
-.btn__send {
-  width: 120px;
-  font-size: 1rem;
-  font-weight: bold;
-  box-shadow: 0 0 4px #585858;
-  color: #808080;
-  background-color: #ffffff;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  transition: all .2s linear;
+.input__email:hover, .input__email:focus,
+  .input__name:hover, .input__name:focus,
+     textarea:hover, textarea:focus{
+  border: 1px solid rgb(64, 224, 208);
 }
 
-.btn__send:hover{
-  background-color: rgb(64, 224, 208);
-  color: #ffffff;
-}
-::placeholder{
-  color: #808080;;
+.btn__send {
+  width: 100px;
+  box-shadow: 0 0 4px #808080;
+  background-color: #ffffff;
+  font-weight: 600;
+  border: none;
+  color: #808080;
 }
 /*-----------End Contact-----------*/
 
-
-
-
-
+/*-----------Login-----------*/
+.login__title{
+  margin-top: 30px;
+  font-size: 35px;
+  font-weight: 400;
+}
 
 .login__container{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.login__row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__left, .login__right {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__inner {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  /* border-radius: 50%; */
+  /* border: 1px solid #808080; */
+  /* padding: 10px; */
+  height: 300px;
+}
+
+.login__inner-title{
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #808080;
+  opacity: 0.5;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__item{
+  display: flex;
+  flex-direction: column;
   position: relative;
-  border-radius: 5px;
-  padding: 20px 0 30px 0;
+  width: 70%
 }
 
-.login__col {
-  float: left;
-  width: 50%;
-  padding: 0 50px;
-  margin: 6px auto auto;
+.login__item-title{
+  padding-left: 15px;
+  padding-bottom: 3px;
 }
 
-input[type=submit] {
-  box-shadow: 0 0 4px #585858;
-  width: 100%;
-
-  margin-right: 15px;
-  font-size: 15px;
+.login__item-title a{
   color: #808080;
-  padding: 0 15px;
-}
-
-input[type=submit]:hover {
-  background-color: rgb(64, 224, 208);
-  color: #ffffff;
-}
-
-/*.login__row:after {*/
-/*  content: "";*/
-/*  display: table;*/
-/*  clear: both;*/
-/*}*/
-
-.vl {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  border: 2px solid #ddd;
-  height: 175px;
-}
-
-.h2{
-  margin-top: 10px;
-  margin-bottom: 2px;
-}
-
-.inner {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  border-radius: 40%;
-  padding: 8px 10px;
-}
-
-.fb{
-  width: 700px;
-  height: 45px;
-  color: #808080;
-}
-
-.apple {
-  width: 700px;
-  height: 45px;
-  color: #808080;
-}
-
-.google {
-  width: 700px;
-  height: 45px;
-  color: #808080;
-}
-
-input,
-.btn {
-  width: 100%;
-  padding: 12px;
-  box-shadow: 0 0 4px #585858;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 5px 0;
-  opacity: 0.85;
-  display: inline-block;
-  font-size: 17px;
-  line-height: 20px;
   text-decoration: none;
+  transition: color .2s linear;
+}
+
+.login__item-title a:hover{
+  color: #ff3399;
+}
+
+.login__item-input{
+  height: 40px;
+  box-shadow: 0 0 4px #808080;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 0 15px 0 40px;
   transition: all .2s linear;
 }
 
-input:hover,
-.btn:hover{
-  opacity: 1;
+.login__item-button{
+  margin-top: 50px;
+}
+
+.login__item-input:hover, .login__item-input:focus{
+  border: 1px solid rgb(64, 224, 208);
+}
+
+.email__icon {
+  position: absolute;
+  left: 10px;
+  bottom: 32px;
+}
+
+.password__icon{
+  position: absolute;
+  left: 10px;
+  bottom: 32px;
+}
+
+.login__item a{
+  position: absolute;
+  color: cornflowerblue;
+  padding-left: 15px;
+  top: 70px;
+  text-decoration: none;
+}
+
+.login__item a:hover{
+  color: #ff3399;
+}
+
+.login__item-button{
+  height: 40px;
+  box-shadow: 0 0 4px #808080;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  color: #808080;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all .2s linear;
+}
+
+.login__item-button:hover{
   background-color: rgb(64, 224, 208);
   color: #ffffff;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.social__button{
+  display: flex;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  width: 70%;
+  height: 40px;
+  box-shadow: 0 0 4px #808080;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  padding: 0 15px;
+  transition: all .2s linear;
 }
+
+.social__button:last-child{
+  margin-bottom: 0px;
+}
+
+.social__button:hover{
+  background-color: rgb(64, 224, 208);
+}
+
+.social__button:hover .social__button-icon, .social__button:hover .social__button-title{
+  color: #ffffff;
+}
+
+.social__button:last-child{
+  margin-bottom: 0;
+}
+
+.social__button-icon{
+  width: 25%;
+  font-size: 30px;
+  color: #808080;
+  transition: color .2s linear;
+}
+
+.social__button-title{
+  width: 75%;
+  text-align: center;
+  color: #808080;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color .2s linear;
+}
+
+.social__option{
+  display: flex;
+  flex-direction: column;
+}
+
+.social__option span a, .social__option a{
+  text-decoration: none;
+  color: cornflowerblue;
+  transition: color .2s linear;
+}
+
+.social__option span a:hover, .social__option a:hover{
+  color: #ff3399;
+}
+
+.social__option span{
+  margin-bottom: 10px;
+}
+
+/*-----------End Login-----------*/
+
+
 

@@ -1,4 +1,7 @@
 import React from "react";
+import { FaFacebookSquare, FaApple, FaGoogle } from "react-icons/fa";
+import { AiOutlineUser} from "react-icons/ai";
+import { RiLockPasswordLine } from "react-icons/ri";
 
 const Login = () => {
     return <React.Fragment>
@@ -11,30 +14,56 @@ const Login = () => {
                     <span className="content__header-title">LOGIN</span>
                 </div>
                 <div className="content__body">
-
-                    <div className="h2"><h2>Welcome back</h2>
-                    </div>
+                    <span className="login__title">
+                        Welcome back
+                    </span>
                     <div className="login__container">
                         <form>
                             <div className="login__row">
-                                <div className="login__col">
-                                    <input type="text" name="email" placeholder="name@gmail.com"/>
-                                    <input type="password" name="password" placeholder="Enter your password..."/>
-                                    <span className="psw"><a href="#">Forgot password?</a></span>
-                                    <input type="submit" value="Login"/>
+                                <div className="login__left">
+                                    <div className="login__item">
+                                        <span className="login__item-title">Email</span>
+                                        <input className="login__item-input" type="email" name="email" placeholder="name@email.com"/>
+                                        <AiOutlineUser className="email__icon"/>
+                                    </div>
+                                    <div className="login__item">
+                                        <span className="login__item-title">Password</span>
+                                        <input className="login__item-input password" type="password" name="password" placeholder="Enter your password"/>
+                                        <RiLockPasswordLine className="password__icon"/>
+                                        <a href="">Forgot password?</a>
+                                    </div>
+                                    <div className="login__item">
+                                        <button className="login__item-button" type="submit" value="Login">Login</button>
+                                    </div>
                                 </div>
 
-                                <div className="vl">
-                                    <span className="inner">or</span>
+                                <div className="login__inner">
+                                    <div className="login__inner-title">
+                                        <span >or</span>
+                                    </div>
                                 </div>
 
-                                <div className="login__col">
-                                    <a href="#" className="fb btn">Continue with Facebook</a>
-                                    <a href="#" className="apple btn">Continue with Apple</a>
-                                    <a href="#" className="google btn">Continue with Google</a>
+                                <div className="login__right">
+                                    <button className="social__button" onClick="">
+                                        <FaFacebookSquare className="social__button-icon"/>
+                                        <span className="social__button-title">Continue with Facebook</span>
+                                    </button>
+                                    <button className="social__button"  onClick="">
+                                            <FaApple className="social__button-icon"/>
+                                            <span className="social__button-title">Continue with Apple</span>
+                                    </button>
+                                    <button className="social__button" onClick="">
+                                        <FaGoogle className="social__button-icon"/>
+                                        <span className="social__button-title">Continue with Google</span>
+                                    </button>
+                                    <div className="social__option">
+                                        <span>New to Coursera?  <a href="">Sign up</a></span>
+                                        <a href="">Log in with your organization</a>
+                                    </div>
                                 </div>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
