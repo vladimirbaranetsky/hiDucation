@@ -1,6 +1,10 @@
 import React from "react";
+import {AiOutlineGithub, AiFillTwitterCircle, AiFillLinkedin, AiOutlineWhatsApp} from 'react-icons/ai'
+import {FaFacebook, FaInstagram, FaYoutube} from 'react-icons/fa';
 
 const Contact = () => {
+
+
     return <React.Fragment>
         <div className="content">
             <div className="container">
@@ -24,8 +28,42 @@ const Contact = () => {
                         <button className="nav__link--btn btn__send" type="submit">Send</button>
                     </div>
                 </div>
+                <div className="content__footer">
+                    <div className="footer__inner">
+                        <div className="footer__credits">
+                            <div className="footer_copyright">
+                                © 2021 hiMath Gaming
+                            </div>
+                            <div className="footer__social">
+                                <a className="footer__link" href=" " >
+                                    < AiOutlineGithub className="footer__icon"/>
+                                </a>
+                                <a className="footer__link" href=" ">
+                                    <FaFacebook className="footer__icon"/>
+                                </a>
+                                <a className="footer__link" href=" ">
+                                    <FaInstagram className="footer__icon"/>
+                                </a>
+                                <a className="footer__link" href=" ">
+                                    <AiFillTwitterCircle className="footer__icon"/>
+                                </a>
+                                <a className="footer__link" href=" ">
+                                    <AiFillLinkedin className="footer__icon"/>
+                                </a>
+                                <a className="footer__link" href=" ">
+                                    <AiOutlineWhatsApp className="footer__icon"/>
+                                </a>
+                                <a className="footer__link" href=" ">
+                                    <FaYoutube className="footer__icon"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+
 
     </React.Fragment>
 }
