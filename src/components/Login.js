@@ -23,14 +23,14 @@ const Login = () => {
                                 <div className="login__left">
                                     <div className="login__item">
                                         <span className="login__item-title">Email</span>
-                                        <input className="login__item-input" type="email" name="email" placeholder="name@email.com"/>
+                                        <input className="login__item-input email" type="email" name="email" placeholder="name@email.com"/>
                                         <AiOutlineUser className="email__icon"/>
                                     </div>
                                     <div className="login__item">
                                         <span className="login__item-title">Password</span>
                                         <input className="login__item-input password" type="password" name="password" placeholder="Enter your password"/>
                                         <RiLockPasswordLine className="password__icon"/>
-                                        <a href="">Forgot password?</a>
+                                        <a href=" ">Forgot password?</a>
                                     </div>
                                     <div className="login__item">
                                         <button className="login__item-button" type="submit" value="Login">Login</button>
@@ -44,21 +44,21 @@ const Login = () => {
                                 </div>
 
                                 <div className="login__right">
-                                    <button className="social__button" onClick="">
-                                        <FaFacebookSquare className="social__button-icon"/>
-                                        <span className="social__button-title">Continue with Facebook</span>
+                                    <button className="login__social-button" onClick="">
+                                        <FaFacebookSquare className="social__icon"/>
+                                        <span className="social__title">Continue with Facebook</span>
                                     </button>
-                                    <button className="social__button"  onClick="">
-                                            <FaApple className="social__button-icon"/>
-                                            <span className="social__button-title">Continue with Apple</span>
+                                    <button className="login__social-button"  onClick="">
+                                            <FaApple className="social__icon"/>
+                                            <span className="social__title">Continue with Apple</span>
                                     </button>
-                                    <button className="social__button" onClick="">
-                                        <FaGoogle className="social__button-icon"/>
-                                        <span className="social__button-title">Continue with Google</span>
+                                    <button className="login__social-button" onClick="">
+                                        <FaGoogle className="social__icon"/>
+                                        <span className="social__title">Continue with Google</span>
                                     </button>
                                     <div className="social__option">
-                                        <span>New to Coursera?  <a href="">Sign up</a></span>
-                                        <a href="">Log in with your organization</a>
+                                        <span>New to Coursera?  <a href=" ">Sign up</a></span>
+                                        <a href=" ">Log in with your organization</a>
                                     </div>
                                 </div>
                             </div>
