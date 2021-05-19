@@ -6,10 +6,6 @@ const Products = () => {
         {product: "Indefinite Integral Basics"},
         {product: "Integration by parts"},
         {product: "Reverse Chain rule"},
-        // {product: "product5"},
-        // {product: "product6"},
-        // {product: "product7"},
-        // {product: "product8"}
     ];
     console.log(products.length)
     const itemProduct = products.map(product => {
