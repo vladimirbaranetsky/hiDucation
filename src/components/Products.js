@@ -37,13 +37,13 @@ const Products = () => {
                     </div>
                     <span className="content__header-title">hi Math Gaming Products</span>
                 </div>
-                <div className="menu__products">
-                    <button className="nav__link menu__link" value="all" type="submit">All</button>
-                    <button className="nav__link menu__link" value="math" type="submit">Math</button>
-                    <button className="nav__link menu__link" value="programming" type="submit">Programming</button>
-                    <button className="nav__link menu__link" value="physics" type="submit">Physics</button>
-                </div>
                 <div className="content__body">
+                    <div className="menu__products">
+                        <button className="nav__link menu__link" value="all" type="submit">All</button>
+                        <button className="nav__link menu__link" value="math" type="submit">Math</button>
+                        <button className="nav__link menu__link" value="programming" type="submit">Programming</button>
+                        <button className="nav__link menu__link" value="physics" type="submit">Physics</button>
+                    </div>
                     <div className="product__items">
                             {itemProduct}
                     </div>

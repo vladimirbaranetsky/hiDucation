@@ -5,11 +5,11 @@ const Home = () => {
     return <React.Fragment>
         <div className="content">
             <div className="container">
-                <div className="content__header-home">
-                    <span className="home__title">hiMath Gaming</span>
-                    <span className="home__subtitle">Revolutionize Learning</span>
-                </div>
                 <div className="content__body">
+                    <div className="home__title-wrapper">
+                        <span className="home__title">hiMath Gaming</span>
+                        <span className="home__subtitle">Revolutionize Learning</span>
+                    </div>
                     <Carousel fade>
                         <Carousel.Item interval={3000}>
                             <p2 className="d-block w-100">The mission - hiMath Gaming is a new project aimed to improve the higher education system, both online and offline by offering a full coverage of the most popular subjects in a form of mobile and web applications that allow students to learn serious materials in an offline guided way with gaming elements. The student can choose what to learn, when and at the best possible pace for him/her at any place using only hiMath platform, no papers or videos required, just a smart phone.</p2>
