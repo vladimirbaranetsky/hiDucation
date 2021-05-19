@@ -1,6 +1,6 @@
 import React from 'react';
-import photo from '../images/avatar_photo.jpg';
 import photo3 from '../images/avatar_photo3.jpg';
+
 const Team = () => {
     const employees = [
         {name: "Dr.Igor Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo: ''},
