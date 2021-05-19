@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
 
-
 const Home = () => {
     return <React.Fragment>
         <div className="content">
