@@ -6,7 +6,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   color:#808080;
-  background-image: url("../src/images/background.jpg");
+  background: url("../src/images/background.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -33,25 +33,26 @@ select,
 textarea{
   outline: 0 !important;
   border: none;
-
 }
 
-a:hover {
+a, a:hover{
+  text-decoration: none;
   color:#808080;
- }
+}
 
 .container{
   margin: 0 auto;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
 /*-----------Header-----------*/
 header{
+  width: 100%;
+  height: 6rem;
   position: fixed;
-  min-width: 100vw;
-  padding: 8px 0;
-  /*background-color: rgb(246, 246, 246);*/
+  padding: 0.53rem 0;
   z-index: 1;
 }
 
@@ -60,70 +61,27 @@ header{
   justify-content: space-between;
   align-items: center;
 }
-/*-----------End Header-----------*/
 
-/*-----------Content header-----------*/
-.content{
-  display: flex;
-  flex-direction: column;
-}
-
-.content__header{
-  display: flex;
-  align-items: center;
-  margin-top: 8rem;
-  text-align: left;
-  border-bottom: 1px solid #ff3399;
-}
-
-.content__header-strip div{
-  width: 0.3rem;
-  height: 2.5rem;
-  background-color: rgb(64, 224, 208);
-}
-
-.content__header-title{
-  font-size: 2.33rem;
-  font-weight: bold;
-  line-height: 4.66rem;
-  margin-left: 0.26rem;
-}
-/*-----------End content header-----------*/
-
-/*-----------Content body-----------*/
-.content__body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 67vh;
-}
-/*-----------End content body-----------*/
-
-/*-----------Navigation-----------*/
-.company__content{
-  display: inline-block;
-}
-
-.company__name {
+.header__name {
   display: flex;
   flex-direction: column;
   line-height: 2.5rem;
   font-weight: 900;
-  font-size: 38px;
+  font-size: 2.53rem;
 }
 
-.company__name-title{
+.header__name-title{
   color: rgb(64, 224, 208);
   margin-top: -0.2rem;
-  font-size: 34px;
+  font-size: 2.26rem;
   font-weight: 900;
 }
+/*-----------End Header-----------*/
 
-
-.nav {
+/*-----------Navigation-----------*/
+nav {
   display: flex;
   align-items: center;
-  height: 100%;
 }
 .nav__link {
   margin-left: 2rem;
@@ -134,6 +92,11 @@ header{
   color:#808080;
   transition: all .2s linear;
 }
+
+/*.nav__link-logo{*/
+/*  text-transform: none;*/
+/*  color: #808080;*/
+/*}*/
 
 .nav__link:first-child{
   margin-left: 0;
@@ -160,11 +123,11 @@ header{
 }
 
 .nav__link--btn {
-  min-width: 100px;
+  min-width: 6.66rem;
   border: 1px solid #808080;
-  padding: 8px 15px;
+  padding: 0.53rem 1rem;
   transition: all .2s linear;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
   text-align: center;
 }
@@ -182,7 +145,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 12rem;
+  margin: 5.33rem 0 2.66rem;
 }
 
 .home__title{
@@ -193,7 +156,7 @@ header{
 
 .home__subtitle{
   font-family: 'Montserrat', sans-serif;
-  font-size: 52px;
+  font-size: 3.46rem;
   font-style: italic;
   font-weight: 400;
   margin-top: -15px;
@@ -201,16 +164,15 @@ header{
 
 .carousel {
   position: relative;
-  width: 950px;
-  padding-top: 50px;
+  padding: 2.66rem 0;
 }
 
 .d-block.w-100{
   text-align: justify;
   /*color: #40E0D0;*/
   color: #808080;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 .sr-only{
@@ -227,19 +189,58 @@ header{
 }
 /*-----------End Home-----------*/
 
+/*-----------Content header-----------*/
+.content{
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+
+.content__header{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  border-bottom: 1px solid #ff3399;
+  height: 10vh;
+}
+
+.content__header-strip div{
+  width: 0.3rem;
+  height: 2.5rem;
+  background-color: rgb(64, 224, 208);
+}
+
+.content__header-title{
+  font-size: 2.33rem;
+  font-weight: bold;
+  line-height: 4.66rem;
+  margin-left: 0.26rem;
+}
+/*-----------End content header-----------*/
+
+/*-----------Content body-----------*/
+.content__body{
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  min-height: 72vh;
+}
+/*-----------End content body-----------*/
+
 /*-----------Products-----------*/
 .menu__products{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 0 25px;
+  padding: 2.66rem 0 1.66rem;
 }
 
 .nav__link.menu__link{
   background: none;
-  font-weight: 200;
+  font-weight: 300;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 0.66rem;
 }
 
 .nav__link.menu__link:after{
@@ -250,13 +251,13 @@ header{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 .product__item{
-  width: 255px;
-  margin: 15px 15px;
+  width: 17rem;
+  margin: 1rem;
 }
 
 .product__item-wrapper{
@@ -269,7 +270,7 @@ header{
   background-color: #fff;
   background-clip: border-box;
   box-shadow: 0 0 4px #808080;
-  border-radius: 10px;
+  border-radius: 0.66rem;
   transition: box-shadow .2s linear;
 }
 
@@ -279,20 +280,20 @@ header{
 
 .product__photo{
   background-color: rgb(0, 204, 204);
-  height: 230px;
+  height: 15.33rem;
 }
 
 .product__content{
   display: flex;
   flex-direction:column;
-  padding: 15px;
+  padding: 1rem;
 }
 
 .product__info{
   display: flex;
   flex-direction: column;
-  height: 135px;
-  padding-bottom: 15px;
+  height: 9rem;
+  padding-bottom: 1rem;
 }
 
 .product__info div{
@@ -300,14 +301,14 @@ header{
   padding-bottom: 3px;
 }
 .product__info-title{
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .product__info-subtitle{
   overflow-x: auto;
-  font-size: 13px;
+  font-size: 0.86rem;
   padding-top: 5px;
 }
 
@@ -315,7 +316,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
 .btn__purchases{
@@ -331,141 +332,142 @@ header{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 30px -15px 0 -15px;
+  margin: 2.66rem -1rem 0 -1rem;
 }
 .team__item{
-  width: 255px;
-  margin: 15px 15px;
+  width: 17rem;
+  margin: 1rem 1rem;
 }
 
 .team__item-wrapper{
   overflow: hidden;
   position: relative;
-  height: 450px;
+  height: 30rem;
   box-shadow: 0 0 4px #808080;
-  border-radius: 10px;
+  border-radius: 0.66rem;
   background-color: #ffffff;
 }
 
 .team__content{
   display: flex;
   flex-direction: column;
+  position: sticky;
   align-items: center;
 }
 
 .team__background{
   position: absolute;
   border-radius: 50%;
-  width: 350px;
-  height: 350px;
+  width: 23.33rem;
+  height: 23.33rem;
   background-color: rgb(0, 204, 204);
 }
 
 .team__background.oval__1{
   bottom: 60%;
-  right: -50px;
+  right: -3.33rem;
 }
 
 .team__background.oval__2{
   bottom: 70%;
-  right: -20px;
+  right: -1.33rem;
   background-color: rgb(64, 224, 208);
 }
 
 .team__background.oval__2-1{
   bottom: 78%;
-  right: -124px;
+  right: -8.26rem;
   background-color: rgb(51, 255, 255);
   opacity: 0.5;
 }
 
 .team__background.oval__3{
   bottom: 73%;
-  right: -100px;
-  width: 350px;
+  right: -6.66rem;
+  width: 23.33rem;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-1{
   bottom: 75%;
-  right: -98px;
+  right: -6.53rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-2{
   bottom: 77%;
-  right: -96px;
+  right: -6.4rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-3{
   bottom: 79%;
-  right: -94px;
+  right: -6.26rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-4{
   bottom: 81%;
-  right: -91px;
+  right: -6.06rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-5{
   bottom: 83%;
-  right: -87px;
+  right: -5.8rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-6{
   bottom: 79%;
-  right: 67px;
+  right: 4.46rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-7{
   bottom: 80%;
-  right: 62px;
+  right: 4.13rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-8{
   bottom: 81%;
-  right: 57px;
+  right: 3.8rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-9{
   bottom: 82%;
-  right: 52px;
+  right: 3.46rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-10{
   bottom: 83%;
-  right: 47px;
+  right: 3.13rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-11{
   bottom: 84%;
-  right: 42px;
+  right: 2.8rem;
   background: none;
   border: 1px solid #66ffff;
 }
 
 .team__background.oval__3-12{
   bottom: 85%;
-  right: 37px;
+  right: 2.46rem;
   background: none;
   border: 1px solid #66ffff;
 }
@@ -474,9 +476,9 @@ header{
   position: absolute;
   border-radius: 50%;
   background-color: white;
-  width: 160px;
-  height: 160px;
-  left: 50px;
+  width: 10.66rem;
+  height: 10.66rem;
+  left: 3.33rem;
   bottom: 47%;
 }
 .team__photo{
@@ -484,8 +486,8 @@ header{
   overflow: hidden;
   border-radius: 50%;
   border: 4px solid #00CCCC;
-  width: 150px;
-  height: 150px;
+  width: 10rem;
+  height: 10rem;
   bottom: 3%;
   left: 5px;
   background-color: white;
@@ -493,20 +495,20 @@ header{
 
 .team__photo img{
   position: absolute;
-  width: 144px;
+  width: 9.6rem;
   right: 2px;
 }
 .team__info{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  padding-top: 240px;
+  width: 13.33rem;
+  padding-top: 16rem;
   border-bottom: 1px solid #808080;
 }
 
 .team__info-title{
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -519,32 +521,37 @@ header{
 
 .team__info-description{
   overflow-y: auto;
-  margin: 10px 27px;
-  height: 130px;
-  font-size: 13px;
+  margin: 0.66rem 1.8rem;
+  height: 8.66rem;
+  font-size: 0.86rem;
   text-align: justify;
 }
 /*-----------End Team-----------*/
 
 /*-----------Contact-----------*/
+.contact__wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .contact__title{
-  margin-top: 30px;
-  font-size: 35px;
+  margin-top: 2.66rem;
+  font-size: 2.33rem;
   font-weight: 400;
 }
 
 .contact__subtitle{
   opacity: 0.8;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 .contact__message{
-  width: 700px;
-  height: 130px;
+  width: 46.66rem;
+  height: 10.66rem;
   box-shadow: 0 0 4px #808080;
-  border-radius: 30px;
-  margin-top: 30px;
-  padding: 15px;
+  border-radius: 2rem;
+  margin-top: 3.33rem;
+  padding: 1rem;
   resize: none;
   font-size: 1rem;
   color: #808080;
@@ -553,6 +560,7 @@ header{
 textarea {
   font-family: 'Poppins', sans-serif;
   border: 1px solid #ffffff;
+  transition: all .2s linear;
 }
 
 ::placeholder{
@@ -563,31 +571,33 @@ textarea {
 
 .contact__buttons{
   display: flex;
-  width: 700px;
-  height: 40px;
-  margin-top: 15px;
+  width: 46.66rem;
+  height: 2.66rem;
+  margin-top: 2rem;
 }
 
 .input__email{
   box-shadow: 0 0 4px #808080;
   border: 1px solid #ffffff;
-  border-radius: 30px;
-  width: 330px;
-  margin-right: 15px;
-  font-size: 15px;
+  border-radius: 2rem;
+  width: 22rem;
+  margin-right: 1rem;
+  font-size: 1rem;
   color: #808080;
-  padding: 0 15px;
+  padding: 0 1rem;
+  transition: all .2s linear;
 }
 
 .input__name{
   box-shadow: 0 0 4px #808080;
   border: 1px solid #ffffff;
-  border-radius: 30px;
-  width: 240px;
-  margin-right: 15px;
-  font-size: 15px;
-  color: #808080;;
-  padding: 0 15px;
+  border-radius: 2rem;
+  width: 16rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  color: #808080;
+  padding: 0 1rem;
+  transition: all .2s linear;
 }
 
 .input__email:hover, .input__email:focus,
@@ -597,7 +607,7 @@ textarea {
 }
 
 .btn__send {
-  width: 100px;
+  width: 6.66rem;
   box-shadow: 0 0 4px #808080;
   background-color: #ffffff;
   font-weight: 600;
@@ -606,7 +616,7 @@ textarea {
 }
 
 .content__footer{
-  height: 50px;
+  height: 3.53rem;
   width: 100%;
   padding: 1rem 0;
 }
@@ -637,8 +647,8 @@ textarea {
   color: #808080;
   margin-right: 1.2rem;
   transition: all .2s linear;
-  width: 24px;
-  height: 23px;
+  width: 1.6rem;
+  height: 1.53rem;
 }
 
 .footer__icon:hover{
@@ -649,14 +659,14 @@ textarea {
 
 /*-----------Login-----------*/
 .login__title{
-  margin-top: 30px;
-  font-size: 35px;
+  margin-top: 2.66rem;
+  font-size: 2.33rem;
   font-weight: 400;
 }
 
 .login__container{
   width: 100%;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .login__row{
@@ -669,7 +679,7 @@ textarea {
 .login__left, .login__right {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: 20rem;
   width: 80%;
   justify-content: center;
   align-items: center;
@@ -680,13 +690,13 @@ textarea {
   position: absolute;
   flex-direction: column;
   justify-content: center;
-  height: 300px;
+  height: 20rem;
 }
 
 .login__inner-title{
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 2.66rem;
+  height: 2.66rem;
   border-radius: 50%;
   border: 1px solid #808080;
   opacity: 0.5;
@@ -717,13 +727,13 @@ textarea {
 }
 
 .login__item-input{
-  height: 40px;
+  height: 2.66rem;
   box-shadow: 0 0 4px #808080;
   border: 1px solid #ffffff;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
-  margin-bottom: 20px;
-  padding: 0 15px 0 40px;
+  margin-bottom: 1.33rem;
+  padding: 0 1rem 0 2.66rem;
   transition: all .2s linear;
 }
 
@@ -733,26 +743,26 @@ textarea {
 
 .login__item-button{
   background: none;
-  margin-top: 50px;
+  margin-top: 3.33rem;
 }
 
 .email__icon {
   position: absolute;
-  left: 10px;
-  bottom: 32px;
+  left: 0.66rem;
+  bottom: 2.13rem;
 }
 
 .password__icon{
   position: absolute;
-  left: 10px;
-  bottom: 32px;
+  left: 0.66rem;
+  bottom: 2.13rem;
 }
 
 .login__item a{
   position: absolute;
   color: cornflowerblue;
-  padding-left: 15px;
-  top: 70px;
+  padding-left: 1rem;
+  top: 4.66rem;
   text-decoration: none;
 }
 
@@ -761,12 +771,12 @@ textarea {
 }
 
 .login__item-button{
-  height: 40px;
+  height: 2.66rem;
   box-shadow: 0 0 4px #808080;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
-  margin-bottom: 20px;
-  padding: 0 15px;
+  margin-bottom: 1.33rem;
+  padding: 0 1rem;
   color: #808080;
   font-size: 1rem;
   font-weight: 600;
@@ -783,14 +793,14 @@ textarea {
   background: none;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 1.33rem;
   width: 70%;
-  height: 40px;
+  height: 2.66rem;
   box-shadow: 0 0 4px #808080;
-  border-radius: 30px;
+  border-radius: 2rem;
   cursor: pointer;
-  margin-bottom: 25px;
-  padding: 0 15px;
+  margin-bottom: 1.66rem;
+  padding: 0 1rem;
   transition: all .2s linear;
 }
 
@@ -812,7 +822,7 @@ textarea {
 
 .social__icon{
   width: 25%;
-  font-size: 30px;
+  font-size: 2rem;
   color: #808080;
   transition: color .2s linear;
 }
@@ -842,7 +852,7 @@ textarea {
 }
 
 .social__option span{
-  margin-bottom: 10px;
+  margin-bottom: 0.66rem;
 }
 /*-----------End Login-----------*/
 
