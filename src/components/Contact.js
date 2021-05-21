@@ -12,7 +12,7 @@ const Contact = () => {
                     <div className="content__header-strip">
                         <div/>
                     </div>
-                    <span className="content__header-title">Contact hiMath Gaming</span>
+                    <span className="content__header-title">Contact</span>
                 </div>
                 <div className="content__body">
                     <span className="contact__title">
@@ -35,25 +35,25 @@ const Contact = () => {
                                 © 2021 hiMath Gaming
                             </div>
                             <div className="footer__social">
-                                <a className="footer__link" href=" " >
+                                <a className="footer__link" href="https://github.com">
                                     < AiOutlineGithub className="footer__icon"/>
                                 </a>
-                                <a className="footer__link" href=" ">
+                                <a className="footer__link" href="https://www.facebook.com">
                                     <FaFacebook className="footer__icon"/>
                                 </a>
-                                <a className="footer__link" href=" ">
+                                <a className="footer__link" href="https://www.instagram.com">
                                     <FaInstagram className="footer__icon"/>
                                 </a>
-                                <a className="footer__link" href=" ">
+                                <a className="footer__link" href="https://twitter.com/">
                                     <AiFillTwitterCircle className="footer__icon"/>
                                 </a>
-                                <a className="footer__link" href=" ">
+                                <a className="footer__link" href="https://linkedin.com">
                                     <AiFillLinkedin className="footer__icon"/>
                                 </a>
-                                <a className="footer__link" href=" ">
+                                <a className="footer__link" href="https://whatsapp.com">
                                     <AiOutlineWhatsApp className="footer__icon"/>
                                 </a>
-                                <a className="footer__link" href=" ">
+                                <a className="footer__link" href="https://www.youtube.com">
                                     <FaYoutube className="footer__icon"/>
                                 </a>
                             </div>

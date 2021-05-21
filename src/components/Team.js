@@ -3,13 +3,13 @@ import photo3 from '../images/avatar_photo3.jpg';
 
 const Team = () => {
     const employees = [
-        {name: "Dr.Igor Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo: ''},
-        {name: "Just.Gabi Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo:''},
-        {name: "Prof.Kevin Manning", position: "Advisor", description: "Bla-bla-bla", photo: ''},
+        {id: 1, name: "Dr.Igor Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo: ''},
+        {id: 2, name: "Just.Gabi Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo:''},
+        {id: 3, name: "Prof.Kevin Manning", position: "Advisor", description: "Bla-bla-bla", photo: ''},
     ];
-
+    let key = Math.floor(Math.random() * 1000) + 1;
     const itemTeam = employees.map(employee => {
-        return <div className="team__item">
+        return <div key={employee.id} className="team__item">
             <div className="team__item-wrapper">
                 <div className="team__content">
                     <div className="team__background oval__1"></div>
@@ -50,7 +50,7 @@ const Team = () => {
                     <div className="content__header-strip">
                         <div/>
                     </div>
-                    <span className="content__header-title">The Team hiMath Gaming</span>
+                    <span className="content__header-title">The Team </span>
                 </div>
                 <div className="content__body">
                     <div className="team__items">

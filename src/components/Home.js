@@ -5,7 +5,6 @@ const Home = () => {
     return <React.Fragment>
         <div className="content">
             <div className="container">
-                <div className="content__body">
                     <div className="home__title-wrapper">
                         <span className="home__title">hiMath Gaming</span>
                         <span className="home__subtitle">Revolutionize Learning</span>
@@ -26,7 +25,7 @@ const Home = () => {
                             </p2>
                         </Carousel.Item>
                     </Carousel>
-                </div>
+
             </div>
         </div>
     </React.Fragment>

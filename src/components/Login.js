@@ -11,7 +11,7 @@ const Login = () => {
                     <div className="content__header-strip">
                         <div/>
                     </div>
-                    <span className="content__header-title">LOGIN</span>
+                    <span className="content__header-title">Login</span>
                 </div>
                 <div className="content__body">
                     <span className="login__title">
@@ -44,15 +44,15 @@ const Login = () => {
                                 </div>
 
                                 <div className="login__right">
-                                    <button className="login__social-button" onClick="">
+                                    <button className="login__social-button" >
                                         <FaFacebookSquare className="social__icon"/>
                                         <span className="social__title">Continue with Facebook</span>
                                     </button>
-                                    <button className="login__social-button"  onClick="">
+                                    <button className="login__social-button" >
                                             <FaApple className="social__icon"/>
                                             <span className="social__title">Continue with Apple</span>
                                     </button>
-                                    <button className="login__social-button" onClick="">
+                                    <button className="login__social-button" >
                                         <FaGoogle className="social__icon"/>
                                         <span className="social__title">Continue with Google</span>
                                     </button>

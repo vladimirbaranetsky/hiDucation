@@ -8,7 +8,7 @@ const About = () => {
                     <div className="content__header-strip">
                         <div/>
                     </div>
-                    <span className="content__header-title">About hiMath Gaming Mission</span>
+                    <span className="content__header-title">About</span>
                 </div>
                 <div className="content__body">
 

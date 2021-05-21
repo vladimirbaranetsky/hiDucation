@@ -35,7 +35,7 @@ const Products = () => {
                     <div className="content__header-strip">
                         <div/>
                     </div>
-                    <span className="content__header-title">hi Math Gaming Products</span>
+                    <span className="content__header-title">Products</span>
                 </div>
                 <div className="content__body">
                     <div className="menu__products">
