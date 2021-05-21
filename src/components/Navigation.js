@@ -14,8 +14,6 @@ const Navigation = () => {
         return <NavLink key={link.path} className="nav__link" to={link.path}>{link.label}</NavLink>
     })
     return <React.Fragment>
-<<<<<<< HEAD
-=======
         <NavLink to={PATH_HOME}>
             <div className="company__content">
                 <div className="company__name">
@@ -24,7 +22,6 @@ const Navigation = () => {
                 </div>
             </div>
         </NavLink>
->>>>>>> origin/main
         <nav className="nav">
             {itemNavigation}
         </nav>
