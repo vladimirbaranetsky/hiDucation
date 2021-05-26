@@ -1,0 +1,27 @@
+.carousel {
+    position: relative;
+    padding: 2.66rem 0;
+}
+
+.d-block.w-100{
+    text-align: justify;
+    /*color: #40E0D0;*/
+    color: #808080;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.sr-only{
+    display: none;
+}
+
+.carousel-control-prev-icon {
+    /*background-image: url('./images/left-arrow.svg');*/
+    background-image: none;
+}
+.carousel-control-next-icon {
+    /*background-image: url('./images/right-arrow.svg');*/
+    background-image: none;
+    
+}
+

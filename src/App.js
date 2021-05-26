@@ -1,65 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
-import {
-    PATH_ABOUT,
-    PATH_CONTACT,
-    PATH_DASHBOARD,
-    PATH_HOME,
-    PATH_LOGIN,
-    PATH_LOGOUT,
-    PATH_PRODUCTS,
-    PATH_TEAM
-} from './config/config_nav';
-import Home from './components/Home';
-import Products from './components/Products';
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Logout from "./components/Logout";
-import Login from "./components/Login";
-import Header from "./components/Header";
-import Team from "./components/Team";
-import Dashboard from "./components/Dashboard";
+import { BrowserRouter} from 'react-router-dom';
+import Shell from "./components/shell/Shell";
+import styled, {ThemeProvider} from "styled-components";
+import { lightTheme, darkTheme, GlobalStyles } from "./components/themes/Themes"
+
+const StyledApp = styled.div``;
 
 function App() {
+    const [theme, setTheme] = useState("light");
+    const themeToggle = () => {
+        theme === "light" ? setTheme("dark") : setTheme("light");
+    }
+
     return <BrowserRouter>
-        <Header/>
-        <Redirect to={PATH_HOME} />
-        <Switch>
-            <Route path={PATH_HOME} exact render={() => {
-                return <Home/>;
-            }}>
-            </Route>
-            <Route path={PATH_PRODUCTS} exact render={() => {
-                return <Products/>;
-            }}>
-            </Route>
-            <Route path={PATH_ABOUT} exact render={() => {
-                return <About/>;
-            }}>
-            </Route>
-            <Route path={PATH_TEAM} exact render={() => {
-                return <Team/>;
-            }}>
-            </Route>
-            <Route path={PATH_CONTACT} exact render={() => {
-                return <Contact/>;
-            }}>
-            </Route>
-            <Route path={PATH_DASHBOARD} exact render={() => {
-                return <Dashboard/>;
-            }}>
-            </Route>
-            <Route path={PATH_LOGIN} exact render={() => {
-                return <Login/>;
-            }}>
-            </Route>
-            <Route path={PATH_LOGOUT} exact render={() => {
-                return <Logout/>;
-            }}>
-            </Route>
-        </Switch>
-  </BrowserRouter>
+        <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+            <GlobalStyles/>
+            <StyledApp>
+                <Shell theme={theme} themeToggle={themeToggle}/>
+            </StyledApp>
+        </ThemeProvider>
+    </BrowserRouter>
+
 }
 
 export default App;

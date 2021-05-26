@@ -1,0 +1,126 @@
+.contact{
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+
+.contact__header{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  border-bottom: 1px solid #ff3399;
+  margin-top: 2rem;
+  height: 6vh;
+  z-index: 1;
+}
+
+.contact__header_strip div{
+  width: 0.2rem;
+  height: 2.5rem;
+  background-color: rgb(64, 224, 208);
+}
+
+.contact__header_title{
+  font-size: 2.33rem;
+  font-weight: 300;
+  line-height: 4.66rem;
+  margin-left: 0.26rem;
+}
+
+.contact__body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.contact__title{
+  margin-top: 2.66rem;
+  font-size: 2.33rem;
+  font-weight: 400;
+}
+
+.contact__subtitle{
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+.contact__message{
+  width: 46.66rem;
+  height: 10.66rem;
+  box-shadow: 0 0 4px #808080;
+  border-radius: 2rem;
+  margin-top: 3.33rem;
+  padding: 1rem;
+  resize: none;
+  font-size: 1rem;
+  color: #808080;
+}
+
+textarea {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ffffff;
+  transition: all .2s linear;
+}
+
+::placeholder{
+  color: #808080;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.contact__buttons{
+  display: flex;
+  width: 46.66rem;
+  height: 2.66rem;
+  margin-top: 2rem;
+}
+
+.contact__input_email{
+  box-shadow: 0 0 4px #808080;
+  border: 1px solid #ffffff;
+  border-radius: 2rem;
+  width: 22rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  color: #808080;
+  padding: 0 1rem;
+  transition: all .2s linear;
+}
+
+.contact__input_name{
+  box-shadow: 0 0 4px #808080;
+  border: 1px solid #ffffff;
+  border-radius: 2rem;
+  width: 16rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  color: #808080;
+  padding: 0 1rem;
+  transition: all .2s linear;
+}
+
+.contact__input_email:hover, .contact__input_email:focus,
+.contact__input_name:hover, .contact__input_name:focus,
+     textarea:hover, textarea:focus{
+  border: 1px solid rgb(64, 224, 208);
+}
+
+.contact__button_send {
+  box-shadow: 0 0 4px #808080;
+  min-width: 6.66rem;
+  background-color: #ffffff;
+  color: #808080;
+  padding: 0.53rem 1rem;
+  transition: all .2s linear;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.contact__button_send:hover, .contact__button_send.active {
+  background-color: #40e0d0;
+  border-color: #40e0d0;
+  color: #ffffff;
+}

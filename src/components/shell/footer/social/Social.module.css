@@ -1,0 +1,27 @@
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  padding-left: 0.76rem;
+}
+
+.social__link_icon{
+  color: #808080;
+  margin-right: 1.2rem;
+  transition: all .2s linear;
+  width: 1.6rem;
+  height: 1.53rem;
+}
+
+.social__link_icon:hover{
+  color: #ff3399;
+  transform: translateY(-3px);
+}
+
+

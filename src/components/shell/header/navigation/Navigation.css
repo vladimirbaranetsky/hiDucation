@@ -1,0 +1,55 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav__link {
+  margin-left: 2rem;
+  position: relative; /* для полоски под link */
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color:#808080;
+  text-transform: lowercase;
+  transition: all .2s linear;
+}
+
+.nav__link:first-child{
+  margin-left: 0;
+}
+
+.nav__link:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #40e0d0;
+  bottom: -0.33rem;
+  left: 0;
+  z-index: 1;
+  transition: all .2s ease;
+}
+
+.nav__link:hover::after, .nav__link.active::after {
+  width: 100%;
+}
+
+  .nav__link_btn {
+  margin-left: 2rem;
+  min-width: 6.66rem;
+  border: 1px solid #808080;
+  padding: 0.53rem 1rem;
+  transition: all .2s linear;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav__link_btn:hover, .nav__link_btn.active {
+  background-color: #40e0d0;
+  box-shadow: 0 0 4px #808080;
+  border-color: #40e0d0;
+  color: #ffffff;
+}
+

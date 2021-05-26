@@ -1,0 +1,10 @@
+.video{
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        overflow: hidden;
+        z-index: 0;
+        opacity: 0.3;
+}
+

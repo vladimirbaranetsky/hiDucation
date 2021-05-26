@@ -1,0 +1,28 @@
+.registration{
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+}
+
+.registration__header{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border-bottom: 1px solid #ff3399;
+    margin-top: 2rem;
+    height: 6vh;
+    z-index: 1;
+}
+
+.registration__header_strip div{
+    width: 0.2rem;
+    height: 2.5rem;
+    background-color: rgb(64, 224, 208);
+}
+
+.registration__header_title{
+    font-size: 2.33rem;
+    font-weight: 300;
+    line-height: 4.66rem;
+    margin-left: 0.26rem;
+}

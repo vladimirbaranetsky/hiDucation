@@ -1,0 +1,45 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+}
+
+.about__header{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border-bottom: 1px solid #ff3399;
+    margin-top: 2rem;
+    height: 6vh;
+    z-index: 1;
+}
+
+.about__header_strip div{
+    width: 0.2rem;
+    height: 2.5rem;
+    background-color: rgb(64, 224, 208);
+}
+
+.about__header_title{
+    font-size: 2.33rem;
+    font-weight: 300;
+    line-height: 4.66rem;
+    margin-left: 0.26rem;
+}
+
+.about__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+.about__title{
+    margin-top: 2.66rem;
+    font-size: 2.33rem;
+    font-weight: 400;
+}
+
+.about__subtitle{
+    opacity: 0.8;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,22 @@
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.footer{
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 8%;
+    padding: 0.3rem 0;
+}
