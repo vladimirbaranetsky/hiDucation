@@ -1,8 +1,7 @@
 import React from "react";
 import Navigation from "./navigation/Navigation";
 import Logo from "./logo/Logo";
-import style from './Header.module.css'
-import ButtonToggleThemes from "../../buttonToggleThemes/ButtonToggleThemes";
+import style from './Header.module.css';
 
 const Header = (props) => {
     return <React.Fragment>

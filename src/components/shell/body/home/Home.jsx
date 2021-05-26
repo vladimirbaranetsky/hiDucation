@@ -1,8 +1,6 @@
 import React from "react";
 import style from './Home.module.css';
 import Carousel from "./carousel/Carousel";
-import Background from "../../background/Background";
-
 
 const Home = () => {
     return <React.Fragment>

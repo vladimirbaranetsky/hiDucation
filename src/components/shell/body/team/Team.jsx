@@ -8,7 +8,7 @@ const Team = () => {
         {id: 2, name: "Just.Gabi Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo:''},
         {id: 3, name: "Prof.Kevin Manning", position: "Advisor", description: "Bla-bla-bla", photo: ''}
     ];
-    let key = Math.floor(Math.random() * 1000) + 1;
+
     const itemTeam = employees.map(employee => {
         return <div key={employee.id} className={style.team__item}>
             <div className={style.team__item_wrapper}>
