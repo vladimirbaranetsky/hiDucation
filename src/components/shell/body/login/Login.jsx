@@ -26,12 +26,12 @@ const Login = () => {
                             <div className={style.login__left}>
                                 <div className={style.login__item}>
                                     <span className={style.login__item_title}>Email</span>
-                                    <input className={style.login__item_input} type="email" name="email" placeholder="name@email.com"/>
+                                    <input required className={style.login__item_input} type="email" name="email" placeholder="name@email.com"/>
                                     <AiOutlineUser className={style.login__item_input_icon}/>
                                 </div>
                                 <div className={style.login__item}>
                                     <span className={style.login__item_title}>Password</span>
-                                    <input className={style.login__item_input} type="password" name="password" placeholder="Enter your password..."/>
+                                    <input required className={style.login__item_input} type="password" name="password" placeholder="Enter your password..."/>
                                     <RiLockPasswordLine className={style.login__item_input_icon}/>
                                     <a href=" ">Forgot password?</a>
                                 </div>

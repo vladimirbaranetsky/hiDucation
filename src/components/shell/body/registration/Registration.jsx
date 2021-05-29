@@ -18,30 +18,30 @@ const Registration = () => {
                         <div className={style.registration__left}>
                             <div className={style.registration__item}>
                                 <span className={style.registration__item_title}>First Name</span>
-                                <input className={style.registration__item_input} type="text" name="firstName"
+                                <input required className={style.registration__item_input} type="text" name="firstName"
                                     placeholder='Enter your first name...' />
                             </div>
                             <div className={style.registration__item}>
                                 <span className={style.registration__item_title}>Last Name</span>
-                                <input className={style.registration__item_input} type="text" name="lastName"
+                                <input required className={style.registration__item_input} type="text" name="lastName"
                                     placeholder='Enter your last name...' />
                             </div>
                             <div className={style.registration__item}>
                                 <span className={style.registration__item_title}>Date of Birth</span>
-                                <input className={style.registration__item_input_date} type="date" name="dateOfBirth" />
+                                <input required className={style.registration__item_input_date} type="date" name="dateOfBirth" />
                             </div>
                         </div>
 
                         <div className={style.registration__right}>
                             <div className={style.registration__item}>
                                 <span className={style.registration__item_title}>Email</span>
-                                <input className={style.registration__item_input} type="email" name="email"
+                                <input required className={style.registration__item_input} type="email" name="email"
                                     placeholder="name@email.com" />
                                 <AiOutlineUser className={style.registration__item_input_icon} />
                             </div>
                             <div className={style.registration__item}>
                                 <span className={style.registration__item_title}>Password</span>
-                                <input className={style.registration__item_input} type="password" name="password"
+                                <input required className={style.registration__item_input} type="password" name="password"
                                     placeholder="Enter your password..." />
                                 <RiLockPasswordLine className={style.registration__item_input_icon} />
                                 <span className={style.registration__item_subtitle}>Use 8 or more characters with a mix of letters and numbers</span>
@@ -49,7 +49,7 @@ const Registration = () => {
                             <br />
                             <div className={style.registration__item}>
                                 <span className={style.registration__item_title}>Confirm your password</span>
-                                <input className={style.registration__item_input} type="password"
+                                <input required className={style.registration__item_input} type="password"
                                     name="confirmPassword" />
                             </div>
                         </div>

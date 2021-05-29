@@ -96,7 +96,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 65%
+  width: 70%
 }
 
 .login__item_title{
@@ -179,7 +179,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.33rem;
-  width: 65%;
+  width: 70%;
   height: 2.66rem;
   box-shadow: 0 0 4px #808080;
   border-radius: 2rem;
@@ -225,7 +225,7 @@
 .login__social_option{
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 70%;
   align-items: center;
 }
 

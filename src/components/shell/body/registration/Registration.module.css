@@ -63,7 +63,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 65%;
+    width: 70%;
 }
 
 .registration__item_title{
@@ -108,11 +108,12 @@
     position: absolute;
     padding-left: 1rem;
     top: 4.66rem;
-    font-size: 12px;
+    font-size: 0.73rem;
 }
 
 .registration__item_button{
     height: 2.66rem;
+    width: 30%;
     box-shadow: 0 0 4px #808080;
     border-radius: 2rem;
     cursor: pointer;
