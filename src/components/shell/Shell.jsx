@@ -7,7 +7,7 @@ const Shell = (props) => {
     return <React.Fragment>
         {/*<Background/>*/}
         <Header theme={props.theme} themeToggle={props.themeToggle}/>
-        <Body/>
+        <Body />
     </React.Fragment>
 }
 

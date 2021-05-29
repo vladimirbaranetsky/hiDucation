@@ -7,6 +7,7 @@ import {PATH_REGISTRATION} from "../../../../config/config_routes";
 import {NavLink} from "react-router-dom";
 
 const Login = () => {
+
     return <React.Fragment>
         <div className={style.login}>
             <div className={style.login__header}>
