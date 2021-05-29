@@ -33,6 +33,7 @@ select,
 textarea{
   outline: 0 !important;
   border: none;
+  color:#808080;
 }
 
 a, a:hover{

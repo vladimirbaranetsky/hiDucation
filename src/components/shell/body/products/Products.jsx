@@ -6,7 +6,7 @@ const Products = () => {
         {id: 1, product: "Integral Basics"},
         {id: 2, product: "Indefinite Integral Basics"},
         {id: 3, product: "Integration by parts"},
-        {id: 4, product: "Reverse Chain rule"}
+        { id: 4, product: "Reverse Chain rule"}
     ];
     console.log(products.length)
     const itemProduct = products.map(product => {
