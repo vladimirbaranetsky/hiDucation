@@ -1,5 +1,6 @@
 import React from "react";
-import style from './Contact.module.css'
+import style from './Contact.module.css';
+import Footer from "../../footer/Footer";
 
 const Contact = () => {
 
@@ -26,6 +27,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
+        <Footer />
     </React.Fragment>
 }
 

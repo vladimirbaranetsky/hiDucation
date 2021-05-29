@@ -1,5 +1,5 @@
 import React from "react";
-import mp4 from "../../../video/1053406_Abstract_natural_animation_HD_BG.mp4"
+import mp4 from "../../video/animation.mp4"
 import style from "./Background.module.css"
 
 const Background = () => {

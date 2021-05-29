@@ -11,7 +11,6 @@
     border-bottom: 1px solid #ff3399;
     margin-top: 2rem;
     height: 6vh;
-    z-index: 1;
 }
 
 .team__header_strip div{
@@ -28,8 +27,6 @@
 }
 
 .team__body{
-    overflow-y: auto;
-    height: 70vh;
     margin: 15px 0;
 }
 
@@ -38,7 +35,6 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 2.66rem -1rem 0 -1rem;
-    z-index: 1;
 }
 .team__item{
   width: 17rem;
