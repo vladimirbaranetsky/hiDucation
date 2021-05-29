@@ -11,7 +11,6 @@
     border-bottom: 1px solid #ff3399;
     margin-top: 2rem;
     height: 6vh;
-    z-index: 1;
 }
 
 .about__header_strip div{
@@ -31,7 +30,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
 }
 .about__title{
     margin-top: 2.66rem;
