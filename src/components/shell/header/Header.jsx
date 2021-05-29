@@ -7,7 +7,7 @@ const Header = (props) => {
     let innerWidth = window.innerWidth;
     return <React.Fragment>
         <header className={style.header}>
-            <div className={style.container} style={{maxWidth: innerWidth}}>
+            <div className={style.container} style={{maxWidth: innerWidth - 200}}>
                 <div className={style.header__inner}>
                     <Logo/>
                     <Navigation themeToggle={props.themeToggle} theme={props.theme}/>

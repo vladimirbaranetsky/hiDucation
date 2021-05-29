@@ -39,27 +39,31 @@
     justify-content: center;
 }
 
-.registration__left, .registration__right{
+.registration__left{
     display: flex;
     flex-direction: column;
     height: 20rem;
-    width: 80%;
+    width: 50%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    margin-right: 6rem;
 }
 
+.registration__right{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 6rem;
+}
 
 .registration__item{
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 70%
-}
-.registration__item{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 70%;
+    width: 65%;
 }
 
 .registration__item_title{
@@ -109,7 +113,6 @@
 
 .registration__item_button{
     height: 2.66rem;
-    width: 30%;
     box-shadow: 0 0 4px #808080;
     border-radius: 2rem;
     cursor: pointer;

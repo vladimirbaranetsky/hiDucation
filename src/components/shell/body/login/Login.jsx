@@ -31,7 +31,7 @@ const Login = () => {
                                 </div>
                                 <div className={style.login__item}>
                                     <span className={style.login__item_title}>Password</span>
-                                    <input className={style.login__item_input} type="password" name="password" placeholder="Enter your password"/>
+                                    <input className={style.login__item_input} type="password" name="password" placeholder="Enter your password..."/>
                                     <RiLockPasswordLine className={style.login__item_input_icon}/>
                                     <a href=" ">Forgot password?</a>
                                 </div>

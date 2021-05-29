@@ -24,7 +24,7 @@ const Body = () => {
 
     return <React.Fragment>
         <body className={style.body}>
-            <div className={style.container} style={{maxWidth: innerWidth}}>
+            <div className={style.container} style={{maxWidth: innerWidth - 200}}>
                 <div className={style.body__inner}>
                     <Redirect to={PATH_HOME} />
                     <Switch>
