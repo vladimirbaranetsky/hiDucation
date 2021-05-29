@@ -27,7 +27,6 @@
     margin-left: 0.26rem;
 }
 
-
 .registration__wrapper{
     width: 100%;
     margin-top: 2rem;
@@ -35,7 +34,7 @@
 
 .registration__row{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -44,12 +43,21 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 35%
+    align-items: center;
+    width: 100%
+}
+.registration__itemDate{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 100%
 }
 
 .registration__item_button{
     height: 2.66rem;
-    /*width: 6.66rem;*/
+    width: 30%;
     box-shadow: 0 0 4px #808080;
     border-radius: 2rem;
     cursor: pointer;
@@ -59,6 +67,8 @@
     font-size: 1rem;
     font-weight: 600;
     transition: all .2s linear;
+    background-color: #ffffff;
+    margin-top: 1.33rem;
 }
 
 .registration__item_button:hover{
@@ -67,11 +77,12 @@
 }
 
 .registration__item_title{
-    padding-left: 15px;
+    /*padding-right: 180px;*/
     padding-bottom: 3px;
 }
 
 .registration__item_input{
+    width: 70%;
     height: 2.66rem;
     box-shadow: 0 0 4px #808080;
     border: 1px solid #ffffff;
@@ -84,10 +95,6 @@
 .registration__item_input[type=date]{
     color: #cbcbcb;}
 
-.registration__item_button{
-    background-color: #ffffff;
-    margin-top: 1.33rem;
-}
 
 .registration__item_input:hover, .login__item_input:focus{
     border: 1px solid rgb(64, 224, 208);
@@ -95,7 +102,7 @@
 
 .registration__item_input_icon {
     position: absolute;
-    left: 0.66rem;
+    left: 6.66rem;
     bottom: 2.13rem;
 }
 
@@ -104,4 +111,17 @@
     padding-left: 1rem;
     top: 4.66rem;
     font-size: 12px;
+}
+
+.registration__left{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 100%;
+}
+.registration__right{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 100%;
 }
