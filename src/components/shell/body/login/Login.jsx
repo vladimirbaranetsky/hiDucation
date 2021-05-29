@@ -60,7 +60,7 @@ const Login = () => {
                                 </button>
                                 <div className={style.login__social_option}>
                                     <span>New to hiMath Gaming?
-                                        <NavLink key={PATH_REGISTRATION} to="/registration"> Sign in</NavLink>
+                                        <NavLink key={PATH_REGISTRATION} to="/registration"> Sign up</NavLink>
                                     </span>
                                     <a href=" ">Log in with your organization</a>
                                 </div>
