@@ -1,6 +1,7 @@
 .carousel {
     position: relative;
     padding: 2.66rem 0;
+    z-index: 0;
 }
 
 .d-block.w-100{

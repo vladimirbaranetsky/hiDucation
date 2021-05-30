@@ -2,16 +2,23 @@ import React from "react";
 import Navigation from "./navigation/Navigation";
 import Logo from "./logo/Logo";
 import style from './Header.module.css';
+import BurgerMenu from "./BurgerMenu/BurgerMenu";
+import ButtonToggleThemes from "../../buttonToggleThemes/ButtonToggleThemes";
 
 const Header = (props) => {
-    let innerWidth = window.innerWidth;
     return <React.Fragment>
         <header className={style.header}>
-            <div className={style.container} style={{maxWidth: innerWidth - 200}}>
-                <div className={style.header__inner}>
+            <div className={style.container}>
+                <div className={style.header__wrapper}>
                     <Logo/>
-                    <Navigation themeToggle={props.themeToggle} theme={props.theme}/>
+                    <div className={style.header__inner}>
+                        <Navigation themeToggle={props.themeToggle} theme={props.theme} />
+                        <BurgerMenu themeToggle={props.themeToggle} theme={props.theme}/>
+                        <ButtonToggleThemes themeToggle={props.themeToggle} theme={props.theme} />
+                    </div>
+
                 </div>
+
             </div>
         </header>
     </React.Fragment>

@@ -2,9 +2,8 @@ import React from "react";
 import {LINKS_NAV, PATH_LOGIN} from "../../../../config/config_routes";
 import {NavLink} from "react-router-dom";
 import './Navigation.css'
-import ButtonToggleThemes from "../../../buttonToggleThemes/ButtonToggleThemes";
 
-const Navigation = (props) => {
+const Navigation = () => {
 
     const itemNavigation = LINKS_NAV.map(link => {
         if(link.path === PATH_LOGIN){
@@ -15,7 +14,7 @@ const Navigation = (props) => {
     return <React.Fragment>
         <nav className="nav">
             {itemNavigation}
-            <ButtonToggleThemes themeToggle={props.themeToggle} theme={props.theme} />
+
         </nav>
     </React.Fragment>
 }

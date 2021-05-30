@@ -20,11 +20,9 @@ import style from './Body.module.css'
 import Registration from "./registration/Registration";
 
 const Body = () => {
-    let innerWidth = window.innerWidth;
-
     return <React.Fragment>
         <body className={style.body}>
-            <div className={style.container} style={{maxWidth: innerWidth - 200}}>
+            <div className={style.container}>
                 <div className={style.body__inner}>
                     <Redirect to={PATH_HOME} />
                     <Switch>

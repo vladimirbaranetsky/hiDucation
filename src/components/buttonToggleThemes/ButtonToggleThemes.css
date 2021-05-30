@@ -1,5 +1,5 @@
 .switch__wrapper{
-    margin-left: 2rem;
+    margin-left: 1.2rem;
     -webkit-writing-mode: vertical-rl;
     writing-mode: tb-rl;
     font-size: 12px;
@@ -9,7 +9,7 @@
     position: relative;
     display: inline-block;
     width: 16px;
-    height: 40px;
+    height: 30px;
     background-color: white;
     border-radius: 16px;
     z-index: 1000;
@@ -50,6 +50,7 @@ input:checked + .slider{
 }
 
 input:checked + .slider:before{
-    transform: translateY(-24px);
+    transform: translateY(-14px);
 }
+
 

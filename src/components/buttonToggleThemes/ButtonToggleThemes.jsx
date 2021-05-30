@@ -7,7 +7,7 @@ const ButtonToggleThemes = (props) => {
         <div className="switch__wrapper">
             <div>{props.theme === "light" ? "dark" : "light"}</div>
             <label className="switch">
-                <input type="checkbox" onChange={() => props.themeToggle()}/>
+                <input type="checkbox"  onChange={() => props.themeToggle()}/>
                 <span className="slider"/>
             </label>
         </div>
