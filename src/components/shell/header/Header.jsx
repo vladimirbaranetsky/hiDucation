@@ -2,8 +2,8 @@ import React from "react";
 import Navigation from "./navigation/Navigation";
 import Logo from "./logo/Logo";
 import style from './Header.module.css';
-import BurgerMenu from "./BurgerMenu/BurgerMenu";
-import ButtonToggleThemes from "../../buttonToggleThemes/ButtonToggleThemes";
+import BurgerMenu from "./burgerMenu/BurgerMenu";
+import ButtonToggleThemes from "./buttonToggleThemes/ButtonToggleThemes";
 
 const Header = (props) => {
     return <React.Fragment>
