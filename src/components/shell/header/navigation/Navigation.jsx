@@ -15,7 +15,7 @@ const Navigation = (props) => {
     return <React.Fragment>
         <nav className="nav">
             {itemNavigation}
-            <ButtonToggleThemes themeToggle={props.themeToggle} theme={props.theme}/>
+            <ButtonToggleThemes themeToggle={props.themeToggle} theme={props.theme} />
         </nav>
     </React.Fragment>
 }
