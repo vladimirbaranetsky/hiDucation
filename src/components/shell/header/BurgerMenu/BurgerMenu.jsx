@@ -5,7 +5,7 @@ import {LINKS_NAV, PATH_LOGIN} from "../../../../config/config_routes";
 import {NavLink} from "react-router-dom";
 
 
-const BurgerMenu = () => {
+const BurgerMenu = (props) => {
     const [menuOn, setMenuOn] = useState(false);
     const [isActive, setIsActive] = useState(false);
 
@@ -35,7 +35,7 @@ const BurgerMenu = () => {
             <button type="button" className="burger__button"  onClick={handlerButton}>
                 {isActive ? <IoMdClose className="burger__button_close"/>
                 : <IoIosMenu className="burger__button_open"/>}
-                {isActive? <div className="burger__menu_items">
+                {isActive? <div className="burger__menu_items" style={props.theme === "light" ? { backgroundColor: "white"} : {backgroundColor: "black"}}>
                     {itemNavigation}
                 </div> : ""}
             </button>
