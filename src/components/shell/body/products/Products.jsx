@@ -8,7 +8,7 @@ const Products = () => {
         {id: 3, product: "Integration by parts"},
         { id: 4, product: "Reverse Chain rule"}
     ];
-    console.log(products.length)
+
     const itemProduct = products.map(product => {
         return <div key={product.id} className={style.product__item}>
             <div className={style.product__item_wrapper}>

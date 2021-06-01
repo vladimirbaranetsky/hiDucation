@@ -20,8 +20,9 @@ import style from './Body.module.css'
 import Registration from "./registration/Registration";
 
 const Body = () => {
+
     return <React.Fragment>
-        <body className={style.body}>
+        <body className={style.body} id="body">
             <div className={style.container}>
                 <div className={style.body__inner}>
                     <Redirect to={PATH_HOME} />
