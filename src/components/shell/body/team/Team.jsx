@@ -31,7 +31,7 @@ const Team = () => {
                     <div className={style.background__oval_3_12}></div>
                     <div className={style.team__photo_wrapper}>
                         <div className={style.team__photo}>
-                            <img src={photo3} alt="photo"/>
+                            <img src={photo3} alt=" "/>
                         </div>
                     </div>
                     <div className={style.team__info}>

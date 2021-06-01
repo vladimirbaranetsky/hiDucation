@@ -1,5 +1,5 @@
 import React from "react";
-import mp4 from "../../video/animation.mp4"
+import mp4 from "../../video/animation2.mp4"
 import style from "./Background.module.css"
 
 const Background = () => {
