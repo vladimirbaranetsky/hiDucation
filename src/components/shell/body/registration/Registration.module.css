@@ -72,6 +72,7 @@
 .registration__item_input{
     height: 2.66rem;
     box-shadow: 0 0 4px #808080;
+    background-color: #ffffff;
     border: 2px solid #ffffff;
     border-radius: 2rem;
     cursor: pointer;
