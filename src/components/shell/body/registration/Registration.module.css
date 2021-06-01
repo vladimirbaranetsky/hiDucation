@@ -70,6 +70,7 @@
 }
 
 .registration__item_input{
+    width: 24.66rem;
     height: 2.66rem;
     box-shadow: 0 0 4px #808080;
     background-color: #ffffff;
@@ -84,6 +85,7 @@
 .registration__item_input_date{
     width: 24.66rem;
     height: 2.66rem;
+    background-color: #ffffff;
     box-shadow: 0 0 4px #808080;
     border: 2px solid #ffffff;
     border-radius: 2rem;

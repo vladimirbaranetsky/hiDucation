@@ -57,7 +57,7 @@
   height: 20rem;
   width: 45%;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   margin-right: 6rem;
 }
 
@@ -67,7 +67,7 @@
   height: 20rem;
   width: 45%;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-left: 6rem;
 }
 
@@ -116,6 +116,7 @@
 }
 
 .login__item_input{
+  width: 26rem;
   height: 2.66rem;
   background-color: #ffffff;
   box-shadow: 0 0 4px #808080;
@@ -157,6 +158,7 @@
 }
 
 .login__item_button{
+  width: 26rem;;
   height: 2.66rem;
   box-shadow: 0 0 4px #808080;
   border-radius: 2rem;
@@ -181,7 +183,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.33rem;
-  width: 85%;
+  width: 26rem;
   height: 2.66rem;
   box-shadow: 0 0 4px #808080;
   border-radius: 2rem;
@@ -263,12 +265,13 @@
     }
 
     .login__item, .login__social_button, .login__social_option{
-      width: 45%;
+      width: 26rem;
     }
+
+    .Login_login__inner__3jS8M {
+      justify-content: center;
+      align-items: center;
+
+}
 }
 
-@media(max-width: 535px){
-  .login__item, .login__social_button, .login__social_option{
-      width: 60%;
-    }
-}
