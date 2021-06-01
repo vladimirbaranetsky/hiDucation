@@ -8,13 +8,13 @@
 }
 
 .burger__button_open{
-    height: 50px;
-    width: 50px;
+    height: 3.33rem;
+    width: 3.33rem;
 }
 
 .burger__button_close{
-    height:40px;
-    width: 40px;
+    height: 2.66rem;
+    width: 2.66rem;
 }
 
 .burger__menu_items{
@@ -62,7 +62,7 @@
     color: #40e0d0;
 }
 
-@media(max-width: 990px){
+@media(max-width: 991px){
     .burger__menu{
         display: flex;
     }

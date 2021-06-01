@@ -97,7 +97,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 70%
+  width: 85%
 }
 
 .login__item_title{
@@ -180,7 +180,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.33rem;
-  width: 70%;
+  width: 85%;
   height: 2.66rem;
   box-shadow: 0 0 4px #808080;
   border-radius: 2rem;
@@ -226,7 +226,7 @@
 .login__social_option{
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 85%;
   align-items: center;
 }
 
@@ -242,4 +242,32 @@
 
 .login__social_option span{
   margin-bottom: 0.66rem;
+}
+
+@media(max-width: 767px){
+    .login__row{
+        flex-direction: column;
+    }
+
+    .login__right {
+      margin-left: 0;
+      align-items: center;
+      width: 100%;
+    }
+
+    .login__left {
+      margin-right: 0;
+      align-items: center;
+      width: 100%;
+    }
+
+    .login__item, .login__social_button, .login__social_option{
+      width: 45%;
+    }
+}
+
+@media(max-width: 535px){
+  .login__item, .login__social_button, .login__social_option{
+      width: 60%;
+    }
 }

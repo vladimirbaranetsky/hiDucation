@@ -45,8 +45,7 @@
     height: 20rem;
     width: 50%;
     justify-content: center;
-    align-items: flex-end;
-    margin-right: 6rem;
+    align-items: center;
 }
 
 .registration__right{
@@ -55,15 +54,14 @@
     height: 20rem;
     width: 50%;
     justify-content: center;
-    align-items: flex-start;
-    margin-left: 6rem;
+    align-items: center;
 }
 
 .registration__item{
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 70%;
+    width: 24.66rem;
 }
 
 .registration__item_title{
@@ -113,7 +111,7 @@
 
 .registration__item_button{
     height: 2.66rem;
-    width: 30%;
+    width: 24.66rem;
     box-shadow: 0 0 4px #808080;
     border-radius: 2rem;
     cursor: pointer;
@@ -132,6 +130,11 @@
     color: #ffffff;
 }
 
+@media(max-width: 767px){
+    .registration__row{
+        flex-direction: column;
+    }
+}
 
 
 

@@ -53,7 +53,7 @@
   color: #ffffff;
 }
 
-@media(max-width: 990px){
+@media(max-width: 991px){
   .nav{
     display: none;
   }
