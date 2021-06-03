@@ -21,15 +21,14 @@
 
 @media(max-width: 747px){
     .footer{
-    position: static;
-}
+        position: inherit;
+    }
 }
 
 @media(max-width: 556px){
-.footer__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 30px;
-}
+    .footer__inner {
+        flex-direction: column;
+        align-items: center;
+        line-height: 30px;
+    }
 }
