@@ -126,6 +126,10 @@ textarea {
 }
 
 @media(max-width: 767px){
+  .contact__data_button{
+    margin-bottom: 3.4rem;
+  }
+
   .contact__message{
   width: 95vw;
   min-width: 22rem;
@@ -135,7 +139,6 @@ textarea {
   .contact__data{
     flex-direction: column;
     width: 95vw;
-    margin-bottom: 2rem;
   }
 
   .contact__data_input{
