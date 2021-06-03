@@ -39,16 +39,7 @@
     justify-content: center;
 }
 
-.registration__left{
-    display: flex;
-    flex-direction: column;
-    height: 20rem;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-}
-
-.registration__right{
+.registration__left, .registration__right{
     display: flex;
     flex-direction: column;
     height: 20rem;
@@ -61,7 +52,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 24.66rem;
 }
 
 .registration__item_title{
@@ -69,8 +59,8 @@
     padding-bottom: 3px;
 }
 
-.registration__item_input{
-    width: 24.66rem;
+.registration__item_input, .registration__item_input_date, .registration__item_button{
+    width: 26rem;
     height: 2.66rem;
     box-shadow: 0 0 4px #808080;
     background-color: #ffffff;
@@ -83,16 +73,6 @@
 }
 
 .registration__item_input_date{
-    width: 24.66rem;
-    height: 2.66rem;
-    background-color: #ffffff;
-    box-shadow: 0 0 4px #808080;
-    border: 2px solid #ffffff;
-    border-radius: 2rem;
-    cursor: pointer;
-    margin-bottom: 1.33rem;
-    padding: 0 1rem 0 2.66rem;
-    transition: all .2s linear;
     color: #c0c0c0;
 }
 
@@ -114,19 +94,7 @@
 }
 
 .registration__item_button{
-    height: 2.66rem;
-    width: 24.66rem;
-    box-shadow: 0 0 4px #808080;
-    border-radius: 2rem;
-    cursor: pointer;
-    margin-bottom: 1.33rem;
-    padding: 0 1rem;
-    color: #808080;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all .2s linear;
-    background-color: #ffffff;
-    margin-top: 1.33rem;
+    border: none;
 }
 
 .registration__item_button:hover{
@@ -134,12 +102,31 @@
     color: #ffffff;
 }
 
-@media(max-width: 767px){
+@media(max-width: 991px){
+    .registration__body{
+        margin-top: 2rem;
+    }
     .registration__row{
         flex-direction: column;
     }
+
     .registration__right, .registration__left{
         width: 100%;
+    }
+
+    .registration__item_input_date{
+        margin-bottom: 0;
+    }
+
+    .registration__item_button:last-child{
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width: 414px){
+    .registration__item_input, .registration__item_input_date, .registration__item_button{
+        width: 90vw;
     }
 }
 

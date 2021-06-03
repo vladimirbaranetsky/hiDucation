@@ -41,63 +41,29 @@
 
 .login__wrapper{
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .login__row{
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
 }
 
-.login__left{
+.login__left, .login__right{
   display: flex;
   flex-direction: column;
-  height: 20rem;
-  width: 45%;
-  justify-content: center;
+  width: 50%;
   align-items: center;
-  margin-right: 6rem;
-}
-
-.login__right {
-  display: flex;
-  flex-direction: column;
-  height: 20rem;
-  width: 45%;
-  justify-content: center;
-  align-items: center;
-  margin-left: 6rem;
 }
 
 .login__inner {
   display: flex;
-  position: absolute;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 20rem;
-  width: 10%;
-
-}
-
-.login__inner-title{
-  display: flex;
-  width: 2.66rem;
-  height: 2.66rem;
-  border-radius: 50%;
-  border: 2px solid #808080;
-  opacity: 0.5;
-  align-items: center;
-  justify-content: center;
 }
 
 .login__item{
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 85%
 }
 
 .login__item_title{
@@ -115,7 +81,7 @@
   color: #ff3399;
 }
 
-.login__item_input{
+.login__item_input, .login__item_button, .login__social_button{
   width: 26rem;
   height: 2.66rem;
   background-color: #ffffff;
@@ -134,16 +100,15 @@
 
 .login__item_button{
   background-color: #ffffff;
-  /*background: none;*/
-  margin-top: 3.33rem;
+  margin-top: 2.33rem;
+  padding-left: 0;
 }
 
 .login__item_input_icon {
   position: absolute;
-  left: 0.66rem;
+  left: 1rem;
   bottom: 2.13rem;
 }
-
 
 .login__item a{
   position: absolute;
@@ -158,16 +123,9 @@
 }
 
 .login__item_button{
-  width: 26rem;;
-  height: 2.66rem;
-  box-shadow: 0 0 4px #808080;
-  border-radius: 2rem;
-  cursor: pointer;
-  margin-bottom: 1.33rem;
-  padding: 0 1rem;
-  color: #808080;
   font-size: 1rem;
   font-weight: 600;
+  border: none;
   transition: all .2s linear;
 }
 
@@ -177,20 +135,11 @@
 }
 
 .login__social_button{
-  display: flex;
-  /*background: none;*/
-  background-color: #ffffff;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.33rem;
-  width: 26rem;
-  height: 2.66rem;
-  box-shadow: 0 0 4px #808080;
-  border-radius: 2rem;
-  cursor: pointer;
-  margin-bottom: 1.66rem;
-  padding: 0 1rem;
-  transition: all .2s linear;
+border: none;
+text-align: left;
+margin-bottom: 1.66rem;
+padding: 0 1rem;
+transition: all .2s linear;
 }
 
 .login__social_button:last-child{
@@ -201,7 +150,6 @@
   background-color: rgb(64, 224, 208);
 }
 
-
 .login__social_icon{
   width: 25%;
   font-size: 2rem;
@@ -210,20 +158,12 @@
 }
 
 .login__social_title{
-  width: 100%;
-  text-align: center;
-  color: #808080;
-  font-size: 1rem;
   font-weight: 600;
   transition: color .2s linear;
 }
 
 .login__social_button:hover .login__social_icon, .login__social_button:hover .login__social_title{
   color: #ffffff;
-}
-
-.login__social_button:last-child{
-  margin-bottom: 0;
 }
 
 .login__social_option{
@@ -247,31 +187,39 @@
   margin-bottom: 0.66rem;
 }
 
-@media(max-width: 767px){
-    .login__row{
-        flex-direction: column;
-    }
+@media(max-width: 991px){
+  .login__wrapper{
+    margin-top: 2rem;
+  }
+  .login__row{
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .login__right {
-      margin-left: 0;
-      align-items: center;
-      width: 100%;
-    }
+  .login__left, .login__right{
+    width: 100%;
+  }
+  .login__item_button {
+    margin-top: 2.33rem;
+    margin-bottom: 0;
+  }
 
-    .login__left {
-      margin-right: 0;
-      align-items: center;
-      width: 100%;
-    }
+  .login__inner{
+    margin: 2rem 0;
+  }
 
-    .login__item, .login__social_button, .login__social_option{
-      width: 26rem;
-    }
+  .login__social_button{
+    margin-bottom: 3rem;
+  }
 
-    .Login_login__inner__3jS8M {
-      justify-content: center;
-      align-items: center;
-
+  .login__social_option{
+    margin-bottom: 2rem;
+  }
 }
+
+@media(max-width: 414px){
+  .login__item_input, .login__social_button, .login__item_button{
+    width: 90vw;
+  }
 }
 

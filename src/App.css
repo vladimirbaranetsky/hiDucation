@@ -41,7 +41,7 @@ a, a:hover{
   color:#808080;
 }
 
-@media(max-width: 991px){
+/* @media(max-width: 991px){
   html {
     font-size: 13px;
   }
@@ -50,7 +50,7 @@ a, a:hover{
 @media(max-width: 535px){
   html {
     font-size: 11px;
-  }
-}
+  } */
+/* } */
 
 

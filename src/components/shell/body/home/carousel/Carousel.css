@@ -25,3 +25,8 @@
     background-image: none;
 }
 
+@media(max-width: 556px){
+    .carousel{
+        padding: 0;
+    }
+}

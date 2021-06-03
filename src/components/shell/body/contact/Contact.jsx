@@ -20,14 +20,16 @@ const Contact = () => {
                         We'd love to hear your thoughts and be in touch with us
                     </span>
                 <textarea className={style.contact__message}  name="" placeholder="Message"/>
-                <div className={style.contact__buttons}>
-                    <input required className={style.contact__input_email}  type="email" name="email" placeholder="Email Address"/>
-                    <input required className={style.contact__input_name}  type="text" name="name" placeholder="Full Name"/>
-                    <button className={style.contact__button_send} type="submit">Send</button>
+                <div className={style.contact__data}>
+                    <div className={style.contact__data_input}>
+                        <input required className={style.input__email} type="email" name="email" placeholder="Email Address" />
+                        <input required className={style.input__name} type="text" name="name" placeholder="Full Name" />
+                    </div>
+                    <button className={style.contact__data_button} type="submit">Send</button>
                 </div>
+                <Footer />
             </div>
         </div>
-        <Footer />
     </React.Fragment>
 }
 
