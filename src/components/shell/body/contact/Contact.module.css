@@ -145,7 +145,7 @@ textarea {
   justify-content: space-between;
   }
 
-.input__email, .input__name {
+  .input__email, .input__name {
   margin-right: 0;
   margin-bottom: 2rem;
   width: 49%;
@@ -156,7 +156,7 @@ textarea {
 }
 
 @media(max-width: 605px){
-.contact__data_input{
+  .contact__data_input{
   display: flex;
   flex-direction: column;
   align-items: center;

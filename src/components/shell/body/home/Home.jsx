@@ -2,7 +2,7 @@ import React from "react";
 import style from './Home.module.css';
 import Carousel from "./carousel/Carousel";
 
-const Home = () => {
+const Home = (props) => {
     return <React.Fragment>
         <div className={style.home}>
             <div className={style.container}>

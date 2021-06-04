@@ -22,51 +22,49 @@ import Registration from "./registration/Registration";
 const Body = () => {
 
     return <React.Fragment>
-        <body className={style.body} id="body">
+        <div className={style.body}>
             <div className={style.container}>
-                <div className={style.body__inner}>
-                    <Redirect to={PATH_HOME} />
-                    <Switch>
-                        <Route path={PATH_HOME} exact render={() => {
-                            return <Home/>;
-                        }}>
-                        </Route>
-                        <Route path={PATH_PRODUCTS} exact render={() => {
-                            return <Products/>;
-                        }}>
-                        </Route>
-                        <Route path={PATH_ABOUT} exact render={() => {
-                            return <About/>;
-                        }}>
-                        </Route>
-                        <Route path={PATH_TEAM} exact render={() => {
-                            return <Team/>;
-                        }}>
-                        </Route>
-                        <Route path={PATH_CONTACT} exact render={() => {
-                            return <Contact/>;
-                        }}>
-                        </Route>
-                        <Route path={PATH_DASHBOARD} exact render={() => {
-                            return <Dashboard/>;
-                        }}>
-                        </Route>
-                        <Route path={PATH_LOGIN} exact render={() => {
-                            return <Login/>;
-                        }}>
-                        </Route>
-                        <Route path={PATH_LOGOUT} exact render={() => {
-                            return <Logout/>;
-                        }}>
-                        </Route>
-                        <Route path={PATH_REGISTRATION} exact render={() => {
-                            return <Registration/>;
-                        }}>
-                        </Route>
-                    </Switch>
-                </div>
+                <Redirect to={PATH_HOME} />
+                <Switch>
+                    <Route path={PATH_HOME} exact render={() => {
+                        return <Home/>;
+                    }}>
+                    </Route>
+                    <Route path={PATH_PRODUCTS} exact render={() => {
+                        return <Products/>;
+                    }}>
+                    </Route>
+                    <Route path={PATH_ABOUT} exact render={() => {
+                        return <About/>;
+                    }}>
+                    </Route>
+                    <Route path={PATH_TEAM} exact render={() => {
+                        return <Team/>;
+                    }}>
+                    </Route>
+                    <Route path={PATH_CONTACT} exact render={() => {
+                        return <Contact/>;
+                    }}>
+                    </Route>
+                    <Route path={PATH_DASHBOARD} exact render={() => {
+                        return <Dashboard/>;
+                    }}>
+                    </Route>
+                    <Route path={PATH_LOGIN} exact render={() => {
+                        return <Login/>;
+                    }}>
+                    </Route>
+                    <Route path={PATH_LOGOUT} exact render={() => {
+                        return <Logout/>;
+                    }}>
+                    </Route>
+                    <Route path={PATH_REGISTRATION} exact render={() => {
+                        return <Registration/>;
+                    }}>
+                    </Route>
+                </Switch>
             </div>
-        </body>
+        </div>
     </React.Fragment>
 }
 
