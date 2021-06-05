@@ -5,7 +5,7 @@ import {LINKS_NAV, PATH_LOGIN} from "../../../../config/config_routes";
 import {NavLink} from "react-router-dom";
 
 
-const BurgerMenu = (props) => {
+const UrgerMenu = (props) => {
     const [menuOn, setMenuOn] = useState(false);
     const [isActive, setIsActive] = useState(false);
 
@@ -42,4 +42,4 @@ const BurgerMenu = (props) => {
         </div>
     </React.Fragment>
 }
-export default BurgerMenu;
+export default UrgerMenu;

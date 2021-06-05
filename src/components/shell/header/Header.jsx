@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Navigation from "./navigation/Navigation";
 import Logo from "./logo/Logo";
 import style from './Header.module.css';
-import BurgerMenu from "./BurgerMenu/burgerMenu";
+import UrgerMenu from "./BurgerMenu/ИurgerMenu";
 import ButtonToggleThemes from "./buttonToggleThemes/ButtonToggleThemes"
 
 const Header = (props) => {
@@ -26,7 +26,7 @@ const Header = (props) => {
                     <Logo/>
                     <div className={style.header__inner}>
                         <Navigation themeToggle={props.themeToggle} theme={props.theme} />
-                        <BurgerMenu theme={props.theme}/>
+                        <UrgerMenu theme={props.theme}/>
                         <ButtonToggleThemes themeToggle={props.themeToggle} theme={props.theme} />
                     </div>
                 </div>
