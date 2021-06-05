@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Navigation from "./navigation/Navigation";
 import Logo from "./logo/Logo";
 import style from './Header.module.css';
-import BurgerMenu from "./burgerMenu/BurgerMenu";
+import BurgerMenu from "./BurgerMenu/burgerMenu";
 import ButtonToggleThemes from "./buttonToggleThemes/ButtonToggleThemes"
 
 const Header = (props) => {
