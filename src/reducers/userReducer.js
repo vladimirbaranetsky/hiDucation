@@ -3,7 +3,19 @@ import {types} from "../constants/actionTypes";
 const initialState = {
     profile: {
         email: '',
-        password: ''
+        password: '',
+        firstName: '',
+        lastName: '',
+        institute: '',
+        degree: '',
+        fields: '',
+        apps: [
+            0
+        ],
+        stillStudent: true,
+        roles: [
+            ''
+        ]
     },
     formSubmit: false
 }
