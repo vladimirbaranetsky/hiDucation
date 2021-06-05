@@ -9,9 +9,9 @@ const initialState = user
 export default function (state = initialState, action) {
     const {type, payload} = action;
 
-    switch (type){
+    switch (type) {
         case REGISTER_SUCCESS:
-            return{
+            return {
                 ...state,
                 isLoggedIn: false
             }
@@ -21,7 +21,7 @@ export default function (state = initialState, action) {
                 isLoggedIn: false
             }
         case LOGIN_SUCCESS:
-            return{
+            return {
                 ...state,
                 isLoggedIn: true,
                 user: payload.user
@@ -33,7 +33,7 @@ export default function (state = initialState, action) {
                 user: null
             }
         case LOGOUT:
-            return{
+            return {
                 ...state,
                 isLoggedIn: false,
                 user: null

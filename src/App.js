@@ -11,7 +11,6 @@ function App() {
             <Shell/>
         </Provider>
     </BrowserRouter>
-
 }
 
 export default App;
