@@ -1,5 +1,5 @@
 import AuthService from "../services/auth.service";
-import {REGISTER_FAIL, REGISTER_SUCCESS, SET_MESSAGE} from "./actionTypes";
+import {LOGIN_FAIL, LOGIN_SUCCESS, LOGOUT, REGISTER_FAIL, REGISTER_SUCCESS, SET_MESSAGE} from "./actionTypes";
 
 
 export const register = (email, password) => (dispatch) => {
@@ -31,3 +31,43 @@ export const register = (email, password) => (dispatch) => {
         }
     )
 }
+
+export const login = (username, password) => (dispatch) => {
+    return AuthService.login(username, password).then(
+        (data) => {
+            dispatch({
+                type: LOGIN_SUCCESS,
+                payload: {user: data},
+            });
+
+            return Promise.resolve();
+        },
+        (error) => {
+            const message =
+                (error.response &&
+                    error.response.data &&
+                    error.response.data.message) ||
+                error.message ||
+                error.toString();
+
+            dispatch({
+                type: LOGIN_FAIL,
+            });
+
+            dispatch({
+                type: SET_MESSAGE,
+                payload: message,
+            });
+
+            return Promise.reject();
+        }
+    );
+};
+
+export const logout = () => (dispatch) => {
+    AuthService.logout();
+
+    dispatch({
+        type: LOGOUT,
+    });
+};
