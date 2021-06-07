@@ -9,8 +9,8 @@ import {
 
 
 
-export const register = (data) => (dispatch) => {
-    return AuthService.register(data)
+export const registration = (data) => (dispatch) => {
+    return AuthService.registration(data)
         .then(response => {
             dispatch({
                 type: REGISTER_SUCCESS,

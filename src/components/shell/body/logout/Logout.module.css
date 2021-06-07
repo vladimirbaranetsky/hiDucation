@@ -58,9 +58,9 @@
 
 .logout__item_button {
     margin-left: 2rem;
-    background-color: #ffffff;
-    border: 1px solid #808080;
-    padding: 0.53rem 1rem;
+    box-shadow: 0 0 4px #808080;
+    background: none;
+    padding: 0.6rem 1.1rem;
     transition: all .2s linear;
     border-radius: 2rem;
     font-size: 1rem;
@@ -71,7 +71,6 @@
 
 .logout__item_button:hover {
     background-color: #ff3399;
-    box-shadow: 0 0 4px #808080;
     border-color: #ff3399;
     color: #ffffff;
 }

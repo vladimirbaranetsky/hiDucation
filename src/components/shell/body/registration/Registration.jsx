@@ -3,7 +3,7 @@ import style from "./Registration.module.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import {useDispatch} from "react-redux";
-import {register} from "../../../../actions/action-auth";
+import {registration} from "../../../../actions/action-auth";
 import {useHistory} from "react-router-dom";
 import {PATH_LOGIN} from "../../../../config/config-routes";
 
@@ -48,7 +48,7 @@ const Registration = () => {
 
     const handlerSubmit = (event) => {
         event.preventDefault();
-        dispatch(register(data))
+        dispatch(registration(data))
             .then(() => {
                 history.push(PATH_LOGIN);
             });

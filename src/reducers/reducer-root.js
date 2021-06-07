@@ -1,4 +1,4 @@
-import {combineReducers, createStore} from "redux";
+import {combineReducers} from "redux";
 
 import {authentication} from "./reducer-auth";
 

@@ -1,11 +1,9 @@
 import {
-    CLEAR_MESSAGE,
     LOGIN_FAIL,
     LOGIN_SUCCESS,
     LOGOUT,
     REGISTER_FAIL,
     REGISTER_SUCCESS,
-    SET_MESSAGE
 } from "../actions/action-types";
 
 const user = JSON.parse(localStorage.getItem('user'))
