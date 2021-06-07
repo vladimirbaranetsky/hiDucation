@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
 import { IoMdClose, IoIosMenu } from "react-icons/io";
 import "./BurgerMenu.css"
-import {LINKS_NAV, PATH_LOGIN, PATH_LOGOUT} from "../../../../config/config_routes";
+import {LINKS_NAV, PATH_LOGIN} from "../../../../config/config_routes";
 import {NavLink} from "react-router-dom";
 
 
-const BurgerMenu = (props) => {
+const UrgerMenu = (props) => {
     const [menuOn, setMenuOn] = useState(false);
     const [isActive, setIsActive] = useState(false);
 
@@ -25,8 +25,7 @@ const BurgerMenu = (props) => {
 
     const itemNavigation = LINKS_NAV.map(link => {
         if(link.path === PATH_LOGIN){
-            return !props.user ? <NavLink key={PATH_LOGOUT} className="nav__link_btn" to={PATH_LOGOUT}>Logout</NavLink>
-                : <NavLink key={PATH_LOGIN} className="nav__link_btn" to={PATH_LOGIN}>Login</NavLink>
+            return <NavLink key={link.path} className="burger__link_btn" to={link.path}>{link.label}</NavLink>
         }
         return <NavLink key={link.path} className="burger__link" to={link.path}>{link.label}</NavLink>
     })
@@ -43,4 +42,4 @@ const BurgerMenu = (props) => {
         </div>
     </React.Fragment>
 }
-export default BurgerMenu;
+export default UrgerMenu;
