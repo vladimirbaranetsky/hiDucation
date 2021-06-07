@@ -8,7 +8,6 @@ const initialState = user
 
 export default function (state = initialState, action) {
     const {type, payload} = action;
-
     switch (type) {
         case REGISTER_SUCCESS:
             return {
@@ -21,6 +20,8 @@ export default function (state = initialState, action) {
                 isLoggedIn: false
             }
         case LOGIN_SUCCESS:
+            console.log(LOGIN_SUCCESS);
+            debugger;
             return {
                 ...state,
                 isLoggedIn: true,
@@ -41,4 +42,5 @@ export default function (state = initialState, action) {
         default:
             return state;
     }
+
 }

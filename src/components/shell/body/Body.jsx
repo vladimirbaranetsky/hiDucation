@@ -21,11 +21,10 @@ import Registration from "./registration/Registration";
 import Profile from "./profile/UserProfile";
 
 const Body = () => {
-
     return <React.Fragment>
         <div className={style.body}>
             <div className={style.container}>
-              {/*  <Redirect to={PATH_HOME} />*/}
+                <Redirect to={PATH_HOME} />
                 <Switch>
                     <Route path={PATH_HOME} exact render={() => {
                         return <Home/>;
