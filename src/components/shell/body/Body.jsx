@@ -5,7 +5,7 @@ import {
     PATH_CONTACT,
     PATH_DASHBOARD,
     PATH_HOME, PATH_LOGIN, PATH_LOGOUT,
-    PATH_PRODUCTS, PATH_REGISTRATION,
+    PATH_PRODUCTS, PATH_PROFILE, PATH_REGISTRATION,
     PATH_TEAM
 } from "../../../config/config_routes";
 import Home from "./home/Home";
@@ -18,6 +18,7 @@ import Login from "./login/Login";
 import Logout from "./logout/Logout";
 import style from './Body.module.css'
 import Registration from "./registration/Registration";
+import Profile from "./profile/UserProfile";
 
 const Body = () => {
 
@@ -60,6 +61,10 @@ const Body = () => {
                     </Route>
                     <Route path={PATH_REGISTRATION} exact render={() => {
                         return <Registration/>;
+                    }}>
+                    </Route>
+                    <Route path={PATH_PROFILE} exact render={() => {
+                        return <Profile/>
                     }}>
                     </Route>
                 </Switch>

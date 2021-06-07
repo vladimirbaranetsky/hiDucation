@@ -6,7 +6,7 @@ import style from './Login.module.css'
 import {PATH_REGISTRATION} from "../../../../config/config_routes";
 import {NavLink} from "react-router-dom";
 import {login} from "../../../../actions/auth.action";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useHistory} from "react-router-dom";
 
 
@@ -14,7 +14,6 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -34,7 +33,7 @@ const Login = () => {
         event.preventDefault();
         dispatch(login(email, password))
             .then(() => {
-                history.push('/registration');
+                history.push('/profile');
                 window.location.reload();
             })
     }

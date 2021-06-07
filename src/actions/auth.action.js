@@ -6,7 +6,7 @@ export const register = (email, password) => (dispatch) => {
     return AuthService.register(email, password).then(
         (response) => {
             dispatch({
-                type: REGISTER_SUCCESS
+                type: REGISTER_SUCCESS,
             });
             dispatch({
                 type: SET_MESSAGE,
@@ -38,7 +38,7 @@ export const login = (email, password) => (dispatch) => {
         (data) => {
             dispatch({
                 type: LOGIN_SUCCESS,
-                payload: {user: data},
+                payload: {user: data}
             });
 
             return Promise.resolve();
