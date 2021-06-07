@@ -3,12 +3,10 @@ import { FaFacebookSquare, FaApple, FaGoogle } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import style from './Login.module.css'
-import { PATH_REGISTRATION } from "../../../../config/config_routes";
+import { PATH_REGISTRATION } from "../../../../config/config-routes";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-// import { useHistory } from "react-router-dom";
-import axios from "axios";
-import { login } from "../../../../actions/auth.action";
+import { login } from "../../../../actions/action-auth";
 
 
 const Login = () => {
@@ -17,20 +15,7 @@ const Login = () => {
         password: "",
     });
 
-    // const history = useHistory();
     const dispatch = useDispatch();
-
-    const handlerSubmit = (event) => {
-        event.preventDefault();
-        dispatch(login(data));
-        // axios.get('https://virtserver.swaggerhub.com/GregorySheygam/himath-gaming/0.0.1/user/login', { data })
-        //     .then(response => {
-        //         localStorage.setItem('token', response.data.token)
-        //         // history.push('/profile');
-        //         // window.location.reload();
-        //     })
-        //     .catch(error => { console.log(error) })
-    }
 
     const handleChange = (event) => {
         event.preventDefault();
@@ -47,6 +32,11 @@ const Login = () => {
         }
     }
 
+    const onSubmit = (event) => {
+        event.preventDefault();
+        dispatch(login(data));
+    }
+
     return <React.Fragment>
         <div className={style.login}>
             <div className={style.login__header}>
@@ -60,7 +50,7 @@ const Login = () => {
                     Welcome back
                     </span>
                 <div className={style.login__wrapper}>
-                    <form onSubmit={handlerSubmit} noValidate>
+                    <form onSubmit={onSubmit} noValidate>
                         <div className={style.login__row}>
                             <div className={style.login__left}>
                                 <div className={style.login__item}>

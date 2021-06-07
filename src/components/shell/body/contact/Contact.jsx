@@ -4,6 +4,8 @@ import Footer from "../../footer/Footer";
 
 const Contact = () => {
 
+
+
     return <React.Fragment>
         <div className={style.contact}>
             <div className={style.contact__header}>

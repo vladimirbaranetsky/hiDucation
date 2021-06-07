@@ -7,7 +7,7 @@ import {
     PATH_HOME, PATH_LOGIN, PATH_LOGOUT,
     PATH_PRODUCTS, PATH_PROFILE, PATH_REGISTRATION,
     PATH_TEAM
-} from "../../../config/config_routes";
+} from "../../../config/config-routes";
 import Home from "./home/Home";
 import Products from "./products/Products";
 import About from "./about/About";
@@ -19,8 +19,11 @@ import Logout from "./logout/Logout";
 import style from './Body.module.css'
 import Registration from "./registration/Registration";
 import Profile from "./profile/UserProfile";
+import {useSelector} from "react-redux";
 
 const Body = () => {
+    const isLoggedIn = useSelector(state => state.data.isLoggedIn);
+
     return <React.Fragment>
         <div className={style.body}>
             <div className={style.container}>
@@ -51,11 +54,15 @@ const Body = () => {
                     }}>
                     </Route>
                     <Route path={PATH_LOGIN} exact render={() => {
-                        return <Login/>;
+                        return !isLoggedIn
+                            ? <Login />
+                            : <Redirect to={PATH_HOME} />
                     }}>
                     </Route>
                     <Route path={PATH_LOGOUT} exact render={() => {
-                        return <Logout/>;
+                        return isLoggedIn
+                            ? <Logout />
+                            : <Redirect to={PATH_HOME} />
                     }}>
                     </Route>
                     <Route path={PATH_REGISTRATION} exact render={() => {

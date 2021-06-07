@@ -1,4 +1,12 @@
-import {LOGIN_FAIL, LOGIN_SUCCESS, LOGOUT, REGISTER_FAIL, REGISTER_SUCCESS} from "../actions/actionTypes";
+import {
+    CLEAR_MESSAGE,
+    LOGIN_FAIL,
+    LOGIN_SUCCESS,
+    LOGOUT,
+    REGISTER_FAIL,
+    REGISTER_SUCCESS,
+    SET_MESSAGE
+} from "../actions/action-types";
 
 const user = JSON.parse(localStorage.getItem('user'))
 
@@ -6,7 +14,7 @@ const initialState = user
     ? {isLoggedIn: true, user}
     : {isLoggedIn: false, user: null};
 
-export default function (state = initialState, action) {
+export function authentication (state = initialState, action) {
     const {type, payload} = action;
     switch (type) {
         case REGISTER_SUCCESS:
@@ -20,8 +28,6 @@ export default function (state = initialState, action) {
                 isLoggedIn: false
             }
         case LOGIN_SUCCESS:
-            console.log(LOGIN_SUCCESS);
-            debugger;
             return {
                 ...state,
                 isLoggedIn: true,
@@ -42,5 +48,4 @@ export default function (state = initialState, action) {
         default:
             return state;
     }
-
 }

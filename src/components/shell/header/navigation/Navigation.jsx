@@ -1,13 +1,15 @@
 import React from "react";
-import {LINKS_NAV, PATH_LOGIN} from "../../../../config/config_routes";
+import {LINKS_NAV, PATH_LOGIN, PATH_LOGOUT} from "../../../../config/config-routes";
 import {NavLink} from "react-router-dom";
 import './Navigation.css'
+import {useSelector} from "react-redux";
 
 const Navigation = () => {
-
+    const user = useSelector(state => state.data.user);
     const itemNavigation = LINKS_NAV.map(link => {
         if(link.path === PATH_LOGIN){
-            return <NavLink key={link.path} className="nav__link_btn" to={link.path}>{link.label}</NavLink>
+            return user ? <NavLink key={PATH_LOGOUT} className="nav__link_btn" to={PATH_LOGOUT}>Logout</NavLink>
+                : <NavLink key={PATH_LOGIN} className="nav__link_btn" to={PATH_LOGIN}>Login</NavLink>
         }
         return <NavLink key={link.path} className="nav__link" to={link.path}>{link.label}</NavLink>
     })

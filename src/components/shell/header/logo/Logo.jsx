@@ -1,5 +1,5 @@
 import React from "react";
-import {PATH_HOME} from "../../../../config/config_routes";
+import {PATH_HOME} from "../../../../config/config-routes";
 import {NavLink} from "react-router-dom";
 import style from './Logo.module.css'
 

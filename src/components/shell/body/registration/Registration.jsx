@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import style from "./Registration.module.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
-import axios from "axios";
 import {useDispatch} from "react-redux";
-import {register} from "../../../../actions/auth.action";
+import {register} from "../../../../actions/action-auth";
+import {useHistory} from "react-router-dom";
+import {PATH_LOGIN} from "../../../../config/config-routes";
 
 const Registration = () => {
+    const history = useHistory();
+    const dispatch = useDispatch();
     const [data, setData] = useState({
         firstName: "",
         lastName: "",
@@ -15,12 +18,6 @@ const Registration = () => {
         password: "",
         password_confirm: ""
     });
-    const dispatch = useDispatch();
-
-    const handlerSubmit = (event) => {
-        event.preventDefault();
-        dispatch(register(data));
-    }
 
     const handleChange = (event) => {
         event.preventDefault();
@@ -47,6 +44,14 @@ const Registration = () => {
             default:
                 break;
         }
+    }
+
+    const handlerSubmit = (event) => {
+        event.preventDefault();
+        dispatch(register(data))
+            .then(() => {
+                history.push(PATH_LOGIN);
+            });
     }
 
     return <React.Fragment>
