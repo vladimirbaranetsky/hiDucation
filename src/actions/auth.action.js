@@ -17,7 +17,8 @@ export const register = (email, password) => (dispatch) => {
         (error) => {
             const message = (
                 error.response &&
-                error.response.data &&
+                error.response.data
+                &&
                 error.response.data.message) ||
                 error.message || error.toString();
             dispatch({
