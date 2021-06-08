@@ -99,6 +99,12 @@
     color: #ffffff;
 }
 
+.registration__item_button:disabled{
+    background: none;
+    color:#808080;
+    cursor: default;
+}
+
 .input__error_message{
     position: absolute;
     bottom: 0;

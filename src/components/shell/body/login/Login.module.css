@@ -135,6 +135,12 @@
   color: #ffffff;
 }
 
+.login__item_button:disabled{
+  background: none;
+  color:#808080;
+  cursor: default;
+}
+
 .login__social_button{
 border: none;
 text-align: left;

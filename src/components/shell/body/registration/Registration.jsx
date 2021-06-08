@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import style from "./Registration.module.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
@@ -11,6 +11,7 @@ import {DIGITS_NAME, DIGITS_PASSWORD, VALIDATE} from "../../../../config/config-
 const Registration = () => {
     const history = useHistory();
     const dispatch = useDispatch();
+    const [isInvalid, setIsInvalid] = useState(true);
     const[data, setData] = useState({
         username: "",
         email: "",
@@ -86,8 +87,17 @@ const Registration = () => {
         dispatch(registration(data.username, data.email, data.password))
             .then(() => {
                 history.push(PATH_LOGIN);
+                setData({...data, username: "", email: "", password: "", confirm: ""});
             });
     }
+
+    useEffect(() => {
+        const isValidate = () =>{
+            return !(data.email !== "" && data.password !== "" && data.username !== "" && data.confirm !== ""
+                && errors.email === "" && errors.password === "" && errors.username === "" && errors.confirm === "");
+        };
+        setIsInvalid(isValidate());
+    },[errors, data]);
 
     return <React.Fragment>
         <div className={style.registration}>
@@ -140,7 +150,7 @@ const Registration = () => {
                         </div>
                     </div>
                     <div className={style.registration__row}>
-                        <button className={style.registration__item_button} type="submit" value="signUp">Sign up
+                        <button disabled={isInvalid} className={style.registration__item_button} type="submit" value="signUp">Sign up
                     </button>
                     </div>
                 </form>

@@ -12,6 +12,7 @@ import {DIGITS_PASSWORD, VALIDATE} from "../../../../config/config-credentials";
 
 const Login = () => {
     const dispatch = useDispatch();
+    const [isInvalid, setIsInvalid] = useState(true);
     const [data, setData] = useState({email: "", password: ""});
     const [errors, setErrors] = useState({email: '', password: ''});
 
@@ -48,7 +49,15 @@ const Login = () => {
     const onSubmit = (event) => {
         event.preventDefault();
         dispatch(login(data));
+        setData({...data, email: "", password: ""});
     }
+
+useEffect(() => {
+        const isValidate = () =>{
+            return !(data.email !== "" && data.password !== "" && errors.email === "" && errors.password === "");
+        };
+        setIsInvalid(isValidate());
+    },[errors, data]);
 
     return <React.Fragment>
         <div className={style.login}>
@@ -80,7 +89,7 @@ const Login = () => {
                                     <a style={errors.password.length > 0 ? {top: "5.5rem"} : {top: "4.5rem"}} href=" ">Forgot password?</a>
                                 </div>
                                 <div className={style.login__item}>
-                                    <button className={style.login__item_button} type="submit" value="Login">Login</button>
+                                    <button disabled={isInvalid} className={style.login__item_button} type="submit" value="Login">Login</button>
                                 </div>
                             </div>
 
