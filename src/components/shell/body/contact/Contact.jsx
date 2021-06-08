@@ -1,10 +1,44 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import style from './Contact.module.css';
 import Footer from "../../footer/Footer";
+import {useDispatch} from "react-redux";
+import {sendMessage} from "../../../../actions/action-message";
 
 const Contact = () => {
+    const dispatch = useDispatch();
+    const [isInvalid, setIsInvalid] = useState(true);
+    const [data, setData] = useState({
+        message: "",
+        email: "",
+        fullname: ""
+    })
 
+    const handleChange = (event) => {
+        event.preventDefault();
+        const name = event.target.name;
+        switch (name){
+            case "message":
+                return setData({...data, message: event.target.value});
+            case "email":
+                return setData({...data, email: event.target.value});
+            case "fullname":
+                return setData({...data, fullname: event.target.value});
+        }
 
+    };
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        dispatch(sendMessage(data));
+        setData({...data, message: "", email: "", fullname: ""});
+    }
+
+    useEffect(() => {
+        const isValidate = () =>{
+            return !(data.message !== "" && data.email !== "" && data.fullname !== "");
+        };
+        setIsInvalid(isValidate());
+    },[data]);
 
     return <React.Fragment>
         <div className={style.contact}>
@@ -21,14 +55,16 @@ const Contact = () => {
                 <span className={style.contact__subtitle}>
                         We'd love to hear your thoughts and be in touch with us
                     </span>
-                <textarea className={style.contact__message}  name="" placeholder="Message"/>
-                <div className={style.contact__data}>
-                    <div className={style.contact__data_input}>
-                        <input required className={style.input__email} type="email" name="email" placeholder="Email Address" />
-                        <input required className={style.input__name} type="text" name="name" placeholder="Full Name" />
+                <form onSubmit={onSubmit} noValidate>
+                    <textarea required className={style.contact__message} onChange={handleChange}  name="message" placeholder="Message"/>
+                    <div className={style.contact__data}>
+                        <div className={style.contact__data_input}>
+                            <input required className={style.input__email} onChange={handleChange} type="email" name="email" placeholder="Email Address" />
+                            <input required className={style.input__name} onChange={handleChange} type="text" name="fullname" placeholder="Full Name" />
+                        </div>
+                        <button disabled={isInvalid} className={style.contact__data_button} type="submit">Send</button>
                     </div>
-                    <button className={style.contact__data_button} type="submit">Send</button>
-                </div>
+                </form>
                 <Footer />
             </div>
         </div>

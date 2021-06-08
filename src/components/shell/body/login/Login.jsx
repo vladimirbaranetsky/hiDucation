@@ -94,7 +94,7 @@ useEffect(() => {
                             </div>
 
                             <div className={style.login__inner}>
-                                <div className={style.login__inner_title}>
+                                <div>
                                     <span >or</span>
                                 </div>
                             </div>

@@ -125,6 +125,20 @@ textarea {
   color: #ffffff;
 }
 
+.contact__data_button:disabled{
+  background-color: #ffffff;
+  color:#808080;
+  cursor: default;
+}
+
+.input__error_message{
+  position: absolute;
+  bottom: 0;
+  padding-left: 16px;
+  font-size: 10px;
+  color: #ff3399;
+}
+
 @media(max-width: 767px){
 
   .contact__message{

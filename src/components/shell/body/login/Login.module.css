@@ -136,7 +136,7 @@
 }
 
 .login__item_button:disabled{
-  background: none;
+  background-color: #ffffff;
   color:#808080;
   cursor: default;
 }
