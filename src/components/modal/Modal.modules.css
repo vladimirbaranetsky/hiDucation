@@ -1,0 +1,21 @@
+.modal-content{
+    border-radius: 2rem;
+}
+
+.btn-primary{
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    padding: 0.53rem 1rem;
+    transition: all .2s linear;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #808080;
+}
+
+.btn-primary:hover {
+    background-color: cornflowerblue;
+    box-shadow: 0 0 4px #808080;
+    border-color: cornflowerblue;
+    color: #ffffff;
+}

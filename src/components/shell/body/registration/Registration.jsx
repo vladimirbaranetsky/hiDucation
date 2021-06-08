@@ -7,11 +7,14 @@ import {registration} from "../../../../actions/action-auth";
 import {useHistory} from "react-router-dom";
 import {PATH_LOGIN} from "../../../../config/config-routes";
 import {DIGITS_NAME, DIGITS_PASSWORD, VALIDATE} from "../../../../config/config-credentials";
+import ModalDisplay from "../../../modal/Modal";
+import {MODAL_TITLE} from "../../../../config/config-regestration";
 
 const Registration = () => {
     const history = useHistory();
     const dispatch = useDispatch();
     const [isInvalid, setIsInvalid] = useState(true);
+    const [modalShow, setModalShow] = React.useState(false);
     const[data, setData] = useState({
         username: "",
         email: "",
@@ -84,9 +87,11 @@ const Registration = () => {
 
     const handlerSubmit = (event) => {
         event.preventDefault();
+        const form = event.target;
         dispatch(registration(data.username, data.email, data.password))
             .then(() => {
-                history.push(PATH_LOGIN);
+                form.reset();
+                setModalShow(true);
                 setData({...data, username: "", email: "", password: "", confirm: ""});
             });
     }
@@ -154,6 +159,13 @@ const Registration = () => {
                     </button>
                     </div>
                 </form>
+                <ModalDisplay
+                    show={modalShow}
+                    title = {MODAL_TITLE}
+                    onHide={() => {
+                    setModalShow(false)
+                    history.push(PATH_LOGIN)
+                }}/>
             </div>
         </div>
     </React.Fragment>

@@ -92,6 +92,7 @@
 
 .registration__item_button{
     border: none;
+    font-weight: bold;
 }
 
 .registration__item_button:hover{
