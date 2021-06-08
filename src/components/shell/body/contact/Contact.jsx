@@ -3,8 +3,11 @@ import style from './Contact.module.css';
 import Footer from "../../footer/Footer";
 import {useDispatch} from "react-redux";
 import {sendMessage} from "../../../../actions/action-message";
+import {useHistory} from "react-router-dom";
+import {PATH_HOME} from "../../../../config/config-routes";
 
 const Contact = () => {
+    const history = useHistory();
     const dispatch = useDispatch();
     const [isInvalid, setIsInvalid] = useState(true);
     const [data, setData] = useState({
@@ -23,13 +26,18 @@ const Contact = () => {
                 return setData({...data, email: event.target.value});
             case "fullname":
                 return setData({...data, fullname: event.target.value});
+            default:
+                break;
         }
 
     };
 
     const onSubmit = (event) => {
         event.preventDefault();
-        dispatch(sendMessage(data));
+        dispatch(sendMessage(data))
+            .then(() => {
+                history.push(PATH_HOME);
+            });
         setData({...data, message: "", email: "", fullname: ""});
     }
 

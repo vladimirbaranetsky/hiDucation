@@ -8,7 +8,6 @@ export const sendMessage = (data) => (dispatch) => {
         .then(response => {
             dispatch({
                 type: SEND_MESSAGE_SUCCESS,
-                payload: data.message
                 // payload: response.data
             });
 
