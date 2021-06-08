@@ -38,7 +38,7 @@ const Login = () => {
             let textError = '';
 
             if(password.length < DIGITS_PASSWORD){
-                textError = `Password should be minimum ${DIGITS_PASSWORD} characters required`;
+                textError = `Use ${DIGITS_PASSWORD} or more characters with a mix of letters and numbers`;
         }else{
             setData({...data, password: password});
                 }

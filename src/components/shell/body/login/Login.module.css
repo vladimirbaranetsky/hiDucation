@@ -115,6 +115,8 @@
   color: cornflowerblue;
   padding-left: 1rem;
   text-decoration: none;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .login__item a:hover{

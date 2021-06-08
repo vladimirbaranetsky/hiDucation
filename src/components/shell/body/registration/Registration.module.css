@@ -34,15 +34,15 @@
 
 .registration__row{
     display: flex;
+    margin-top: 2rem;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.registration__left, .registration__right{
+.registration__col{
     display: flex;
     flex-direction: column;
-    height: 20rem;
     width: 50%;
     justify-content: center;
     align-items: center;
@@ -52,14 +52,15 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-top: 1rem;
 }
 
 .registration__item_title{
-    padding-left: 15px;
+    padding-left: 16px;
     padding-bottom: 3px;
 }
 
-.registration__item_input, .registration__item_input_date, .registration__item_button{
+.registration__item_input, .registration__item_button{
     width: 26rem;
     height: 2.66rem;
     box-shadow: 0 0 4px #808080;
@@ -72,11 +73,7 @@
     transition: all .2s linear;
 }
 
-.registration__item_input_date{
-    color: #c0c0c0;
-}
-
-.registration__item_input:hover, .login__item_input:focus, .registration__item_input_date:hover, .registration__item_input_date:focus{
+.registration__item_input:hover, .login__item_input:focus{
     border: 1px solid rgb(64, 224, 208);
 }
 
@@ -102,6 +99,14 @@
     color: #ffffff;
 }
 
+.input__error_message{
+    position: absolute;
+    bottom: 0;
+    padding-left: 16px;
+    font-size: 10px;
+    color: #ff3399;
+}
+
 @media(max-width: 991px){
     .registration__body{
         margin-top: 2rem;
@@ -110,12 +115,8 @@
         flex-direction: column;
     }
 
-    .registration__right, .registration__left{
+    .registration__col{
         width: 100%;
-    }
-
-    .registration__item_input_date{
-        margin-bottom: 0;
     }
 
     .registration__item_button:last-child{
@@ -125,7 +126,7 @@
 }
 
 @media(max-width: 414px){
-    .registration__item_input, .registration__item_input_date, .registration__item_button{
+    .registration__item_input, .registration__item_button{
         width: 90vw;
     }
 }
