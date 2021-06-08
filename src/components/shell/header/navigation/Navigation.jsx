@@ -1,5 +1,5 @@
 import React from "react";
-import {LINKS_NAV, PATH_LOGIN, PATH_LOGOUT} from "../../../../config/config-routes";
+import {LINKS_NAV, PATH_LOGIN, PATH_LOGOUT, PATH_PROFILE} from "../../../../config/config-routes";
 import {NavLink} from "react-router-dom";
 import './Navigation.css'
 import {useSelector} from "react-redux";
@@ -10,6 +10,10 @@ const Navigation = () => {
         if(link.path === PATH_LOGIN){
             return user ? <NavLink key={PATH_LOGOUT} className="nav__link_btn" to={PATH_LOGOUT}>Logout</NavLink>
                 : <NavLink key={PATH_LOGIN} className="nav__link_btn" to={PATH_LOGIN}>Login</NavLink>
+        }
+        if(link.path === PATH_PROFILE){
+            return user ? <NavLink key={link.path} className="nav__link" to={link.path}>{link.label}</NavLink>
+                : ""
         }
         return <NavLink key={link.path} className="nav__link" to={link.path}>{link.label}</NavLink>
     })

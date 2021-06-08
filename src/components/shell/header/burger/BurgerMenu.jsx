@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { IoMdClose, IoIosMenu } from "react-icons/io";
 import "./BurgerMenu.css"
-import {LINKS_NAV, PATH_LOGIN, PATH_LOGOUT} from "../../../../config/config-routes";
+import {LINKS_NAV, PATH_LOGIN, PATH_LOGOUT, PATH_PROFILE} from "../../../../config/config-routes";
 import {NavLink} from "react-router-dom";
 import {useSelector} from "react-redux";
 
@@ -27,8 +27,12 @@ const BurgerMenu = (props) => {
 
     const itemNavigation = LINKS_NAV.map(link => {
         if(link.path === PATH_LOGIN){
-            return user ? <NavLink key={PATH_LOGOUT} className="nav__link_btn" to={PATH_LOGOUT}>Logout</NavLink>
-                : <NavLink key={PATH_LOGIN} className="nav__link_btn" to={PATH_LOGIN}>Login</NavLink>
+            return user ? <NavLink key={PATH_LOGOUT} className="burger__link_btn" to={PATH_LOGOUT}>Logout</NavLink>
+                : <NavLink key={PATH_LOGIN} className="burger__link_btn" to={PATH_LOGIN}>Login</NavLink>
+        }
+        if(link.path === PATH_PROFILE){
+            return user ? <NavLink key={link.path} className="burger__link" to={link.path}>{link.label}</NavLink>
+                : ""
         }
         return <NavLink key={link.path} className="burger__link" to={link.path}>{link.label}</NavLink>
     })

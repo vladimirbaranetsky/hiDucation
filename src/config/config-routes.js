@@ -17,5 +17,6 @@ export const LINKS_NAV = [
     { path: PATH_TEAM, label: 'Team' },
     { path: PATH_CONTACT, label: 'Contact' },
     { path: PATH_DASHBOARD, label: 'Dashboard' },
-    { path: PATH_LOGIN, label: 'Login' },
+    { path: PATH_PROFILE, label: 'Profile' },
+    { path: PATH_LOGIN, label: 'Login' }
 ];

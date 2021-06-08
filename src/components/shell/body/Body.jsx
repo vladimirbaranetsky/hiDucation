@@ -70,7 +70,7 @@ const Body = () => {
                     }}>
                     </Route>
                     <Route path={PATH_PROFILE} exact render={() => {
-                        return <Profile/>
+                        return <Profile />;
                     }}>
                     </Route>
                 </Switch>
