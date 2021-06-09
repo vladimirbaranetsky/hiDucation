@@ -31,7 +31,6 @@
     width: 100%;
     margin-top: 4rem;
 }
-
 .profile__row{
     display: flex;
     margin-top: 2rem;
@@ -53,11 +52,14 @@
     flex-direction: column;
     position: relative;
     margin-top: 1rem;
+    margin-right: 1rem;
+    justify-items: center;
 }
 
 .profile__item_title{
     padding-left: 16px;
     padding-bottom: 3px;
+    margin-right: 1rem;
 }
 
 .profile__item_input, .profile__item_button{
@@ -66,7 +68,7 @@
     box-shadow: 0 0 4px #808080;
     background-color: #ffffff;
     border: 1px solid #ffffff;
-    border-radius: 2rem;
+    border-radius: 1rem;
     cursor: pointer;
     margin-bottom: 1.33rem;
     padding: 0 1rem 0 2.66rem;
@@ -77,11 +79,7 @@
     border: 1px solid rgb(64, 224, 208);
 }
 
-.profile__item_input_icon {
-    position: absolute;
-    left: 0.66rem;
-    bottom: 2.13rem;
-}
+
 
 .profile__item_subtitle{
     position: absolute;
