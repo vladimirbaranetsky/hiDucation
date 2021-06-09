@@ -10,7 +10,7 @@ const Contact = () => {
     const [data, setData] = useState({
         message: "",
         email: "",
-        fullname: ""
+        fullName: ""
     })
 
     const handleChange = (event) => {
@@ -21,8 +21,8 @@ const Contact = () => {
                 return setData({...data, message: event.target.value});
             case "email":
                 return setData({...data, email: event.target.value});
-            case "fullname":
-                return setData({...data, fullname: event.target.value});
+            case "fullName":
+                return setData({...data, fullName: event.target.value});
             default:
                 break;
         }
@@ -35,13 +35,13 @@ const Contact = () => {
             .then(() => {
                 form.reset()
             });
-        setData({...data, message: "", email: "", fullname: ""});
+        setData({...data, message: "", email: "", fullName: ""});
 
     }
 
     useEffect(() => {
         const isValidate = () =>{
-            return !(data.message !== "" && data.email !== "" && data.fullname !== "");
+            return !(data.message !== "" && data.email !== "" && data.fullName !== "");
         };
         setIsInvalid(isValidate());
     },[data]);
@@ -66,7 +66,7 @@ const Contact = () => {
                     <div className={style.contact__data}>
                         <div className={style.contact__data_input}>
                             <input required className={style.input__email} onChange={handleChange} type="email" name="email" placeholder="Email Address" />
-                            <input required className={style.input__name} onChange={handleChange} type="text" name="fullname" placeholder="Full Name" />
+                            <input required className={style.input__name} onChange={handleChange} type="text" name="fullName" placeholder="Full Name" />
                         </div>
                         <button disabled={isInvalid} className={style.contact__data_button} type="submit">Send</button>
                     </div>
