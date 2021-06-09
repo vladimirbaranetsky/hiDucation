@@ -9,14 +9,16 @@ const ModalDisplay = (props) => {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
+            title=""
         >
             <Modal.Header>
                 <Modal.Title id="contained-modal-title-vcenter">
-                    {props.title.title}
+                    <span style={{fontSize: "1.8vw"}}>{props.title.title}</span>
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {props.title.subtitle}
+                <span style={{fontSize: "1.2vw"}}>{props.title.subtitle}</span>
+                <span style={{fontWeight: "bold", fontSize: "1.3vw", color: "#40e0d0"}} >{props.title.companyName}</span>
             </Modal.Body>
             <Modal.Footer>
                 <Button  onClick={props.onHide}>Close</Button>
