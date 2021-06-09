@@ -34,15 +34,15 @@ const Login = () => {
     };
 
     const handleChangePassword = (event) => {
-            event.preventDefault();
-            const password = event.target.value;
-            let textError = '';
+        event.preventDefault();
+        const password = event.target.value;
+        let textError = '';
 
-            if(password.length < DIGITS_PASSWORD){
-                textError = `Use ${DIGITS_PASSWORD} or more characters with a mix of letters and numbers`;
+        if(password.length < DIGITS_PASSWORD){
+            textError = `Use ${DIGITS_PASSWORD} or more characters with a mix of letters and numbers`;
         }else{
             setData({...data, password: password});
-                }
+        }
         setErrors({...errors, password: textError});
     };
 
