@@ -26,7 +26,7 @@ const Header = (props) => {
                     <Logo/>
                     <div className={style.header__inner}>
                         <Navigation />
-                        <BurgerMenu />
+                        <BurgerMenu theme={props.theme}/>
                         <ButtonToggleThemes themeToggle={props.themeToggle} theme={props.theme} />
                     </div>
                 </div>

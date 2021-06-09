@@ -1,6 +1,21 @@
+.modal.show .modal-dialog {
+    transform: none;
+    display: flex;
+    justify-content: center;
+}
+
 .modal-content{
     border-radius: 2rem;
+    width: auto;
 }
+
+/*.modal-content{*/
+/*    border-radius: 2rem;*/
+/*    !*border-color: cornflowerblue;*!*/
+/*    color: #ffffff;*/
+/*    background-color: #808080;*/
+/*    width: auto;*/
+/*}*/
 
 .btn-primary{
     background-color: #ffffff;
@@ -19,3 +34,4 @@
     border-color: cornflowerblue;
     color: #ffffff;
 }
+
