@@ -144,9 +144,7 @@ const Profile = () => {
                                 <input hidden={hidden} className={style.profile__item_input} type="text" name="subject" onChange={handleChangeSubject}/>
                             </div>
                         </div>
-
-                            <button disabled={!hidden} className={style.profile__item_button} type="button" value="signUp" onClick={updateData}>Update data</button>
-
+                            <button disabled={!hidden} className={style.profile__item_button} type="button" value="signUp" onClick={updateData}>Update profile</button>
                     </div>
 
                 </form>
