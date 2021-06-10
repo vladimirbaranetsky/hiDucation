@@ -89,7 +89,12 @@
 }
 
 .profile__item_button{
+    display: flex;
     border: none;
+    width: 10%;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 1rem;
 }
 
 .profile__item_button:hover{
