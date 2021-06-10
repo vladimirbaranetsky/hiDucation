@@ -144,7 +144,9 @@ const Profile = () => {
                                 {errors.password.length > 0 && <span className={style.input__error_message}>{errors.password}</span>}
                             </div>
                         </div>
+                        <div className={style.profile__col}>
                             <button disabled={!hidden} className={style.profile__item_button} type="button" value="signUp" onClick={updateData}>Update profile</button>
+                        </div>
                     </div>
 
                 </form>

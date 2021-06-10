@@ -92,7 +92,7 @@
 .profile__item_button{
     display: flex;
     border: none;
-    width: 10%;
+    width: 20%;
     justify-content: space-around;
     align-items: center;
     padding-left: 1rem;
