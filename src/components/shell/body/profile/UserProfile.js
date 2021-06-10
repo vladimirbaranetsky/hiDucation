@@ -130,6 +130,10 @@ const Profile = () => {
                                 <input hidden={hidden}  className={style.profile__item_input} type="text" name="degree" onChange={handleChangeDegree}/>
                             </div>
                             <div className={style.profile__item}>
+                                <label className={style.profile__item_title}>Subject</label>
+                                <input hidden={hidden} className={style.profile__item_input} type="text" name="subject" onChange={handleChangeSubject}/>
+                            </div>
+                            <div className={style.profile__item}>
                                 <label className={style.profile__item_title}>Email</label>
                                 <input hidden={hidden} className={style.profile__item_input} type="email" name="email" onChange={handleChangeEmail}/>
                                 {errors.email.length > 0 && <span className={style.input__error_message}>{errors.email}</span>}
@@ -138,10 +142,6 @@ const Profile = () => {
                                 <label className={style.profile__item_title}>Password</label>
                                 <input hidden={hidden} className={style.profile__item_input} type="password" name="password" onChange={handleChangePassword}/>
                                 {errors.password.length > 0 && <span className={style.input__error_message}>{errors.password}</span>}
-                            </div>
-                            <div className={style.profile__item}>
-                                <label className={style.profile__item_title}>Subject</label>
-                                <input hidden={hidden} className={style.profile__item_input} type="text" name="subject" onChange={handleChangeSubject}/>
                             </div>
                         </div>
                             <button disabled={!hidden} className={style.profile__item_button} type="button" value="signUp" onClick={updateData}>Update profile</button>
