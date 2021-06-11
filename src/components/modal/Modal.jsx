@@ -1,6 +1,6 @@
 import React from "react";
 import {Button, Modal} from "react-bootstrap";
-import style from "./Modal.modules.css"
+import  "./Modal.css"
 
 const ModalDisplay = (props) => {
     return (
@@ -13,12 +13,11 @@ const ModalDisplay = (props) => {
         >
             <Modal.Header>
                 <Modal.Title id="contained-modal-title-vcenter">
-                    <span style={{fontSize: "1.8vw"}}>{props.title.title}</span>
+                    <span style={{fontSize: "1.5rem", fontWeight: "300", borderBottom: "none"}}>{props.message.title}</span>
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <span style={{fontSize: "1.2vw"}}>{props.title.subtitle}</span>
-                <span style={{fontWeight: "bold", fontSize: "1.3vw", color: "#40e0d0"}} >{props.title.companyName}</span>
+                <span style={{fontSize: "1rem", fontWeight: "300", borderBottom: "none"}}>{props.message.subtitle}</span>
             </Modal.Body>
             <Modal.Footer>
                 <Button  onClick={props.onHide}>Close</Button>

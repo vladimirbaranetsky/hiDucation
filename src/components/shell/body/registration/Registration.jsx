@@ -2,19 +2,19 @@ import React, {useEffect, useState} from "react";
 import style from "./Registration.module.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {registration} from "../../../../actions/action-auth";
 import {useHistory} from "react-router-dom";
 import {PATH_LOGIN} from "../../../../config/config-routes";
 import {DIGITS_NAME, DIGITS_PASSWORD, VALIDATE} from "../../../../config/config-credentials";
 import ModalDisplay from "../../../modal/Modal";
-import {MODAL_TITLE} from "../../../../config/config-regestration";
 
-const Registration = () => {
+const Registration = (props) => {
     const history = useHistory();
     const dispatch = useDispatch();
     const [isInvalid, setIsInvalid] = useState(true);
     const [modalShow, setModalShow] = React.useState(false);
+    const messageServer = useSelector(state => state.messageServer.message);
     const[data, setData] = useState({
         username: "",
         email: "",
@@ -91,9 +91,11 @@ const Registration = () => {
         dispatch(registration(data.username, data.email, data.password))
             .then(() => {
                 form.reset();
-                setModalShow(true);
                 setData({...data, username: "", email: "", password: "", confirm: ""});
-            });
+            })
+            .finally(() => {
+                setModalShow(true);
+            })
     }
 
     useEffect(() => {
@@ -161,7 +163,7 @@ const Registration = () => {
                 </form>
                 <ModalDisplay
                     show={modalShow}
-                    title = {MODAL_TITLE}
+                    message = {messageServer}
                     onHide={() => {
                     setModalShow(false)
                     history.push(PATH_LOGIN)

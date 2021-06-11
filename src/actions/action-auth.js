@@ -4,25 +4,36 @@ import {
     LOGIN_SUCCESS,
     LOGOUT,
     REGISTER_FAIL,
-    REGISTER_SUCCESS
+    REGISTER_SUCCESS, SET_MESSAGE_SERVER
 } from "./action-types";
-
-
+import React from "react";
 
 export const registration = (data) => (dispatch) => {
     return AuthService.registration(data)
         .then(response => {
             dispatch({
                 type: REGISTER_SUCCESS,
-            });
+            })
+            dispatch({
+                type: SET_MESSAGE_SERVER,
+                payload: {
+                    title: "Registration completed!",
+                    subtitle: ""
+                }
 
+            });
         })
         .catch(error => {
             dispatch({
                 type: REGISTER_FAIL
             });
-            alert(error.message);
-
+            dispatch({
+                type: SET_MESSAGE_SERVER,
+                payload: {
+                    title: "Registration fail :(",
+                    subtitle: error.message
+                }
+            });
             return Promise.reject();
         });
 }
@@ -38,14 +49,26 @@ export const login = (data) => (dispatch) => {
                 //temporary code execution
                 type: LOGIN_SUCCESS,
                 payload: {user: data}
+            })
+            dispatch({
+                type: SET_MESSAGE_SERVER,
+                payload: {
+                    title: "Authorization completed!",
+                    subtitle: ""
+                }
             });
         })
         .catch(error => {
             dispatch({
                 type: LOGIN_FAIL
+            })
+            dispatch({
+                type: SET_MESSAGE_SERVER,
+                payload: {
+                    title: "Authorization fail :(",
+                    subtitle: error.message
+                }
             });
-            alert(error.message);
-
             return Promise.reject();
         });
 };

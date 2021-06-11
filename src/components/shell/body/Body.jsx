@@ -21,7 +21,7 @@ import Registration from "./registration/Registration";
 import Profile from "./profile/UserProfile";
 import {useSelector} from "react-redux";
 
-const Body = () => {
+const Body = (props) => {
     const isLoggedIn = useSelector(state => state.data.isLoggedIn);
 
     return <React.Fragment>
@@ -54,9 +54,7 @@ const Body = () => {
                     }}>
                     </Route>
                     <Route path={PATH_LOGIN} exact render={() => {
-                        return !isLoggedIn
-                            ? <Login />
-                            : <Redirect to={PATH_HOME} />
+                        return <Login />
                     }}>
                     </Route>
                     <Route path={PATH_LOGOUT} exact render={() => {
@@ -66,7 +64,7 @@ const Body = () => {
                     }}>
                     </Route>
                     <Route path={PATH_REGISTRATION} exact render={() => {
-                        return <Registration/>;
+                        return <Registration />;
                     }}>
                     </Route>
                     <Route path={PATH_PROFILE} exact render={() => {
