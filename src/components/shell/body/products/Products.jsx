@@ -122,10 +122,10 @@ const Products = () => {
             </div>
             <div className={style.products__body}>
                 <div className={style.products__menu}>
-                    <button onSubmit={handleSubject} className={style.products__menu_link} value="all" type="submit">All</button>
-                    <button onSubmit={handleSubject} className={style.products__menu_link} value="math" type="submit">Math</button>
-                    <button onSubmit={handleSubject} className={style.products__menu_link} value="programming" type="submit">Programming</button>
-                    <button onSubmit={handleSubject} className={style.products__menu_link} value="physics" type="submit">Physics</button>
+                    <button onSubmit={handleSubject} className={style.products__menu_link} name="all" type="submit">All</button>
+                    <button onSubmit={handleSubject} className={style.products__menu_link} name="math" type="submit">Math</button>
+                    <button onSubmit={handleSubject} className={style.products__menu_link} name="programming" type="submit">Programming</button>
+                    <button onSubmit={handleSubject} className={style.products__menu_link} name="physics" type="submit">Physics</button>
                 </div>
                 <div className={style.product__items}>
                     {itemProductMath}, {itemProductPhys},{itemProductProg}
