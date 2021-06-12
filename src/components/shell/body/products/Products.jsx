@@ -1,3 +1,4 @@
+import React from "react";
 import style from './Products.module.css'
 import photoMath from "../../../../images/product_math.jpg";
 import photoProg from "../../../../images/product_prog.jpg";
