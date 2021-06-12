@@ -8,9 +8,28 @@ import {
 
 const user = JSON.parse(localStorage.getItem('user'))
 
-const initialState = user
-    ? {isLoggedIn: true, user}
-    : {isLoggedIn: false, user: null};
+// const initialState = user
+//     ? {isLoggedIn: true, user}
+//     : { isLoggedIn: false,
+//         user: {
+//         id: 0,
+//         firstName: "",
+//         lastName: "",
+//         email: "",
+//         password: "",
+//         institute: "",
+//         degree: "",
+//         fields: "",
+//         apps: [],
+//         stillStudent: true,
+//         roles: []
+//     }};
+
+const initialState = {
+    user:
+    isLoggedIn: false
+}
+
 
 export function authentication (state = initialState, action) {
     const {type, payload} = action;
@@ -28,8 +47,8 @@ export function authentication (state = initialState, action) {
         case LOGIN_SUCCESS:
             return {
                 ...state,
-                isLoggedIn: true,
-                user: payload.user
+                user: {email: payload.user.email, password: payload.user.password},
+                isLoggedIn: true
             }
         case LOGIN_FAIL:
             return {
