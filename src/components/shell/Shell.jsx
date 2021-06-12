@@ -3,7 +3,7 @@ import Header from "./header/Header";
 import Body from "./body/Body";
 import styled, {ThemeProvider} from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "../themes/Themes"
-import Background from "../background/Background";
+
 
 
 const StyledApp = styled.div``;
@@ -17,7 +17,7 @@ const Shell = () => {
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
             <GlobalStyles/>
                 <StyledApp>
-                    {/*<Background/>*/}
+                   {/* <Background/>*/}
                     <Header theme={theme} themeToggle={themeToggle}/>
                     <Body />
                 </StyledApp>
