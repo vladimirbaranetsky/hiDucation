@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import style from './Products.module.css'
 import photoMath from "../../../../images/product_math.jpg";
 import photoProg from "../../../../images/product_prog.jpg";
@@ -8,12 +8,30 @@ import photoPhys from "../../../../images/product_phys.jpg";
 const Products = () => {
 
 
+
+/*
+    const products = [
+        {id: 1, product: "Integral Basics", name: "math"},
+        {id: 2, product: "Indefinite Integral Basics", name: "math"},
+        {id: 3, product: "Integration by parts", name: "math"},
+        {id: 4, product: "Reverse Chain rule", name: "math"},
+        {id: 5, product: "Java", name: "programming},
+        {id: 6, product: "Python", name: "programming"},
+        {id: 7, product: "JavaScript", name: "programming"},
+        {id: 8, product: "C++", name: "programming"},
+        {id: 9, product: "Classical Physic", name: "physics"},
+        {id: 10, product: "Relativistic Physic", name: "physics"},
+        {id: 11, product: "Quantum Physic", name: "physics"},
+    ];
+
+    const [filterProduct, setFilterProduct] = useState([...products]);*/
+
     const productsMath = [
         {id: 1, product: "Integral Basics"},
         {id: 2, product: "Indefinite Integral Basics"},
         {id: 3, product: "Integration by parts"},
-        { id: 4, product: "Reverse Chain rule"}
-    ];
+        {id: 4, product: "Reverse Chain rule"}
+    ]
 
     const productsProg = [
         {id: 1, product: "Java"},
@@ -85,7 +103,6 @@ const Products = () => {
             </div>
         </div>
     });
-
     const allSubjects = () => {
         return {
             itemProductMath,
