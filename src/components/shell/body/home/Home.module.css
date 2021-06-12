@@ -54,7 +54,7 @@
     }
 
     .video {
-        width: auto;
+        display: none;
     }
 
     .subtitle {
