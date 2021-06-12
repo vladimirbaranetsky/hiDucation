@@ -10,7 +10,9 @@ const Products = (props) => {
         const name = event.target.name
         props.updateProductFilter(name);
     }
-    const itemProducts = filterProducts.map(product => {
+
+
+    const itemProduct = filterProducts.map(product => {
         return <div key={product.id} className={style.product__item}>
             <div className={style.product__item_wrapper}>
                 <img className={style.product__photo} src={product.photo}  alt="" />
@@ -45,7 +47,7 @@ const Products = (props) => {
                     <button className={style.products__menu_link} onClick={handleChangeCategory} type="button" name="physics" >Physics</button>
                 </div>
                 <div className={style.product__items}>
-                    {itemProducts}
+                    {itemProduct}
                 </div>
             </div>
         </div>

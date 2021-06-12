@@ -12,6 +12,7 @@ const Home = () => {
                 </div>
                 <Carousel/>
             </div>
+
         </div>
     </React.Fragment>
 }
