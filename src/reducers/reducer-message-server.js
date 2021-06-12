@@ -1,4 +1,4 @@
-import {GET_ERRORS, CLEAR_ERRORS} from "../actions/action-types";
+import {SET_MESSAGE_SERVER} from "../actions/action-types";
 
 const initialState = {
     message: ""

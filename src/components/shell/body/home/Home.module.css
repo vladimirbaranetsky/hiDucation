@@ -23,7 +23,8 @@
 .title{
     font-size: 5rem;
     font-weight: 700;
-    color: #ff3399;
+    color: #40e0d0;
+    text-shadow: 0 0 3px #808080;
 }
 
 .subtitle{
@@ -32,6 +33,7 @@
     font-style: italic;
     font-weight: 400;
     margin-top: -15px;
+    text-shadow: 0 0 3px #808080;
 }
 
 @media(max-width: 747px){

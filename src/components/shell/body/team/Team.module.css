@@ -1,10 +1,10 @@
-.team{
+.team {
     display: flex;
     flex-direction: column;
     padding-top: 6rem;
 }
 
-.team__header{
+.team__header {
     display: flex;
     align-items: center;
     text-align: left;
@@ -14,52 +14,54 @@
     height: 6vh;
 }
 
-.team__header_strip div{
+.team__header_strip div {
     width: 0.2rem;
     height: 2.5rem;
     background-color: rgb(64, 224, 208);
 }
 
-.team__header_title{
+.team__header_title {
     font-size: 2.33rem;
     font-weight: 300;
     line-height: 4.66rem;
     margin-left: 0.26rem;
 }
 
-.team__body{
+.team__body {
     margin: 15px 0;
 }
 
-.team__items{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 2.66rem -1rem 0 -1rem;
-}
-.team__item{
-  width: 17rem;
-  margin: 1rem 1rem;
+.team__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2.66rem -1rem 0 -1rem;
 }
 
-.team__item_wrapper{
-  overflow: hidden;
-  position: relative;
-  height: 30rem;
-  box-shadow: 0 0 4px #808080;
-  border-radius: 0.66rem;
-  background-color: #ffffff;
+.team__item {
+    width: 24rem;
+    height: 40rem;
+    margin: 1rem 1rem;
 }
 
-.team__background{
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  align-items: center;
+.team__item_wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 30rem;
+    box-shadow: 0 0 4px #808080;
+    border-radius: 0.66rem;
+    background-color: #ffffff;
+}
+
+.team__background {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    align-items: center;
 }
 
 
-.background__oval_1{
+.background__oval_1 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
@@ -69,7 +71,7 @@
     right: -3.33rem;
 }
 
-.background__oval_2{
+.background__oval_2 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
@@ -79,211 +81,212 @@
     background-color: #40e0d0;
 }
 
-.background__oval_2_1{
+.background__oval_2_1 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 78%;
-  right: -8.26rem;
-  background-color: #33ffff;
-  opacity: 0.5;
+    bottom: 78%;
+    right: -8.26rem;
+    background-color: #33ffff;
+    opacity: 0.5;
 }
 
-.background__oval_3{
+.background__oval_3 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 73%;
-  right: -6.66rem;
-  width: 23.33rem;
-  border: 1px solid #66ffff;
+    bottom: 73%;
+    right: -6.66rem;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_1{
+.background__oval_3_1 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 75%;
-  right: -6.53rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 75%;
+    right: -6.53rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_2{
+.background__oval_3_2 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 77%;
-  right: -6.4rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 77%;
+    right: -6.4rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_3{
+.background__oval_3_3 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 79%;
-  right: -6.26rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 79%;
+    right: -6.26rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_4{
+.background__oval_3_4 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 81%;
-  right: -6.06rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 81%;
+    right: -6.06rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_5{
+.background__oval_3_5 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 83%;
-  right: -5.8rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 83%;
+    right: -5.8rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_6{
+.background__oval_3_6 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 79%;
-  right: 4.46rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 79%;
+    right: 4.46rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_7{
+.background__oval_3_7 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 80%;
-  right: 4.13rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 80%;
+    right: 4.13rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_8{
+.background__oval_3_8 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 81%;
-  right: 3.8rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 81%;
+    right: 3.8rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_9{
+.background__oval_3_9 {
     position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 82%;
-  right: 3.46rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 82%;
+    right: 3.46rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_10{
-     position: absolute;
+.background__oval_3_10 {
+    position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 83%;
-  right: 3.13rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 83%;
+    right: 3.13rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_11{
-     position: absolute;
+.background__oval_3_11 {
+    position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 84%;
-  right: 2.8rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 84%;
+    right: 2.8rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.background__oval_3_12{
-     position: absolute;
+.background__oval_3_12 {
+    position: absolute;
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-  bottom: 85%;
-  right: 2.46rem;
-  background: none;
-  border: 1px solid #66ffff;
+    bottom: 85%;
+    right: 2.46rem;
+    background: none;
+    border: 1px solid #66ffff;
 }
 
-.team__photo_wrapper{
-  position: absolute;
-  border-radius: 50%;
-  background-color: white;
-  width: 10.66rem;
-  height: 10.66rem;
-  left: 3.33rem;
-  bottom: 47%;
-}
-.team__photo{
-  position: absolute;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 4px solid #00CCCC;
-  width: 10rem;
-  height: 10rem;
-  bottom: 3%;
-  left: 5px;
-  background-color: white;
+.team__photo_wrapper {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    width: 10.66rem;
+    height: 10.66rem;
+    left: 3.33rem;
+    bottom: 47%;
 }
 
-.team__photo img{
-  position: absolute;
-  width: 9.6rem;
-  right: 2px;
-}
-.team__info{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 13.33rem;
-  padding-top: 16rem;
-  border-bottom: 1px solid #808080;
+.team__photo {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #00CCCC;
+    width: 10rem;
+    height: 10rem;
+    bottom: 3%;
+    left: 5px;
+    background-color: white;
 }
 
-.team__info_title{
-  font-size: 1.2rem;
-  font-weight: 600;
+.team__photo img {
+    position: absolute;
+    width: 9.6rem;
+    right: 2px;
 }
 
-.team__info_subtitle{
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  font-weight: 200;
-  color: #808080;
+.team__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 13.33rem;
+    padding-top: 16rem;
+    border-bottom: 1px solid #808080;
 }
 
-.team__info_description{
-  overflow-y: auto;
-  margin: 0.66rem 1.8rem;
-  height: 8.66rem;
-  font-size: 0.86rem;
-  text-align: justify;
+.team__info_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.team__info_subtitle {
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-weight: 200;
+    color: #808080;
+}
+
+.team__info_description {
+    overflow-y: auto;
+    margin: 0.66rem 1.8rem;
+    height: 8.66rem;
+    font-size: 0.86rem;
+    text-align: justify;
 }

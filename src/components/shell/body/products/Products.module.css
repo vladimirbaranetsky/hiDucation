@@ -88,6 +88,7 @@
 .product__item{
   width: 17rem;
   margin: 1rem;
+
 }
 
 .product__item_wrapper{
@@ -99,17 +100,17 @@
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  box-shadow: 0 0 4px #808080;
+  box-shadow: 0 0 8px #808080;
   border-radius: 0.66rem;
   transition: box-shadow .2s linear;
 }
 
-/* .product__item_wrapper:hover {
+ .product__item_wrapper:hover {
   box-shadow: 0 0 25px #808080;
-} */
+}
 
 .product__photo{
-  background-color: #40e0d0;
+/*  background-color: #40e0d0;*/
   height: 15.33rem;
 }
 
