@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Redirect, Route, Switch} from "react-router-dom";
 import {
     PATH_ABOUT,
@@ -20,9 +20,36 @@ import style from './Body.module.css'
 import Registration from "./registration/Registration";
 import Profile from "./profile/UserProfile";
 import {useSelector} from "react-redux";
+import photoMath from "../../../images/product_math.jpg";
+import photoProg from "../../../images/product_prog.jpg";
+import photoPhys from "../../../images/product_phys.jpg";
 
 const Body = (props) => {
     const isLoggedIn = useSelector(state => state.data.isLoggedIn);
+
+    const products = [
+        {id: 1, product: "Integral Basics", category: "math", photo: photoMath},
+        {id: 2, product: "Indefinite Integral Basics", category: "math", photo: photoMath},
+        {id: 3, product: "Integration by parts", category: "math", photo: photoMath},
+        {id: 4, product: "Reverse Chain rule", category: "math", photo: photoMath},
+        {id: 5, product: "Java", category: "programming", photo: photoProg},
+        {id: 6, product: "Python", category: "programming", photo: photoProg},
+        {id: 7, product: "JavaScript", category: "programming", photo: photoProg},
+        {id: 8, product: "C++", category: "programming", photo: photoProg},
+        {id: 9, product: "Classical Physic", category: "physics", photo: photoPhys},
+        {id: 10, product: "Relativistic Physic", category: "physics", photo: photoPhys},
+        {id: 11, product: "Quantum Physic", category: "physics", photo: photoPhys}
+    ];
+
+    const [productsFilter, setProductsFilter] = useState([]);
+
+    const updateProductsFilter = (category) => {
+        category !== "all"
+        ? setProductsFilter(products.filter(product => {
+                return product.category === category ? product : "";
+            }))
+            : setProductsFilter(products);
+    }
 
     return <React.Fragment>
         <div className={style.body}>
@@ -34,7 +61,7 @@ const Body = (props) => {
                     }}>
                     </Route>
                     <Route path={PATH_PRODUCTS} exact render={() => {
-                        return <Products/>;
+                        return <Products updateProductFilter={updateProductsFilter} productsFilter={productsFilter.length > 0 ? productsFilter : products}/>;
                     }}>
                     </Route>
                     <Route path={PATH_ABOUT} exact render={() => {

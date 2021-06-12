@@ -1,116 +1,33 @@
 import React from "react";
 import style from './Products.module.css'
-import photoMath from "../../../../images/product_math.jpg";
-import photoProg from "../../../../images/product_prog.jpg";
-import photoPhys from "../../../../images/product_phys.jpg";
 
+const Products = (props) => {
 
-const Products = () => {
+    const filterProducts = props.productsFilter;
 
-
-    const productsMath = [
-        {id: 1, product: "Integral Basics"},
-        {id: 2, product: "Indefinite Integral Basics"},
-        {id: 3, product: "Integration by parts"},
-        { id: 4, product: "Reverse Chain rule"}
-    ];
-
-    const productsProg = [
-        {id: 1, product: "Java"},
-        {id: 2, product: "Python"},
-        {id: 3, product: "JavaScript"},
-        {id: 4, product: "C++"}
-    ]
-
-    const productsPhys = [
-        {id: 1, product: "Classical Physic"},
-        {id: 2, product: "Relativistic Physic"},
-        {id: 3, product: "Quantum Physic"},
-    ]
-
-
-    const itemProductMath = productsMath.map(product => {
-        return <div key={product.id} className={style.product__item}>
-            <div className={style.product__item_wrapper}>
-                <img className={style.product__photo} src={photoMath}  alt="" />
-                <div className={style.product__content}>
-                    <div className={style.product__info}>
-                        <div>
-                            <span className={style.product__info_title}>{product.product}</span>
-                        </div>
-                        <span className={style.product__info_subtitle}>Introduction to integration operation...</span>
-                    </div>
-                    <div className={style.product__buttons}>
-                        <button className={style.product__buttons_item} type="button">Purchase</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    });
-
-    const itemProductProg = productsProg.map(product => {
-        return <div key={product.id} className={style.product__item}>
-            <div className={style.product__item_wrapper}>
-                <img className={style.product__photo} src={photoProg}  alt="" />
-                <div className={style.product__content}>
-                    <div className={style.product__info}>
-                        <div>
-                            <span className={style.product__info_title}>{product.product}</span>
-                        </div>
-                        <span className={style.product__info_subtitle}>Introduction to integration operation...</span>
-                    </div>
-                    <div className={style.product__buttons}>
-                        <button className={style.product__buttons_item} type="button">Purchase</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    });
-
-    const itemProductPhys = productsPhys.map(product => {
-        return <div key={product.id} className={style.product__item}>
-            <div className={style.product__item_wrapper}>
-                <img className={style.product__photo} src={photoPhys}  alt="" />
-                <div className={style.product__content}>
-                    <div className={style.product__info}>
-                        <div>
-                            <span className={style.product__info_title}>{product.product}</span>
-                        </div>
-                        <span className={style.product__info_subtitle}>Introduction to integration operation...</span>
-                    </div>
-                    <div className={style.product__buttons}>
-                        <button className={style.product__buttons_item} type="button">Purchase</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    });
-
-    const allSubjects = () => {
-        return {
-            itemProductMath,
-            itemProductProg,
-            itemProductPhys
-        }
+    const handleChangeCategory = (event) => {
+        event.preventDefault();
+        const name = event.target.name
+        props.updateProductFilter(name);
     }
-
-    const handleSubject = (e) => {
-        e.preventDefault()
-        const value = e.target.value
-        switch (value){
-            case "all":
-                return allSubjects
-            case "math":
-                return itemProductMath
-            case "programming":
-                return itemProductProg
-            case "physics":
-                return itemProductPhys
-            default :
-                return allSubjects
-        }
-    }
-
+    const itemProducts = filterProducts.map(product => {
+        return <div key={product.id} className={style.product__item}>
+            <div className={style.product__item_wrapper}>
+                <img className={style.product__photo} src={product.photo}  alt="" />
+                <div className={style.product__content}>
+                    <div className={style.product__info}>
+                        <div>
+                            <span className={style.product__info_title}>{product.product}</span>
+                        </div>
+                        <span className={style.product__info_subtitle}>Introduction to integration operation...</span>
+                    </div>
+                    <div className={style.product__buttons}>
+                        <button className={style.product__buttons_item} type="button">Purchase</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    });
 
     return <React.Fragment>
         <div className={style.products}>
@@ -122,13 +39,13 @@ const Products = () => {
             </div>
             <div className={style.products__body}>
                 <div className={style.products__menu}>
-                    <button onSubmit={handleSubject} className={style.products__menu_link} name="all" type="submit">All</button>
-                    <button onSubmit={handleSubject} className={style.products__menu_link} name="math" type="submit">Math</button>
-                    <button onSubmit={handleSubject} className={style.products__menu_link} name="programming" type="submit">Programming</button>
-                    <button onSubmit={handleSubject} className={style.products__menu_link} name="physics" type="submit">Physics</button>
+                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button" name="all" >All</button>
+                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button" name="math" >Math</button>
+                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button" name="programming" >Programming</button>
+                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button" name="physics" >Physics</button>
                 </div>
                 <div className={style.product__items}>
-                    {itemProductMath}, {itemProductPhys},{itemProductProg}
+                    {itemProducts}
                 </div>
             </div>
         </div>
