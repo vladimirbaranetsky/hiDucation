@@ -7,8 +7,8 @@ const Logo = () => {
     return <React.Fragment>
         <NavLink key={PATH_HOME} to="/home">
             <div className={style.logo__company}>
-                <span className={style.logo__company_title}>hiMath</span>
-                <span className={style.logo__company_subtitle}>Gaming</span>
+                <span className={style.logo__company_title}>hi</span>
+                <span className={style.logo__company_subtitle}>Ducation</span>
             </div>
         </NavLink>
     </React.Fragment>

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Header from "./header/Header";
 import Body from "./body/Body";
+import Background from "../background/Background";
 import styled, {ThemeProvider} from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "../themes/Themes"
 

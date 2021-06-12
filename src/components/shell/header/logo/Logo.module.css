@@ -1,6 +1,6 @@
 .logo__company {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     line-height: 2.5rem;
 }
 
@@ -11,8 +11,8 @@
 
 .logo__company_subtitle{
     color: #40e0d0;
-    margin-top: -0.2rem;
-    font-size: 2.26rem;
+/*    margin-top: -0.2rem;*/
+    font-size: 2.53rem;
     font-weight: 900;
 }
 
