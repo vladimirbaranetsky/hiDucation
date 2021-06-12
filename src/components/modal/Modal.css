@@ -9,14 +9,6 @@
     width: auto;
 }
 
-/*.modal-content{*/
-/*    border-radius: 2rem;*/
-/*    !*border-color: cornflowerblue;*!*/
-/*    color: #ffffff;*/
-/*    background-color: #808080;*/
-/*    width: auto;*/
-/*}*/
-
 .btn-primary{
     background-color: #ffffff;
     border: 1px solid #808080;
@@ -29,9 +21,17 @@
 }
 
 .btn-primary:hover {
-    background-color: cornflowerblue;
+    background-color: #ff3399;
     box-shadow: 0 0 4px #808080;
-    border-color: cornflowerblue;
+    border-color: #ff3399;
     color: #ffffff;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
 }
 

@@ -1,6 +1,7 @@
 import ProfileService from "../services/profile-servise";
 import {PROFILE_UPDATE_FAIL, PROFILE_UPDATE_SUCCESS} from "./action-types";
 
+
 export const profile = (data, userEmail) => (dispatch) => {
     return ProfileService.profile(data, userEmail)
         .then(response => {

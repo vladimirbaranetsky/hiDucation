@@ -6,7 +6,7 @@ const registration = (data) => {
 };
 
 const login = (data) => {
-    return axios.get(api_url + '/user/login', {data});
+    return axios.get(api_url + '/user/loin', {data});
 };
 
 const logout = () => {
