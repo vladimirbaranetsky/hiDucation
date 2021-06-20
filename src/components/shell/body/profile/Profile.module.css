@@ -1,0 +1,223 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+}
+
+.profile__header{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border-bottom: 1px solid #e04050;
+    margin-top: 2rem;
+    padding-bottom: 10px;
+    height: 6vh;
+}
+
+.profile__header_strip div{
+    width: 0.2rem;
+    height: 2.5rem;
+    background-color: rgb(64, 224, 208);
+}
+
+.profile__header_title{
+    font-size: 2.33rem;
+    font-weight: 300;
+    line-height: 4.66rem;
+    margin-left: 0.26rem;
+}
+
+.profile__body{
+    width: 100%;
+}
+.profile__row, .profile__row_button{
+    display: flex;
+    margin-top: 4rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile__col{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__avatar_inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 6px #808080;
+    -webkit-text-stroke: 1px #18b8a9;
+    border-radius: 50%;
+    border: 8px solid #40e0d0;
+    background: none;
+}
+
+.profile__avatar_title{
+    font-size: 6rem;
+    font-weight: 400;
+    color: #40e0d0;
+    -webkit-text-stroke: 1px #18b8a9;
+}
+
+.profile__avatar_wrapper{
+    right: -73%;
+    height: 200px;
+}
+.profile__avatar_img{
+    height: 200px;
+}
+
+.profile__avatar_input{
+    position: absolute;
+    display: flex;
+    background: #ffffff;
+    height: 47px;
+    width: 160px;
+    top: 150px;
+    left: 12px;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.profile__avatar_input label{
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 300;
+    transition: all .2s linear;
+}
+
+.profile__avatar_input label:hover{
+    color: #e04050;
+}
+
+.profile__item{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-items: center;
+}
+
+.profile__item_title{
+    padding-left: 16px;
+    padding-bottom: 3px;
+    margin-right: 1rem;
+}
+
+.profile__item_input{
+    width: 26rem;
+    height: 2.66rem;
+    box-shadow: 0 0 4px #808080;
+    /*background-color: #ffffff;*/
+    border: 1px solid #808080;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-bottom: 1.33rem;
+    padding: 0 1rem 0 2.66rem;
+    transition: all .2s linear;
+    background: none;
+}
+
+.profile__item_input:hover, .profile__item_input:focus{
+    border: 1px solid #40e0d0;
+}
+.profile__item_input:read-only{
+    border: 1px solid #808080;
+    cursor: default;
+}
+
+.profile__item_subtitle{
+    position: absolute;
+    padding-left: 1rem;
+    top: 4.66rem;
+    font-size: 0.73rem;
+}
+
+.profile__button_submit{
+    margin-left: 2rem;
+}
+
+.profile__button_submit,.profile__button_edit{
+    box-shadow: 0 0 4px #808080;
+    background: none;
+    padding: 0.6rem 1.1rem;
+    transition: all .2s linear;
+    border-radius: 2rem;
+    border: 1px solid #808080;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.profile__button_submit:hover{
+    border: 1px solid #40e0d0;
+    background-color: #40e0d0;
+    color: #ffffff;
+}
+
+.profile__button_edit:hover{
+    border: 1px solid #e04050;
+    background-color: #e04050;
+    color: #ffffff;
+}
+
+.profile__button_submit:disabled{
+    border: 1px solid #808080;
+    background: none;
+    color:#808080;
+    cursor: default;
+}
+
+.input__error_message{
+    position: absolute;
+    bottom: 0;
+    padding-left: 16px;
+    font-size: 10px;
+    color: #e04050;
+}
+
+@media(max-width: 991px){
+    .profile__body{
+        margin-top: 2rem;
+    }
+    .profile__row{
+        flex-direction: column;
+        margin-top: 15rem;
+    }
+
+    .profile__row_button{
+        margin: 2rem 0;
+    }
+
+    .profile__col{
+        width: 100%;
+    }
+
+    .profile__col_avatar{
+        position: absolute;
+        top: 207px;
+    }
+
+    .profile__item_button:last-child{
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width: 414px){
+    .profile__item_input{
+        width: 90vw;
+    }
+}
+

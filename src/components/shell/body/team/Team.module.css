@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     text-align: left;
-    border-bottom: 1px solid #ff3399;
+    border-bottom: 1px solid #e04050;
     margin-top: 2rem;
     padding-bottom: 10px;
     height: 6vh;
@@ -39,8 +39,8 @@
 }
 
 .team__item {
-    width: 18rem;
-    height: 40rem;
+    width: 21rem;
+    height: 30rem;
     margin: 1rem 1rem;
 }
 
@@ -49,8 +49,9 @@
     position: relative;
     height: 30rem;
     box-shadow: 0 0 4px #808080;
+    border: 1px solid #40e0d0;
     border-radius: 0.66rem;
-    background-color: #ffffff;
+    background: none;
 }
 
 .team__background {
@@ -68,7 +69,7 @@
     height: 23.33rem;
     background-color: #00cccc;
     bottom: 60%;
-    right: -3.33rem;
+    right: -1.2rem;
 }
 
 .background__oval_2 {
@@ -77,7 +78,7 @@
     width: 23.33rem;
     height: 23.33rem;
     bottom: 70%;
-    right: -1.33rem;
+    right: 0.67rem;
     background-color: #40e0d0;
 }
 
@@ -86,8 +87,8 @@
     border-radius: 50%;
     width: 23.33rem;
     height: 23.33rem;
-    bottom: 78%;
-    right: -8.26rem;
+    bottom: 70%;
+    right: -2.26rem;
     background-color: #33ffff;
     opacity: 0.5;
 }
@@ -98,7 +99,7 @@
     width: 23.33rem;
     height: 23.33rem;
     bottom: 73%;
-    right: -6.66rem;
+    right: -3.66rem;
     border: 1px solid #66ffff;
 }
 
@@ -108,7 +109,7 @@
     width: 23.33rem;
     height: 23.33rem;
     bottom: 75%;
-    right: -6.53rem;
+    right: -3.53rem;
     background: none;
     border: 1px solid #66ffff;
 }
@@ -119,7 +120,7 @@
     width: 23.33rem;
     height: 23.33rem;
     bottom: 77%;
-    right: -6.4rem;
+    right: -3.4rem;
     background: none;
     border: 1px solid #66ffff;
 }
@@ -130,7 +131,7 @@
     width: 23.33rem;
     height: 23.33rem;
     bottom: 79%;
-    right: -6.26rem;
+    right: -3.26rem;
     background: none;
     border: 1px solid #66ffff;
 }
@@ -141,7 +142,7 @@
     width: 23.33rem;
     height: 23.33rem;
     bottom: 81%;
-    right: -6.06rem;
+    right: -3.06rem;
     background: none;
     border: 1px solid #66ffff;
 }
@@ -152,7 +153,7 @@
     width: 23.33rem;
     height: 23.33rem;
     bottom: 83%;
-    right: -5.8rem;
+    right: -2.8rem;
     background: none;
     border: 1px solid #66ffff;
 }
@@ -237,10 +238,9 @@
 .team__photo_wrapper {
     position: absolute;
     border-radius: 50%;
-    background-color: white;
     width: 10.66rem;
     height: 10.66rem;
-    left: 3.33rem;
+    left: 5.3rem;
     bottom: 47%;
 }
 
@@ -285,7 +285,7 @@
 
 .team__info_description {
     overflow-y: auto;
-    margin: 0.66rem 1.8rem;
+    margin: 0.66rem 1.5rem;
     height: 8.66rem;
     font-size: 0.86rem;
     text-align: justify;

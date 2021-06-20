@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import style from './Contact.module.css';
 import Footer from "../../footer/Footer";
 import {useDispatch} from "react-redux";
-import {sendMessage} from "../../../../actions/action-message";
+import {sendMessage} from "../../../../actions/messageAction";
 
 const Contact = () => {
     const dispatch = useDispatch();

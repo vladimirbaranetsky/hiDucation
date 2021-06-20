@@ -1,11 +1,13 @@
-import MessageService from "../services/message-service";
-import {SEND_MESSAGE_FAIL, SEND_MESSAGE_SUCCESS} from "./action-types";
+import MessageService from "../services/messageService";
+import {SEND_MESSAGE_FAIL, SEND_MESSAGE_SUCCESS} from "./typesAction";
+import {clearErrors, returnErrors} from "./errorAction";
 
 
 
 export const sendMessage = (data) => (dispatch) => {
-    return MessageService.send(data)
+    return MessageService.sendMessage(data)
         .then(response => {
+            dispatch(clearErrors());
             dispatch({
                 type: SEND_MESSAGE_SUCCESS,
                 // payload: response.data
@@ -13,6 +15,7 @@ export const sendMessage = (data) => (dispatch) => {
 
         })
         .catch(error => {
+            dispatch(returnErrors(error.message, error.response.status));
             dispatch({
                 type: SEND_MESSAGE_FAIL
             });

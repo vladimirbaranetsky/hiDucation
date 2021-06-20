@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../logout/Logout.module.css";
 import {useDispatch} from "react-redux";
-import {logout} from "../../../../actions/action-auth";
+import {logout} from "../../../../actions/authAction";
 
 const Logout = () => {
     const dispatch = useDispatch();

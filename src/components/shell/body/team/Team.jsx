@@ -1,8 +1,10 @@
 import React from 'react';
 import photo3 from '../../../../images/avatar_photo3.jpg';
 import style from './Team.module.css'
+import {useSelector} from "react-redux";
 
 const Team = () => {
+    const theme = useSelector(state => state.theme.theme)
     const employees = [
         {id: 1, name: "Dr.Igor Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo: ''},
         {id: 2, name: "Just.Gabi Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo:''},
@@ -29,7 +31,7 @@ const Team = () => {
                     <div className={style.background__oval_3_10}></div>
                     <div className={style.background__oval_3_11}></div>
                     <div className={style.background__oval_3_12}></div>
-                    <div className={style.team__photo_wrapper}>
+                    <div className={style.team__photo_wrapper} style={theme === "dark" ? {backgroundColor: "black"} : {backgroundColor: "white"}}>
                         <div className={style.team__photo}>
                             <img src={photo3} alt=" "/>
                         </div>

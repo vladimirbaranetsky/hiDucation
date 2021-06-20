@@ -1,24 +1,25 @@
-import React, {useState} from "react";
+import React, {useEffect} from "react";
 import Header from "./header/Header";
 import Body from "./body/Body";
 import styled, {ThemeProvider} from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "../themes/Themes"
-
-
+import store from "../../store/store";
+import {getProducts} from "../../actions/productsAction";
+import {useSelector} from "react-redux";
 
 const StyledApp = styled.div``;
 
 const Shell = () => {
-    const [theme, setTheme] = useState("light");
-    const themeToggle = () => {
-        theme === "light" ? setTheme("dark") : setTheme("light");
-    }
+
+    useEffect(() => {
+        store.dispatch(getProducts(""));
+    })
     return <React.Fragment>
-        <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <ThemeProvider theme={useSelector(state => state.theme.theme) === "light" ? lightTheme : darkTheme}>
             <GlobalStyles/>
                 <StyledApp>
                    {/* <Background/>*/}
-                    <Header theme={theme} themeToggle={themeToggle}/>
+                    <Header/>
                     <Body />
                 </StyledApp>
         </ThemeProvider>

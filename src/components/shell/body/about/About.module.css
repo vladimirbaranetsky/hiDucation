@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     text-align: left;
-    border-bottom: 1px solid #ff3399;
+    border-bottom: 1px solid #e04050;
     margin-top: 2rem;
     padding-bottom: 10px;
     height: 6vh;
@@ -41,4 +41,11 @@
 .about__subtitle{
     opacity: 0.8;
     font-size: 1.2rem;
+}
+
+@media (max-width: 475px) {
+    .about__title{
+        text-align: center;
+    }
+
 }

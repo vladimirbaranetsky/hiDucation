@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {Redirect, Route, Switch} from "react-router-dom";
 import {
     PATH_ABOUT,
@@ -18,37 +18,18 @@ import Login from "./login/Login";
 import Logout from "./logout/Logout";
 import style from './Body.module.css'
 import Registration from "./registration/Registration";
-import Profile from "./profile/UserProfile";
+import Profile from "./profile/Profile";
 import {useSelector} from "react-redux";
-import photoMath from "../../../images/product_math.jpg";
-import photoProg from "../../../images/product_prog.jpg";
-import photoPhys from "../../../images/product_phys.jpg";
+import store from "../../../store/store";
+import {getProducts} from "../../../actions/productsAction";
 
-const Body = (props) => {
-    const isLoggedIn = useSelector(state => state.data.isLoggedIn);
+const Body = () => {
 
-    const products = [
-        {id: 1, product: "Integral Basics", category: "math", photo: photoMath},
-        {id: 2, product: "Indefinite Integral Basics", category: "math", photo: photoMath},
-        {id: 3, product: "Integration by parts", category: "math", photo: photoMath},
-        {id: 4, product: "Reverse Chain rule", category: "math", photo: photoMath},
-        {id: 5, product: "Java", category: "programming", photo: photoProg},
-        {id: 6, product: "Python", category: "programming", photo: photoProg},
-        {id: 7, product: "JavaScript", category: "programming", photo: photoProg},
-        {id: 8, product: "C++", category: "programming", photo: photoProg},
-        {id: 9, product: "Classical Physic", category: "physics", photo: photoPhys},
-        {id: 10, product: "Relativistic Physic", category: "physics", photo: photoPhys},
-        {id: 11, product: "Quantum Physic", category: "physics", photo: photoPhys}
-    ];
-
-    const [productsFilter, setProductsFilter] = useState([]);
+    const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+    const products = useSelector(state => state.products.products)
 
     const updateProductsFilter = (category) => {
-        category !== "all"
-        ? setProductsFilter(products.filter(product => {
-                return product.category === category ? product : "";
-            }))
-            : setProductsFilter(products);
+        store.dispatch(getProducts(category))
     }
 
     return <React.Fragment>
@@ -61,7 +42,7 @@ const Body = (props) => {
                     }}>
                     </Route>
                     <Route path={PATH_PRODUCTS} exact render={() => {
-                        return <Products updateProductFilter={updateProductsFilter} productsFilter={productsFilter.length > 0 ? productsFilter : products}/>;
+                        return <Products updateProductFilter={updateProductsFilter} productsFilter={products}/>;
                     }}>
                     </Route>
                     <Route path={PATH_ABOUT} exact render={() => {
@@ -85,7 +66,7 @@ const Body = (props) => {
                     }}>
                     </Route>
                     <Route path={PATH_LOGOUT} exact render={() => {
-                        return isLoggedIn
+                        return isAuthenticated
                             ? <Logout />
                             : <Redirect to={PATH_HOME} />
                     }}>

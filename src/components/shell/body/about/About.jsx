@@ -12,7 +12,7 @@ const About = () => {
             </div>
             <div className={style.about__body}>
                 <span className={style.about__title}>
-                    About hiMath Gaming Mission
+                    About hiDucation Mission
                 </span>
                 <span className={style.about__subtitle}>
                     Your best teacher is YOU!

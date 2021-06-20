@@ -2,8 +2,8 @@ import React, {useEffect, useState} from "react";
 import style from "./Registration.module.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
-import {useDispatch, useSelector} from "react-redux";
-import {registration} from "../../../../actions/action-auth";
+import {useDispatch} from "react-redux";
+import {registration} from "../../../../actions/authAction";
 import {useHistory} from "react-router-dom";
 import {PATH_LOGIN} from "../../../../config/config-routes";
 import {DIGITS_NAME, DIGITS_PASSWORD, VALIDATE} from "../../../../config/config-credentials";
@@ -14,7 +14,7 @@ const Registration = (props) => {
     const dispatch = useDispatch();
     const [isInvalid, setIsInvalid] = useState(true);
     const [modalShow, setModalShow] = React.useState(false);
-    const messageServer = useSelector(state => state.messageServer.message);
+    // const messageServer = useSelector(state => state.messageServer.message);
     const[data, setData] = useState({
         username: "",
         email: "",
@@ -36,53 +36,50 @@ const Registration = (props) => {
     const handleChangeUsername = (event) => {
         event.preventDefault();
         const name = event.target.value;
-        let textError = '';
-
         if(name.length < DIGITS_NAME){
-            textError = `Name should be minimum ${DIGITS_NAME} characters required`;
+            setErrors({...errors, username: `Name should be minimum ${DIGITS_NAME} characters required`});
         }else{
             setData({...data, username: name});
+            setErrors({...errors, username: ""});
         }
-        setErrors({...errors, username: textError});
     };
 
     const handleChangeEmail = (event) => {
         event.preventDefault();
         const email = event.target.value;
-        let textError = '';
-
         if(!validateEmail(email)){
-            textError = 'Invalid email address'
+            setErrors({...errors, email: 'Invalid email address'});
         }else{
             setData({...data, email: email});
+            setErrors({...errors, email: ""});
         }
-        setErrors({...errors, email: textError});
     };
 
     const handleChangePassword = (event) => {
         event.preventDefault();
         const password = event.target.value;
-        let textError = '';
-
         if(password.length < DIGITS_PASSWORD){
-            textError = `Use ${DIGITS_PASSWORD} or more characters with a mix of letters and numbers`;
+            setErrors({
+                ...errors,
+                password: `Use ${DIGITS_PASSWORD} or more characters with a mix of letters and numbers`,
+                confirm: 'Confirm the password'
+            });
+
         }else{
             setData({...data, password: password});
+            setErrors({...errors, password: ""});
         }
-        setErrors({...errors, password: textError});
     };
 
     const handleChangeConfirm = (event) => {
         event.preventDefault();
         const confirm = event.target.value;
-        let textError = '';
-
         if(data.password !== confirm){
-            textError = `Password is invalid`;
+            setErrors({...errors, confirm: `Password is invalid`});
         }else{
             setData({...data, confirm: confirm});
+            setErrors({...errors, confirm: ""});
         }
-        setErrors({...errors, confirm: textError});
     };
 
     const handlerSubmit = (event) => {
@@ -92,6 +89,7 @@ const Registration = (props) => {
             .then(() => {
                 form.reset();
                 setData({...data, username: "", email: "", password: "", confirm: ""});
+                history.push(PATH_LOGIN)
             })
             .finally(() => {
                 setModalShow(true);
@@ -161,13 +159,13 @@ const Registration = (props) => {
                     </button>
                     </div>
                 </form>
-                <ModalDisplay
-                    show={modalShow}
-                    message = {messageServer}
-                    onHide={() => {
-                    setModalShow(false)
-                    history.push(PATH_LOGIN)
-                }}/>
+                {/*<ModalDisplay*/}
+                {/*    show={modalShow}*/}
+                {/*    message = {}*/}
+                {/*    onHide={() => {*/}
+                {/*    setModalShow(false)*/}
+                {/*    history.push(PATH_LOGIN)*/}
+                {/*}}/>*/}
             </div>
         </div>
     </React.Fragment>

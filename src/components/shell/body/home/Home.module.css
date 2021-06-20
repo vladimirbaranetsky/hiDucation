@@ -16,24 +16,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5.33rem 0 2.66rem;
-    line-height: 85px;
+    margin-top: 5.33rem;
+    line-height: 95px;
 }
 
 .title {
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 700;
     color: #40e0d0;
-    text-shadow: 0 0 3px #808080;
+    -webkit-text-stroke: 1px #18b8a9;
 }
 
 .subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
-    font-style: italic;
-    font-weight: 400;
+    font-family: 'Lobster Two', cursive;
+    font-size: 3.5rem;
+    color: #e04050;
     margin-top: -15px;
-    text-shadow: 0 0 3px #808080;
+    /*text-shadow: 0 0 3px #808080;*/
 }
 
 .video {
@@ -50,7 +49,7 @@
 
 @media (max-width: 747px) {
     .title {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     .video {
@@ -73,12 +72,24 @@
         text-align: center;
     }
 
-    .subtitle {
-        font-size: 1.5rem;
+    .home__title {
+        line-height: 125px;
+    }
+}
+
+@media (max-width: 485px) {
+    .title {
+        line-height: 60px;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .subtitle{
+        font-size: 1.8rem;
     }
 
     .home__title {
-        line-height: 125px;
+        line-height: 90px;
     }
 }
 

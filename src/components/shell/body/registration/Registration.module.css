@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     text-align: left;
-    border-bottom: 1px solid #ff3399;
+    border-bottom: 1px solid #e04050;
     margin-top: 2rem;
     padding-bottom: 10px;
     height: 6vh;
@@ -64,8 +64,8 @@
     width: 26rem;
     height: 2.66rem;
     box-shadow: 0 0 4px #808080;
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
+    background: none;
+    border: 1px solid #808080;
     border-radius: 2rem;
     cursor: pointer;
     margin-bottom: 1.33rem;
@@ -73,8 +73,8 @@
     transition: all .2s linear;
 }
 
-.registration__item_input:hover, .login__item_input:focus{
-    border: 1px solid rgb(64, 224, 208);
+.registration__item_input:hover, .login__item_input:focus {
+    border: 1px solid #40e0d0;
 }
 
 .registration__item_input_icon {
@@ -91,17 +91,20 @@
 }
 
 .registration__item_button{
-    border: none;
+    background: none;
+    border: 1px solid #808080;
     font-weight: bold;
 }
 
 .registration__item_button:hover{
-    background-color: rgb(64, 224, 208);
+    border: 1px solid #40e0d0;
+    background-color: #40e0d0;
     color: #ffffff;
 }
 
 .registration__item_button:disabled{
-    background-color: #ffffff;
+    border: 1px solid #808080;
+    background: none;
     color:#808080;
     cursor: default;
 }
@@ -111,7 +114,7 @@
     bottom: 0;
     padding-left: 16px;
     font-size: 10px;
-    color: #ff3399;
+    color: #e04050;
 }
 
 @media(max-width: 991px){

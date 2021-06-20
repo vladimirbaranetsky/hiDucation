@@ -5,11 +5,9 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import style from './Login.module.css'
 import {PATH_HOME, PATH_REGISTRATION} from "../../../../config/config-routes";
 import {NavLink, useHistory} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import { login } from "../../../../actions/action-auth";
+import {useDispatch} from "react-redux";
+import { login } from "../../../../actions/authAction";
 import {DIGITS_PASSWORD, VALIDATE} from "../../../../config/config-credentials";
-import ModalDisplay from "../../../modal/Modal";
-
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -18,7 +16,6 @@ const Login = () => {
     const [data, setData] = useState({email: "", password: ""});
     const [errors, setErrors] = useState({email: '', password: ''});
     const [modalShow, setModalShow] = React.useState(false);
-    const messageServer = useSelector(state => state.messageServer.message);
 
     const validateEmail = (email) => {
         return  VALIDATE.test(String(email).toLowerCase());
@@ -27,27 +24,23 @@ const Login = () => {
     const handleChangeEmail = (event) => {
         event.preventDefault();
         const email = event.target.value;
-        let textError = '';
-
         if(!validateEmail(email)){
-            textError = 'Invalid email address'
+            setErrors({...errors, email: 'Invalid email address'});
         }else{
             setData({...data, email: email});
+            setErrors({...errors, email: ""});
         }
-        setErrors({...errors, email: textError});
     };
 
     const handleChangePassword = (event) => {
         event.preventDefault();
         const password = event.target.value;
-        let textError = '';
-
         if(password.length < DIGITS_PASSWORD){
-            textError = `Use ${DIGITS_PASSWORD} or more characters with a mix of letters and numbers`;
+            setErrors({...errors, password: `Use ${DIGITS_PASSWORD} or more characters with a mix of letters and numbers`});
         }else{
             setData({...data, password: password});
+            setErrors({...errors, password: ""});
         }
-        setErrors({...errors, password: textError});
     };
 
     const onSubmit = (event) => {
@@ -57,6 +50,7 @@ const Login = () => {
         .then(() => {
             form.reset();
             setData({...data, email: "", password: ""});
+            history.push(PATH_HOME)
         })
             .finally(() => {
                 setModalShow(true);
@@ -133,13 +127,13 @@ useEffect(() => {
                             </div>
                         </div>
                     </form>
-                    <ModalDisplay
-                        show={modalShow}
-                        message = {messageServer}
-                        onHide={() => {
-                            setModalShow(false)
-                            history.push(PATH_HOME)
-                        }}/>
+                    {/*<ModalDisplay*/}
+                    {/*    show={modalShow}*/}
+                    {/*    message = {messageServer}*/}
+                    {/*    onHide={() => {*/}
+                    {/*        setModalShow(false)*/}
+                    {/*        history.push(PATH_HOME)*/}
+                    {/*    }}/>*/}
                 </div>
             </div>
         </div>

@@ -4,9 +4,10 @@ import Logo from "./logo/Logo";
 import style from './Header.module.css';
 import BurgerMenu from "./burger/BurgerMenu";
 import ButtonToggleThemes from "./buttonToggleThemes/ButtonToggleThemes"
+import store from "../../../store/store";
 
-
-const Header = (props) => {
+const Header = () => {
+    const theme = store.getState().theme.theme;
     const scrollTopStart = document.scrollingElement.scrollTop;
     const [colorHeader, setColorHeader] = useState("");
     const [scrollTop, setScrollTop] = useState(scrollTopStart);
@@ -16,8 +17,8 @@ const Header = (props) => {
             let scrolled = document.scrollingElement.scrollTop;
             setScrollTop(scrolled);
          });
-        props.theme === "light" ? setColorHeader("white") : setColorHeader("black");
-    },[props.theme])
+        theme === "light" ? setColorHeader("white") : setColorHeader("black");
+    },[theme])
 
     return <React.Fragment>
         <header className={style.header} style={scrollTop > 20 ? {backgroundColor: colorHeader} : {background: "none"}}>
@@ -26,8 +27,8 @@ const Header = (props) => {
                     <Logo/>
                     <div className={style.header__inner}>
                         <Navigation />
-                        <BurgerMenu theme={props.theme}/>
-                        <ButtonToggleThemes themeToggle={props.themeToggle} theme={props.theme} />
+                        <BurgerMenu />
+                        <ButtonToggleThemes />
                     </div>
                 </div>
             </div>

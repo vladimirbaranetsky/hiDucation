@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     text-align: left;
-    border-bottom: 1px solid #ff3399;
+    border-bottom: 1px solid #e04050;
     margin-top: 2rem;
     padding-bottom: 10px;
     height: 6vh;
@@ -59,6 +59,7 @@
 .logout__item_button {
     margin-left: 2rem;
     box-shadow: 0 0 4px #808080;
+    border: 1px solid #808080;
     background: none;
     padding: 0.6rem 1.1rem;
     transition: all .2s linear;
@@ -70,7 +71,7 @@
 }
 
 .logout__item_button:hover {
-    background-color: #ff3399;
-    border-color: #ff3399;
+    background-color: #e04050;
+    border-color: #e04050;
     color: #ffffff;
 }

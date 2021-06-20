@@ -53,7 +53,51 @@
   color: #ffffff;
 }
 
-@media(max-width: 991px){
+/*--------------------------------*/
+.user__inner{
+  display: none;
+  position: absolute;
+  padding-top: 40px;
+}
+
+.user__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user__wrapper{
+  justify-content: center;
+  border: 1px solid #808080;
+  padding: 0.53rem 1rem;
+  border-radius: 2rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+.user__wrapper:hover{
+  border-color: #40e0d0;
+}
+
+.user__wrapper:hover .profile__info-title{
+  transition: all .3s linear;
+}
+
+.user__wrapper:hover .profile__info-title{
+  color: #40e0d0;
+}
+
+.user__wrapper:hover, .user__wrapper:hover .user__inner{
+  display: flex;
+}
+
+.user__link{
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+
+@media(max-width: 1020px){
   .nav{
     display: none;
   }

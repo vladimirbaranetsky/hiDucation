@@ -62,7 +62,11 @@
     color: #40e0d0;
 }
 
-@media(max-width: 991px){
+.user__wrapper:hover{
+    border-color: #40e0d0;
+}
+
+@media(max-width: 1020px){
     .burger__menu{
         display: flex;
     }

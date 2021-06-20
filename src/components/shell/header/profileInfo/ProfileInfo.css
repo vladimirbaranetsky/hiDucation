@@ -1,0 +1,10 @@
+.profile__info{
+    text-align: center;
+}
+
+.profile__info-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #808080;
+}

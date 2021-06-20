@@ -4,10 +4,13 @@ import "./BurgerMenu.css"
 import {LINKS_NAV, PATH_DASHBOARD, PATH_LOGIN, PATH_LOGOUT, PATH_PROFILE} from "../../../../config/config-routes";
 import {NavLink} from "react-router-dom";
 import {useSelector} from "react-redux";
+import store from "../../../../store/store";
 
 
-const BurgerMenu = (props) => {
-    const user = useSelector(state => state.data.user);
+const BurgerMenu = () => {
+    const user = useSelector(state => state.auth.user);
+    const theme = store.getState().theme.theme;
+
     const [menuOn, setMenuOn] = useState(false);
     const [isActive, setIsActive] = useState(false);
 
@@ -47,7 +50,7 @@ const BurgerMenu = (props) => {
                 {isActive ? <IoMdClose className="burger__button_close"/>
                     : <IoIosMenu className="burger__button_open"/>}
                 {isActive ? <div className="burger__menu_items"
-                                 style={props.theme === "light" ? {backgroundColor: "white"} : {backgroundColor: "black"}}>
+                                 style={theme === "light" ? {backgroundColor: "white"} : {backgroundColor: "black"}}>
                     {itemNavigation}
                 </div> : ""}
             </button>

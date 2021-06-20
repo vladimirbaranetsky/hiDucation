@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   text-align: left;
-  border-bottom: 1px solid #ff3399;
+  border-bottom: 1px solid #e04050;
   margin-top: 2rem;
   padding-bottom: 10px;
   height: 6vh;
@@ -57,8 +57,9 @@
 
 textarea {
   font-family: 'Poppins', sans-serif;
-  border: 2px solid #ffffff;
+  border: 1px solid #808080;
   transition: all .2s linear;
+  background: none;
 }
 
 ::placeholder{
@@ -82,7 +83,7 @@ textarea {
 
 .input__email, .input__name{
   box-shadow: 0 0 4px #808080;
-  border: 2px solid #ffffff;
+  border: 1px solid #808080;
   border-radius: 2rem;
   margin-right: 1rem;
   font-size: 1rem;
@@ -90,6 +91,7 @@ textarea {
   height: 2.66rem;
   padding: 0 1rem;
   cursor: pointer;
+  background: none;
   transition: all .2s linear;
 }
 .input__email{
@@ -102,13 +104,14 @@ textarea {
 .input__email:hover, .input__email:focus,
 .input__name:hover, .input__name:focus,
      textarea:hover, textarea:focus{
-  border: 2px solid rgb(64, 224, 208);
+  border: 1px solid #40e0d0;
 }
 
 .contact__data_button {
   box-shadow: 0 0 4px #808080;
   width: 18%;
-  background-color: #ffffff;
+  background: none;
+  border: 1px solid #808080;
   color: #808080;
   padding: 0.53rem 1rem;
   transition: all .2s linear;
@@ -126,7 +129,8 @@ textarea {
 }
 
 .contact__data_button:disabled{
-  background-color: #ffffff;
+  border: 1px solid #808080;
+  background: none;
   color:#808080;
   cursor: default;
 }
@@ -136,7 +140,7 @@ textarea {
   bottom: 0;
   padding-left: 16px;
   font-size: 10px;
-  color: #ff3399;
+  color: #e04050;
 }
 
 @media(max-width: 767px){
