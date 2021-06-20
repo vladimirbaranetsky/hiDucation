@@ -7,7 +7,7 @@ const Team = () => {
     const theme = useSelector(state => state.theme.theme)
     const employees = [
         {id: 1, name: "Dr.Igor Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo: ''},
-        {id: 2, name: "Just.Gabi Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo:''},
+        {id: 2, name: "Just.Gabi Karasin", position: "Co-Founder", description: "Bla-bla-bla", photo: ''},
         {id: 3, name: "Prof.Kevin Manning", position: "Advisor", description: "Bla-bla-bla", photo: ''}
     ];
 
