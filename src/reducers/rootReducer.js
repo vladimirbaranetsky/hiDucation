@@ -5,6 +5,10 @@ import {authReducer} from "./authReducer";
 import {productsReducer} from "./productsReducer";
 import {profileReducer} from "./profileReducer";
 import {themeReducer} from "./themeReducer";
+import {statsReducer} from "./statsReducer";
+import {theoryStatsReducer} from "./statsTheoryReducer";
+import {exercisesStatsReducer} from "./statsExercisesReducer";
+import {examStatsReducer} from "./statsExamReducer";
 
 
 export default combineReducers({
@@ -13,5 +17,9 @@ export default combineReducers({
     products: productsReducer,
     message: messageReducer,
     userProfile: profileReducer,
-    theme: themeReducer
+    theme: themeReducer,
+    allStats: statsReducer,
+    theoryStats: theoryStatsReducer,
+    exercisesStats: exercisesStatsReducer,
+    examStats: examStatsReducer
 });

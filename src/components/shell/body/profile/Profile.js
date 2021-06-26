@@ -15,8 +15,8 @@ import {DIGITS_PASSWORD, VALIDATE} from "../../../../config/config-credentials";
 
 const Profile = () => {
     const userProfile = useSelector(state => state.userProfile)
-    let nameAvatar = userProfile.lastName && userProfile.firstName ? userProfile.firstName.charAt(0).toUpperCase() + userProfile.lastName.charAt(0).toUpperCase()  : "";
-console.log(nameAvatar)
+    let nameAvatar = userProfile.lastName && userProfile.firstName ? userProfile.firstName.charAt(0).toUpperCase() + userProfile.lastName.charAt(0).toUpperCase() : "";
+    console.log(nameAvatar)
 
     const [isInvalid, setIsInvalid] = useState(true);
     const [inputActive, setInputActive] = useState(false);
@@ -28,7 +28,7 @@ console.log(nameAvatar)
     });
 
     const validateEmail = (email) => {
-        return  VALIDATE.test(String(email).toLowerCase());
+        return VALIDATE.test(String(email).toLowerCase());
     };
 
     const handleChange = (event) => {
@@ -41,33 +41,33 @@ console.log(nameAvatar)
             case "lastName":
                 return store.dispatch(updateInputField(NEW_LAST_NAME, value));
             case "email":
-                if(!validateEmail(value)){
+                if (!validateEmail(value)) {
                     setErrors({...errors, email: 'Invalid email address'});
-                }else{
+                } else {
                     setErrors({...errors, email: ''});
                 }
                 return store.dispatch(updateInputField(NEW_EMAIL, value));
             case "password":
-                if(value.length < DIGITS_PASSWORD){
+                if (value.length < DIGITS_PASSWORD) {
                     setErrors({
                         ...errors,
                         password: `Use ${DIGITS_PASSWORD} or more characters with a mix of letters and numbers`,
                         confirm: `Confirm the password`
                     });
-                }else{
+                } else {
                     setErrors({...errors, password: ''});
                 }
                 return store.dispatch(updateInputField(NEW_PASSWORD, value));
-            case "password_confirm":{
-                if(userProfile.password !== value){
+            case "password_confirm": {
+                if (userProfile.password !== value) {
                     setErrors({...errors, confirm: `Password is invalid`});
-                }else{
+                } else {
                     setErrors({...errors, confirm: ''});
                 }
                 break;
             }
             default:
-               break;
+                break;
         }
     }
 
@@ -90,11 +90,11 @@ console.log(nameAvatar)
     }
 
     useEffect(() => {
-        const isValidate = () =>{
+        const isValidate = () => {
             return (errors.email === "" && errors.password === "" && errors.username === "" && errors.confirm === "")
         };
         setIsInvalid(isValidate());
-    },[errors]);
+    }, [errors]);
 
     return <React.Fragment>
         <div className={style.profile}>
@@ -110,19 +110,23 @@ console.log(nameAvatar)
                         <div className={style.profile__col}>
                             <div className={style.profile__item}>
                                 <label className={style.profile__item_title}>First Name</label>
-                                <input className={style.profile__item_input} type="text" name="firstName"  value={userProfile.firstName} onChange={handleChange} readOnly={!inputActive}/>
+                                <input className={style.profile__item_input} type="text" name="firstName"
+                                       value={userProfile.firstName} onChange={handleChange} readOnly={!inputActive}/>
                             </div>
                             <div className={style.profile__item}>
                                 <label className={style.profile__item_title}>Last Name</label>
-                                <input className={style.profile__item_input} type="text" name="lastName" value={userProfile.lastName} onChange={handleChange} readOnly={!inputActive}/>
+                                <input className={style.profile__item_input} type="text" name="lastName"
+                                       value={userProfile.lastName} onChange={handleChange} readOnly={!inputActive}/>
                             </div>
                             <div className={style.profile__item}>
                                 <label className={style.profile__item_title}>Institute</label>
-                                <input className={style.profile__item_input} type="text" name="institute" onChange={handleChange} readOnly={!inputActive}/>
+                                <input className={style.profile__item_input} type="text" name="institute"
+                                       onChange={handleChange} readOnly={!inputActive}/>
                             </div>
                             <div className={style.profile__item}>
                                 <label className={style.profile__item_title}>Degree</label>
-                                <input className={style.profile__item_input} type="text" name="degree" onChange={handleChange} readOnly={!inputActive}/>
+                                <input className={style.profile__item_input} type="text" name="degree"
+                                       onChange={handleChange} readOnly={!inputActive}/>
                             </div>
                         </div>
 
@@ -142,35 +146,46 @@ console.log(nameAvatar)
                         <div className={style.profile__col}>
                             <div className={style.profile__item}>
                                 <label className={style.profile__item_title}>Subject</label>
-                                <input className={style.profile__item_input} type="text" name="subject" onChange={handleChange} readOnly={!inputActive}/>
+                                <input className={style.profile__item_input} type="text" name="subject"
+                                       onChange={handleChange} readOnly={!inputActive}/>
                             </div>
                             <div className={style.profile__item}>
                                 <label className={style.profile__item_title}>Email</label>
-                                <input className={style.profile__item_input} type="email" name="email" value={userProfile.email} onChange={handleChange} readOnly={!inputActive}/>
-                                {errors.email.length > 0 && <span className={style.input__error_message}>{errors.email}</span>}
+                                <input className={style.profile__item_input} type="email" name="email"
+                                       value={userProfile.email} onChange={handleChange} readOnly={!inputActive}/>
+                                {errors.email.length > 0 &&
+                                <span className={style.input__error_message}>{errors.email}</span>}
                             </div>
                             <div className={style.profile__item}>
                                 <label className={style.profile__item_title}>Password</label>
-                                <input className={style.profile__item_input} type="password" name="password" value={userProfile.password}  onChange={handleChange} readOnly={!inputActive}/>
-                                {errors.password.length > 0 && <span className={style.input__error_message}>{errors.password}</span>}
+                                <input className={style.profile__item_input} type="password" name="password"
+                                       value={userProfile.password} onChange={handleChange} readOnly={!inputActive}/>
+                                {errors.password.length > 0 &&
+                                <span className={style.input__error_message}>{errors.password}</span>}
                             </div>
                             <div className={style.profile__item}>
                                 <label className={style.profile__item_title}>Confirm your password</label>
-                                <input required className={style.profile__item_input} type="password" name="password_confirm"
+                                <input required className={style.profile__item_input} type="password"
+                                       name="password_confirm"
                                        placeholder="Please confirm password..."
                                        onChange={handleChange}
                                        readOnly={!inputActive}
                                 />
-                                {errors.confirm.length > 0 && <span className={style.input__error_message}>{errors.confirm}</span>}
+                                {errors.confirm.length > 0 &&
+                                <span className={style.input__error_message}>{errors.confirm}</span>}
                             </div>
                         </div>
                     </div>
                     <div className={style.profile__row_button}>
-                        <div className={style.profile__item} >
-                            <button className={style.profile__button_edit} onClick={showInput} type="button" >Edit profile</button>
+                        <div className={style.profile__item}>
+                            <button className={style.profile__button_edit} onClick={showInput} type="button">Edit
+                                profile
+                            </button>
                         </div>
                         <div className={style.profile__item}>
-                            <button disabled={!isInvalid || !inputActive} className={style.profile__button_submit} type="submit" >Update profile</button>
+                            <button disabled={!isInvalid || !inputActive} className={style.profile__button_submit}
+                                    type="submit">Update profile
+                            </button>
                         </div>
                     </div>
                 </form>
