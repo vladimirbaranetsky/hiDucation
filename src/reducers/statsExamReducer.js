@@ -22,6 +22,7 @@ export function examStatsReducer (state = initialState, action){
             }
         case GET_EXAM_STATS_FAIL:
             return {
+                ...state,
                 examId: 0,
                 gradeOverall: 0,
                 exercises: [

@@ -29,6 +29,7 @@ export function statsReducer(state = initialState, action) {
             }
         case GET_ALL_STATS_FAIL:
             return {
+                ...state,
                 id: 0,
                 theory: [
                     {

@@ -14,6 +14,7 @@ export function theoryStatsReducer (state = initialState, action){
             }
         case GET_THEORY_STATS_FAIL:
             return {
+                ...state,
                 itemId: 0,
                 progress: 0
             }

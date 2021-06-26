@@ -16,6 +16,7 @@ export function exercisesStatsReducer(state = initialState, action){
             }
         case GET_EXERCISES_STATS_FAIL:
             return {
+                ...state,
                 exId: 0,
                 level: 0,
                 progress: 0,
