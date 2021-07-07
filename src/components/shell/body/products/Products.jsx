@@ -34,7 +34,7 @@ const Products = (props) => {
                     <div className={style.background__oval_3_11}></div>
                     <div className={style.background__oval_3_12}></div>
                     <div className={style.product__title_wrapper} style={theme === "dark" ? {backgroundColor: "black"} : {backgroundColor: "white"}}>
-                        <span className={style.product__field} style={theme === "dark" ? {color: "black"} : {color: "white"}} >{product.displayName}</span>
+                        <span className={style.product__field} style={theme === "dark" ? {color: "#40e0d0"} : {color: "#40e0d0"}} >{product.displayName}</span>
                     </div>
                 </div>
                 <div className={style.product__content}>

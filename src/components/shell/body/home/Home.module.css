@@ -30,7 +30,7 @@
 .subtitle {
     font-family: 'Lobster Two', cursive;
     font-size: 3.5rem;
-    color: #e04050;
+    color: #e08040;
     margin-top: -15px;
     /*text-shadow: 0 0 3px #808080;*/
 }
@@ -64,6 +64,16 @@
         line-height: 85px;
         margin: 2.5rem 0 0.5rem;
     }
+}
+
+.option-enter{
+    opacity: 0;
+
+}
+
+.option-enter.option-enter-active{
+    opacity: 1;
+    transition: opacity .2s ease;
 }
 
 @media (max-width: 556px) {
