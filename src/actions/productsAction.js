@@ -1,6 +1,7 @@
 import {GET_PRODUCTS_FAIL, GET_PRODUCTS_SUCCESS} from "./typesAction";
 import {clearErrors, returnErrors} from "./errorAction";
 import ProductsService from "../services/productsService"
+import store from "../store/store";
 
 
 export const getProducts = (field) => (dispatch) => {

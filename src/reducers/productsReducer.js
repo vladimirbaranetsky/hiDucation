@@ -4,6 +4,7 @@ const initialState = {
     products: []
 }
 
+
 export function productsReducer (state = initialState, action) {
     switch (action.type) {
         case GET_PRODUCTS_SUCCESS:

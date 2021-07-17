@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import style from './Products.module.css'
 import {useSelector} from "react-redux";
+import store from "../../../../store/store";
+import {getProducts} from "../../../../actions/productsAction";
 
 
 const Products = (props) => {
     const theme = useSelector(state => state.theme.theme)
     const filterProducts = props.productsFilter;
+
 
     const handleChangeCategory = (event) => {
         event.preventDefault();

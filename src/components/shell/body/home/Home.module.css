@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Comfortaa Regular", cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap')
+}
+
 .container {
     margin: 0 auto;
     width: 100%;
@@ -21,10 +26,13 @@
 }
 
 .title {
-    font-size: 7rem;
-    font-weight: 700;
-    color: #40e0d0;
-    -webkit-text-stroke: 1px #18b8a9;
+    font-family: "Comfortaa Regular", cursive;
+    font-size: 4rem;
+    font-weight: 300;
+    /*color: #40e0d0;*/
+    color: #6afffa;
+    /*-webkit-text-stroke: 1px #18b8a9;*/
+    text-shadow: 0 0 3px #808080;
 }
 
 .subtitle {
@@ -40,16 +48,17 @@
     position: relative;
     flex-direction: column;
     align-items: center;
-    height: 240px;
-    box-shadow: 0 0 18px #828282;
+    height: 300px;
+    box-shadow: 0 0 10px #828282;
     border-radius: 30px;
     overflow: hidden;
     margin-top: 3rem;
+    opacity: 0.5;
 }
 
 @media (max-width: 747px) {
     .title {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     .video {
@@ -66,12 +75,12 @@
     }
 }
 
-.option-enter{
+.option-enter {
     opacity: 0;
 
 }
 
-.option-enter.option-enter-active{
+.option-enter.option-enter-active {
     opacity: 1;
     transition: opacity .2s ease;
 }
@@ -94,7 +103,7 @@
         font-size: 4rem;
     }
 
-    .subtitle{
+    .subtitle {
         font-size: 1.8rem;
     }
 
