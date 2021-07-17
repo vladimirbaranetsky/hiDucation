@@ -62,7 +62,8 @@
     }
 
     .video {
-        display: none;
+        /*display: none;*/
+        max-width: 100%;
     }
 
     .subtitle {
@@ -86,6 +87,11 @@
 }
 
 @media (max-width: 556px) {
+
+    .video {
+        max-width: 100%;
+    }
+
     .title {
         line-height: 60px;
         text-align: center;
@@ -97,6 +103,10 @@
 }
 
 @media (max-width: 485px) {
+    .video {
+        max-width: 100%;
+    }
+
     .title {
         line-height: 60px;
         text-align: center;
