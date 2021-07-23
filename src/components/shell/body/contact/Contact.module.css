@@ -76,10 +76,15 @@ textarea {
   justify-content: space-around;
   align-items: center;
   width: 46.66rem;
+
   margin-top: 2rem;
 }
 
-
+.contact__data_input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .input__email, .input__name{
   box-shadow: 0 0 4px #808080;

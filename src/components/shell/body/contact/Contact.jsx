@@ -71,7 +71,7 @@ const Contact = () => {
                         <button disabled={isInvalid} className={style.contact__data_button} type="submit">Send</button>
                     </div>
                 </form>
-                <Footer />
+                <Footer/>
             </div>
         </div>
     </React.Fragment>
