@@ -1,5 +1,6 @@
 .about{
     display: flex;
+    position: relative;
     flex-direction: column;
     padding-top: 6rem;
 }

@@ -6,6 +6,7 @@ import BurgerMenu from "./burger/BurgerMenu";
 import ButtonToggleThemes from "./buttonToggleThemes/ButtonToggleThemes"
 import store from "../../../store/store";
 
+
 const Header = () => {
     const theme = store.getState().theme.theme;
     const scrollTopStart = document.scrollingElement.scrollTop;
@@ -17,7 +18,7 @@ const Header = () => {
             let scrolled = document.scrollingElement.scrollTop;
             setScrollTop(scrolled);
          });
-        theme === "light" ? setColorHeader("white") : setColorHeader("black");
+        theme === "light" ? setColorHeader( 'white') : setColorHeader("black");
     },[theme])
 
     return <React.Fragment>

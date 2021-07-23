@@ -1,14 +1,12 @@
 .logo__company {
-
     display: flex;
     line-height: 2.5rem;
-
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+/*.img {*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+/*}*/
 
 
 .logo__company_title {

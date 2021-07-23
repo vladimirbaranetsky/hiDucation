@@ -1,13 +1,18 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import style from './Products.module.css'
 import {useSelector} from "react-redux";
 import store from "../../../../store/store";
 import {getProducts} from "../../../../actions/productsAction";
-
+import products from "../Body";
 
 const Products = (props) => {
     const theme = useSelector(state => state.theme.theme)
     const filterProducts = props.productsFilter;
+    const[value, setValue] = useState('');
+
+    // const filteredProducts = products.filter(product => {
+    //     return product.displayName.toLowerCase().includes(value.toLowerCase());
+    // })
 
 
     const handleChangeCategory = (event) => {
@@ -20,24 +25,26 @@ const Products = (props) => {
         return <div key={product.id} className={style.product__item}>
             <div className={style.product__item_wrapper}>
                 <div className={style.product__background}>
-                    <div className={style.background__oval_1}></div>
-                    <div className={style.background__oval_2}></div>
-                    <div className={style.background__oval_2_1}></div>
-                    <div className={style.background__oval_3}></div>
-                    <div className={style.background__oval_3_1}></div>
-                    <div className={style.background__oval_3_2}></div>
-                    <div className={style.background__oval_3_3}></div>
-                    <div className={style.background__oval_3_4}></div>
-                    <div className={style.background__oval_3_5}></div>
-                    <div className={style.background__oval_3_6}></div>
-                    <div className={style.background__oval_3_7}></div>
-                    <div className={style.background__oval_3_8}></div>
-                    <div className={style.background__oval_3_9}></div>
-                    <div className={style.background__oval_3_10}></div>
-                    <div className={style.background__oval_3_11}></div>
-                    <div className={style.background__oval_3_12}></div>
-                    <div className={style.product__title_wrapper} style={theme === "dark" ? {backgroundColor: "black"} : {backgroundColor: "white"}}>
-                        <span className={style.product__field} style={theme === "dark" ? {color: "#40e0d0"} : {color: "#40e0d0"}} >{product.displayName}</span>
+                    <div className={style.background__oval_1}/>
+                    <div className={style.background__oval_2}/>
+                    <div className={style.background__oval_2_1}/>
+                    <div className={style.background__oval_3}/>
+                    <div className={style.background__oval_3_1}/>
+                    <div className={style.background__oval_3_2}/>
+                    <div className={style.background__oval_3_3}/>
+                    <div className={style.background__oval_3_4}/>
+                    <div className={style.background__oval_3_5}/>
+                    <div className={style.background__oval_3_6}/>
+                    <div className={style.background__oval_3_7}/>
+                    <div className={style.background__oval_3_8}/>
+                    <div className={style.background__oval_3_9}/>
+                    <div className={style.background__oval_3_10}/>
+                    <div className={style.background__oval_3_11}/>
+                    <div className={style.background__oval_3_12}/>
+                    <div className={style.product__title_wrapper}
+                         style={theme === "dark" ? {backgroundColor: "black"} : {backgroundColor: "white"}}>
+                        <span className={style.product__field}
+                              style={theme === "dark" ? {color: "#40e0d0"} : {color: "#40e0d0"}}>{product.displayName}</span>
                     </div>
                 </div>
                 <div className={style.product__content}>
@@ -64,11 +71,24 @@ const Products = (props) => {
                 <span className={style.products__header_title}>Products</span>
             </div>
             <div className={style.products__body}>
+
+                <div className={style.search__data}>
+                    <input required className={style.input__search} onChange={(event) => setValue(event.target.value)} type="search" name="search" placeholder="Search in products"/>
+                </div>
+
                 <div className={style.products__menu}>
-                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button" name="all" >All</button>
-                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button" name="math" >Math</button>
-                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button" name="programming" >Programming</button>
-                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button" name="physics" >Physics</button>
+                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button"
+                            name="all">All
+                    </button>
+                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button"
+                            name="math">Math
+                    </button>
+                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button"
+                            name="programming">Programming
+                    </button>
+                    <button className={style.products__menu_link} onClick={handleChangeCategory} type="button"
+                            name="physics">Physics
+                    </button>
                 </div>
                 <div className={style.product__items}>
                     {itemProduct}

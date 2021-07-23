@@ -1,5 +1,6 @@
 .contact{
   display: flex;
+  position: relative;
   flex-direction: column;
   padding-top: 6rem;
 }
@@ -29,6 +30,7 @@
 
 .contact__body{
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
 }
@@ -70,16 +72,14 @@ textarea {
 
 .contact__data{
   display: flex;
+  position: relative;
   justify-content: space-around;
   align-items: center;
   width: 46.66rem;
   margin-top: 2rem;
 }
 
-.contact__data_input{
-  display: flex;
-  width: inherit;
-}
+
 
 .input__email, .input__name{
   box-shadow: 0 0 4px #808080;
@@ -108,6 +108,7 @@ textarea {
 }
 
 .contact__data_button {
+
   box-shadow: 0 0 4px #808080;
   width: 18%;
   background: none;
