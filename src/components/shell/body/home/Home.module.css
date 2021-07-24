@@ -27,21 +27,22 @@
 }
 
 .title {
-    font-family: "Comfortaa Regular", cursive;
-    font-size: 4rem;
-    font-weight: 300;
+    font-size: 5rem;
+    font-weight: 500;
     /*color: #40e0d0;*/
-    color: #6afffa;
+    color: #808080;
     /*-webkit-text-stroke: 1px #18b8a9;*/
-    text-shadow: 0 0 3px #808080;
+    text-shadow: 0 0 5px #808080;
 }
 
 .subtitle {
-    font-family: 'Lobster Two', cursive;
+    font-family: "Comfortaa Regular", cursive;
+    /*font-family: 'Lobster Two', cursive;*/
     font-size: 3.5rem;
-    color: #e08040;
+    color: #6afffa;
     margin-top: -15px;
-    /*text-shadow: 0 0 3px #808080;*/
+    text-shadow: 0 0 3px #808080;
+    /*-webkit-text-stroke: 1px #18b8a9;*/
 }
 
 .video {

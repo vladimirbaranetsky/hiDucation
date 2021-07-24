@@ -8,11 +8,11 @@ const Home = () => {
         <div className={style.home}>
             <div className={style.container}>
                 <div className={style.home__title}>
-                    <span className={style.title}>Revolutionize Learning</span>
+                    <span className={style.title}>hiDucation</span>
+                    <span className={style.subtitle}>Revolutionize Learning</span>
                     <video className={style.video} controls autoPlay muted loop>
                         <source src={temp_video}/>
                     </video>
-                    {/*<span className={style.subtitle}>Revolutionize Learning</span>*/}
                 </div>
                 <Carousel/>
             </div>
