@@ -7,12 +7,13 @@ import products from "../Body";
 
 const Products = (props) => {
     const theme = useSelector(state => state.theme.theme)
+    const products = useSelector(state => state.products.products)
     const filterProducts = props.productsFilter;
     const[value, setValue] = useState('');
 
-    // const filteredProducts = products.filter(product => {
-    //     return product.displayName.toLowerCase().includes(value.toLowerCase());
-    // })
+    const filteredProducts = products.filter(product => {
+        return product.displayName.toLowerCase().includes(value.toLowerCase());
+    })
 
 
     const handleChangeCategory = (event) => {
