@@ -51,7 +51,7 @@ const BurgerMenu = () => {
                     : <IoIosMenu className="burger__button_open"/>}
                 {isActive ? <div className="burger__menu_items"
                                  style={theme === "light" ? {backgroundColor: "white"} : {backgroundColor: "black"}}>
-                    {itemNavigation}
+                  {itemNavigation}
                 </div> : ""}
             </button>
         </div>

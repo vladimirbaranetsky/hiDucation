@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 import style from './Products.module.css'
 import {useSelector} from "react-redux";
+import {FaSearch} from "react-icons/fa";
 
 
 const Products = (props) => {
     const theme = useSelector(state => state.theme.theme)
     const products = useSelector(state => state.products.products)
     // const filterProducts = props.productsFilter;
-    const[value, setValue] = useState('');
+    const [value, setValue] = useState('');
 
     const filteredProducts = products.filter(product => {
         return product.displayName.toLowerCase().includes(value.toLowerCase());
@@ -72,7 +73,9 @@ const Products = (props) => {
             <div className={style.products__body}>
 
                 <div className={style.search__data}>
-                    <input required className={style.input__search} onChange={(event) => setValue(event.target.value)} type="search" name="search" placeholder="Search in products"/>
+                    <FaSearch className={style.search__icon}/>
+                    <input className={style.input__search} onChange={(event) => setValue(event.target.value)}
+                           type="search" name="search" placeholder="Search in products"/>
                 </div>
 
                 <div className={style.products__menu}>
