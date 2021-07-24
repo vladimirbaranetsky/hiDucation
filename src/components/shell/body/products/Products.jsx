@@ -22,7 +22,7 @@ const Products = (props) => {
         props.updateProductFilter(field.toLowerCase());
     }
 
-    const itemProduct = filterProducts.map(product => {
+    const itemProduct = filteredProducts.map(product => {
         return <div key={product.id} className={style.product__item}>
             <div className={style.product__item_wrapper}>
                 <div className={style.product__background}>
