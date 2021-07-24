@@ -408,3 +408,9 @@
   margin-top: 2rem;
   margin-left: 1rem;
 }
+
+@media (max-width: 605px) {
+  .input__search{
+    width: 18.66rem;
+  }
+}

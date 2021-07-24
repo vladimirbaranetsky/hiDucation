@@ -1,14 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import style from './Products.module.css'
 import {useSelector} from "react-redux";
-import store from "../../../../store/store";
-import {getProducts} from "../../../../actions/productsAction";
-import products from "../Body";
+
 
 const Products = (props) => {
     const theme = useSelector(state => state.theme.theme)
     const products = useSelector(state => state.products.products)
-    const filterProducts = props.productsFilter;
+    // const filterProducts = props.productsFilter;
     const[value, setValue] = useState('');
 
     const filteredProducts = products.filter(product => {
