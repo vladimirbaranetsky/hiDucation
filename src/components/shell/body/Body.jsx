@@ -21,15 +21,18 @@ import Registration from "./registration/Registration";
 import Profile from "./profile/Profile";
 import {useSelector} from "react-redux";
 import store from "../../../store/store";
-import {getProducts} from "../../../actions/productsAction";
+import {getProductsByCategory, getProductsByName} from "../../../actions/productsAction";
 
 const Body = () => {
 
     const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
-    const products = useSelector(state => state.products.products)
 
-    const updateProductsFilter = (category) => {
-        store.dispatch(getProducts(category))
+    const updateProductsByCategory = (category) => {
+        store.dispatch(getProductsByCategory(category))
+    }
+
+    const updateProductsByName = (name) => {
+        store.dispatch(getProductsByName(name))
     }
 
     return <React.Fragment>
@@ -42,7 +45,7 @@ const Body = () => {
                     }}>
                     </Route>
                     <Route path={PATH_PRODUCTS} exact render={() => {
-                        return <Products updateProductFilter={updateProductsFilter} productsFilter={products}/>;
+                        return <Products updateProductsByCategory={updateProductsByCategory} updateProductsByName={updateProductsByName}/>;
                     }}>
                     </Route>
                     <Route path={PATH_ABOUT} exact render={() => {

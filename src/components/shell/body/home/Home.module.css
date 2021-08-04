@@ -27,21 +27,25 @@
 }
 
 .title {
-    font-size: 5rem;
+    font-size: 8rem;
     font-weight: 500;
-    /*color: #40e0d0;*/
-    color: #808080;
-    /*-webkit-text-stroke: 1px #18b8a9;*/
-    text-shadow: 0 0 5px #808080;
+    color: #40e0d0;
+    -webkit-text-stroke: 1px #18b8a9;
+    text-shadow: 0 0 10px #808080;
 }
 
 .subtitle {
-    font-family: "Comfortaa Regular", cursive;
+    /*font-family: "Comfortaa Regular", cursive;*/
     /*font-family: 'Lobster Two', cursive;*/
-    font-size: 3.5rem;
-    color: #6afffa;
+    /*font-family: 'Palette Mosaic', cursive;*/
+    /*font-family: 'Anton', sans-serif;*/
+    font-family: 'Righteous', cursive;
+
+    font-size: 3rem;
+    color: #e04050;
     margin-top: -15px;
-    text-shadow: 0 0 3px #808080;
+    /*letter-spacing: 9px;*/
+    /*text-shadow: 0 0 3px #808080;*/
     /*-webkit-text-stroke: 1px #18b8a9;*/
 }
 
@@ -60,7 +64,7 @@
 
 @media (max-width: 747px) {
     .title {
-        font-size: 3rem;
+        font-size: 6rem;
     }
 
     .video {

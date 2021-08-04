@@ -1,27 +1,24 @@
-import React, {useState} from "react";
+import React from "react";
 import style from './Products.module.css'
 import {useSelector} from "react-redux";
-import {FaSearch} from "react-icons/fa";
-
 
 const Products = (props) => {
     const theme = useSelector(state => state.theme.theme)
-    const products = useSelector(state => state.products.products)
-    // const filterProducts = props.productsFilter;
-    const [value, setValue] = useState('');
+    const filterProducts = useSelector(state => state.products.products)
 
-    const filteredProducts = products.filter(product => {
-        return product.displayName.toLowerCase().includes(value.toLowerCase());
-    })
-
+    const handleChangeProduct = (event) => {
+        event.preventDefault();
+        const name = event.target.value;
+        props.updateProductsByName(name.toLowerCase());
+    }
 
     const handleChangeCategory = (event) => {
         event.preventDefault();
-        const field = event.target.name
-        props.updateProductFilter(field.toLowerCase());
+        const field = event.target.name;
+        props.updateProductsByCategory(field.toLowerCase());
     }
 
-    const itemProduct = filteredProducts.map(product => {
+    const itemProduct = filterProducts.map(product => {
         return <div key={product.id} className={style.product__item}>
             <div className={style.product__item_wrapper}>
                 <div className={style.product__background}>
@@ -73,8 +70,7 @@ const Products = (props) => {
             <div className={style.products__body}>
 
                 <div className={style.search__data}>
-                    <FaSearch className={style.search__icon}/>
-                    <input className={style.input__search} onChange={(event) => setValue(event.target.value)}
+                    <input className={style.input__search} onChange={handleChangeProduct}
                            type="search" name="search" placeholder="Search in products"/>
                 </div>
 

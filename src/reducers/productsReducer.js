@@ -1,4 +1,8 @@
-import {GET_PRODUCTS_FAIL, GET_PRODUCTS_SUCCESS} from "../actions/typesAction";
+import {
+    GET_PRODUCTS_BY_CATEGORY_SUCCESS,
+    GET_PRODUCTS_BY_NAME_SUCCESS,
+    GET_PRODUCTS_FAIL
+} from "../actions/typesAction";
 
 const initialState = {
     products: []
@@ -7,7 +11,7 @@ const initialState = {
 
 export function productsReducer (state = initialState, action) {
     switch (action.type) {
-        case GET_PRODUCTS_SUCCESS:
+        case GET_PRODUCTS_BY_CATEGORY_SUCCESS:
             switch (action.field){
                 case "all":
                     return {
@@ -29,6 +33,13 @@ export function productsReducer (state = initialState, action) {
                         products: action.payload
                     }
             }
+        case GET_PRODUCTS_BY_NAME_SUCCESS:
+            return {
+                ...state,
+                products: action.payload.filter(product => {
+                    return product.displayName.toLowerCase().includes(action.displayName);
+                })
+            };
         case GET_PRODUCTS_FAIL:
             return {
                 ...state,

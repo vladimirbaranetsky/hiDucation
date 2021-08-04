@@ -1,5 +1,5 @@
 .video {
-    width: 100%;
+    width: max-content;
     top: 0;
     left: 0;
     position: fixed;
@@ -16,16 +16,16 @@
 }
 
 @media(max-width: 1679px){
-    .img{
-        width: auto;
-    }
+    /*.img{*/
+    /*    width: auto;*/
+    /*}*/
 }
 
-/*@media (max-width: 747px) {*/
-/*    .img {*/
-/*        width: auto;*/
-/*    }*/
-/*}*/
+@media (max-width: 747px) {
+    /*.img {*/
+    /*    width: auto;*/
+    /*}*/
+}
 
 /*@media (max-width: 556px) {*/
 /*    .img {*/

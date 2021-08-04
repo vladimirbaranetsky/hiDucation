@@ -20,7 +20,8 @@ export const PROFILE_UPDATE_FAIL = "PROFILE_UPDATE_FAIL";
 export const GET_ERRORS = "GET_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
-export const GET_PRODUCTS_SUCCESS = "GET_PRODUCTS_SUCCESS";
+export const GET_PRODUCTS_BY_CATEGORY_SUCCESS = "GET_PRODUCTS_BY_CATEGORY_SUCCESS";
+export const GET_PRODUCTS_BY_NAME_SUCCESS = "GET_PRODUCTS_BY_NAME_SUCCESS";
 export const GET_PRODUCTS_FAIL = "GET_PRODUCTS_FAIL";
 ///////////////////////////////////////////////////////////////////////
 export const NEW_ID = "NEW_ID";
