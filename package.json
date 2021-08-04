@@ -30,11 +30,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "node server.js #Production only!",
-    "postinstall": "npm run build",
-    "dev": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -58,9 +56,5 @@
   "devDependencies": {
     "history": "^5.0.0",
     "react-redux": "^7.2.4"
-  },
-  "engines": {
-    "node": "6.9.1",
-    "npm": "3.10.8"
   }
 }
