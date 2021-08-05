@@ -42,11 +42,11 @@
     font-family: 'Righteous', cursive;
 
     font-size: 3rem;
-    color: #40d3e0;
-    margin-top: -15px;
+    color: #dae6e7;
+    margin-top: -6px;
     /*letter-spacing: 9px;*/
-    /*text-shadow: 0 0 3px #808080;*/
-    /*-webkit-text-stroke: 1px #18b8a9;*/
+    text-shadow: 0 0 4px #5d5d5d;
+    -webkit-text-stroke: 1px #7a7a7a;
 }
 
 .video {

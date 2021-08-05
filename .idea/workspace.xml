@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f50e104f-aa75-4dda-bb9f-610c6de529c5" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/background/Background.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/background/Background.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="f50e104f-aa75-4dda-bb9f-610c6de529c5" name="Changes" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +35,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\GitHub\hiDucation\src\video" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.run">
     <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -79,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628076351581</updated>
       <workItem from="1628076353712" duration="6180000" />
-      <workItem from="1628140356877" duration="2608000" />
+      <workItem from="1628140356877" duration="2929000" />
     </task>
     <task id="LOCAL-00001" summary="search update">
       <created>1628077171026</created>
@@ -123,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628090499935</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1628143208760</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628143208760</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
