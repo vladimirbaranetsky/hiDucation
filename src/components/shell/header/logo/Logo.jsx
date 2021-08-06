@@ -7,11 +7,9 @@ import logo from '../../../../images/logo.png';
 const Logo = () => {
     return <React.Fragment>
         <NavLink key={PATH_HOME} to="/home">
-            {/*<div className={style.logo__company}>*/}
-                {/*<span className={style.logo__company_title}>hi</span>*/}
-                {/*<span className={style.logo__company_subtitle}>Ducation</span>*/}
-                <img src={logo} alt=''/>
-            {/*</div>*/}
+            <div className={style.logo__company}>
+                <img src={logo}/>
+            </div>
         </NavLink>
     </React.Fragment>
 }

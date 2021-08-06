@@ -19,7 +19,7 @@ const Shell = () => {
         <ThemeProvider theme={useSelector(state => state.theme.theme) === "light" ? lightTheme : darkTheme}>
             <GlobalStyles/>
             <StyledApp>
-                {/*<Background/>*/}
+                <Background/>
                 <Header/>
                 <Body />
             </StyledApp>

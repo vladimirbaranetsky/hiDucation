@@ -6,7 +6,7 @@ import Background from "../../../background/Background";
 
 const Home = () => {
     return <React.Fragment>
-        <Background/>
+        {/*<Background/>*/}
         <div className={style.home}>
             <div className={style.container}>
                 <div className={style.home__title}>
