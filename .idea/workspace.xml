@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f50e104f-aa75-4dda-bb9f-610c6de529c5" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shell/Shell.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shell/Shell.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shell/body/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shell/body/home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shell/body/home/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shell/body/home/Home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shell/header/logo/Logo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shell/header/logo/Logo.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="f50e104f-aa75-4dda-bb9f-610c6de529c5" name="Changes" comment="update home logo css" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +82,7 @@
       <updated>1628076351581</updated>
       <workItem from="1628076353712" duration="6180000" />
       <workItem from="1628140356877" duration="5607000" />
-      <workItem from="1628229890200" duration="308000" />
+      <workItem from="1628229890200" duration="439000" />
     </task>
     <task id="LOCAL-00001" summary="search update">
       <created>1628077171026</created>
@@ -153,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628144565850</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update home logo css">
+      <created>1628230321201</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1628230321201</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +176,7 @@
     <MESSAGE value="search update" />
     <MESSAGE value="gitignore update" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update home logo css" />
+    <option name="LAST_COMMIT_MESSAGE" value="update home logo css" />
   </component>
 </project>
